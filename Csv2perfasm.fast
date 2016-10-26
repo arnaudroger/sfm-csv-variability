@@ -1,0 +1,1203 @@
+# JMH 1.15 (released 26 days ago)
+# VM version: JDK 1.8.0_101, VM 25.101-b13
+# VM invoker: /usr/lib/jvm/java-8-oracle/jre/bin/java
+# VM options: -Dcsv.dir=/home/aroger/volatile
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Sampling time
+# Benchmark: org.github.arnaudroger.Csv2Benchmark.parseCsv
+
+# Run progress: 0.00% complete, ETA 00:00:20
+# Fork: 1 of 1
+# Preparing profilers: LinuxPerfAsmProfiler 
+# Profilers consume stdout and stderr from target VM, use -v EXTRA to copy to console
+# Warmup Iteration   1: 4.144 s/op
+# Warmup Iteration   2: 0.845 s/op
+# Warmup Iteration   3: 0.855 s/op
+# Warmup Iteration   4: 0.768 s/op
+# Warmup Iteration   5: 0.698 s/op
+# Warmup Iteration   6: 0.706 s/op
+# Warmup Iteration   7: 0.705 s/op
+# Warmup Iteration   8: 0.694 s/op
+# Warmup Iteration   9: 0.692 s/op
+# Warmup Iteration  10: 0.696 s/op
+Iteration   1: 0.698 s/op
+                 parseCsv·p0.00:   0.691 s/op
+                 parseCsv·p0.50:   0.698 s/op
+                 parseCsv·p0.90:   0.705 s/op
+                 parseCsv·p0.95:   0.705 s/op
+                 parseCsv·p0.99:   0.705 s/op
+                 parseCsv·p0.999:  0.705 s/op
+                 parseCsv·p0.9999: 0.705 s/op
+                 parseCsv·p1.00:   0.705 s/op
+
+Iteration   2: 0.758 s/op
+                 parseCsv·p0.00:   0.689 s/op
+                 parseCsv·p0.50:   0.758 s/op
+                 parseCsv·p0.90:   0.826 s/op
+                 parseCsv·p0.95:   0.826 s/op
+                 parseCsv·p0.99:   0.826 s/op
+                 parseCsv·p0.999:  0.826 s/op
+                 parseCsv·p0.9999: 0.826 s/op
+                 parseCsv·p1.00:   0.826 s/op
+
+Iteration   3: 0.698 s/op
+                 parseCsv·p0.00:   0.696 s/op
+                 parseCsv·p0.50:   0.698 s/op
+                 parseCsv·p0.90:   0.699 s/op
+                 parseCsv·p0.95:   0.699 s/op
+                 parseCsv·p0.99:   0.699 s/op
+                 parseCsv·p0.999:  0.699 s/op
+                 parseCsv·p0.9999: 0.699 s/op
+                 parseCsv·p1.00:   0.699 s/op
+
+Iteration   4: 0.695 s/op
+                 parseCsv·p0.00:   0.693 s/op
+                 parseCsv·p0.50:   0.695 s/op
+                 parseCsv·p0.90:   0.697 s/op
+                 parseCsv·p0.95:   0.697 s/op
+                 parseCsv·p0.99:   0.697 s/op
+                 parseCsv·p0.999:  0.697 s/op
+                 parseCsv·p0.9999: 0.697 s/op
+                 parseCsv·p1.00:   0.697 s/op
+
+Iteration   5: 0.694 s/op
+                 parseCsv·p0.00:   0.688 s/op
+                 parseCsv·p0.50:   0.694 s/op
+                 parseCsv·p0.90:   0.700 s/op
+                 parseCsv·p0.95:   0.700 s/op
+                 parseCsv·p0.99:   0.700 s/op
+                 parseCsv·p0.999:  0.700 s/op
+                 parseCsv·p0.9999: 0.700 s/op
+                 parseCsv·p1.00:   0.700 s/op
+
+Iteration   6: 0.689 s/op
+                 parseCsv·p0.00:   0.688 s/op
+                 parseCsv·p0.50:   0.689 s/op
+                 parseCsv·p0.90:   0.691 s/op
+                 parseCsv·p0.95:   0.691 s/op
+                 parseCsv·p0.99:   0.691 s/op
+                 parseCsv·p0.999:  0.691 s/op
+                 parseCsv·p0.9999: 0.691 s/op
+                 parseCsv·p1.00:   0.691 s/op
+
+Iteration   7: 0.695 s/op
+                 parseCsv·p0.00:   0.693 s/op
+                 parseCsv·p0.50:   0.695 s/op
+                 parseCsv·p0.90:   0.696 s/op
+                 parseCsv·p0.95:   0.696 s/op
+                 parseCsv·p0.99:   0.696 s/op
+                 parseCsv·p0.999:  0.696 s/op
+                 parseCsv·p0.9999: 0.696 s/op
+                 parseCsv·p1.00:   0.696 s/op
+
+Iteration   8: 0.693 s/op
+                 parseCsv·p0.00:   0.689 s/op
+                 parseCsv·p0.50:   0.693 s/op
+                 parseCsv·p0.90:   0.697 s/op
+                 parseCsv·p0.95:   0.697 s/op
+                 parseCsv·p0.99:   0.697 s/op
+                 parseCsv·p0.999:  0.697 s/op
+                 parseCsv·p0.9999: 0.697 s/op
+                 parseCsv·p1.00:   0.697 s/op
+
+Iteration   9: 0.695 s/op
+                 parseCsv·p0.00:   0.689 s/op
+                 parseCsv·p0.50:   0.695 s/op
+                 parseCsv·p0.90:   0.701 s/op
+                 parseCsv·p0.95:   0.701 s/op
+                 parseCsv·p0.99:   0.701 s/op
+                 parseCsv·p0.999:  0.701 s/op
+                 parseCsv·p0.9999: 0.701 s/op
+                 parseCsv·p1.00:   0.701 s/op
+
+Iteration  10: 0.733 s/op
+                 parseCsv·p0.00:   0.693 s/op
+                 parseCsv·p0.50:   0.733 s/op
+                 parseCsv·p0.90:   0.773 s/op
+                 parseCsv·p0.95:   0.773 s/op
+                 parseCsv·p0.99:   0.773 s/op
+                 parseCsv·p0.999:  0.773 s/op
+                 parseCsv·p0.9999: 0.773 s/op
+                 parseCsv·p1.00:   0.773 s/op
+
+# Processing profiler results: LinuxPerfAsmProfiler 
+
+
+Result "parseCsv":
+  N = 20
+  mean =      0.705 ±(99.9%) 0.029 s/op
+
+  Histogram, s/op:
+    [0.600, 0.625) = 0 
+    [0.625, 0.650) = 0 
+    [0.650, 0.675) = 0 
+    [0.675, 0.700) = 15 
+    [0.700, 0.725) = 3 
+    [0.725, 0.750) = 0 
+    [0.750, 0.775) = 1 
+    [0.775, 0.800) = 0 
+    [0.800, 0.825) = 0 
+    [0.825, 0.850) = 1 
+    [0.850, 0.875) = 0 
+
+  Percentiles, s/op:
+      p(0.0000) =      0.688 s/op
+     p(50.0000) =      0.695 s/op
+     p(90.0000) =      0.766 s/op
+     p(95.0000) =      0.824 s/op
+     p(99.0000) =      0.826 s/op
+     p(99.9000) =      0.826 s/op
+     p(99.9900) =      0.826 s/op
+     p(99.9990) =      0.826 s/op
+     p(99.9999) =      0.826 s/op
+    p(100.0000) =      0.826 s/op
+
+Secondary result "·asm":
+PrintAssembly processed: 281791 total address lines.
+Perf output processed (skipped 17.735 seconds):
+ Column 1: cycles (18088 events)
+ Column 2: instructions (17967 events)
+
+Hottest code regions (>10.00% "cycles" events):
+
+....[Hottest Region 1]..............................................................................
+C2, level 4, org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer, version 584 (841 bytes) 
+
+                         0x00007fd8b1278aa2: mov    %r8d,0x18(%rsp)
+                         0x00007fd8b1278aa7: mov    %r11d,0x1c(%rsp)
+                         0x00007fd8b1278aac: data16 xchg %ax,%ax
+                         0x00007fd8b1278aaf: callq  0x00007fd8b10051a0  ; OopMap{[0]=Oop [40]=Oop [80]=NarrowOop off=308}
+                                                                       ;*ifne
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                                                       ;   {runtime_call}
+                         0x00007fd8b1278ab4: callq  0x00007fd8c7bc50b0  ;*ifne
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                                                       ;   {runtime_call}
+  0.66%    0.91%         0x00007fd8b1278ab9: mov    0x20(%rsp),%r11
+  1.29%    1.46%         0x00007fd8b1278abe: mov    0x14(%r11),%r9d    ;*getfield cellStart
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@3 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.88%    0.79%         0x00007fd8b1278ac2: lea    0x10(%rbx,%r9,2),%r13  ;*invokestatic arraycopy
+                                                                       ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                                                       ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.69%    0.51%         0x00007fd8b1278ac7: cmp    %r10d,%r9d
+                  ╭      0x00007fd8b1278aca: jge    0x00007fd8b1278ae5  ;*if_icmpge
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@10 (line 30)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.13%    0.10%  │      0x00007fd8b1278acc: cmp    (%rsp),%r9d
+                  │      0x00007fd8b1278ad0: jae    0x00007fd8b12790a0
+  0.09%    0.16%  │      0x00007fd8b1278ad6: movzwl 0x0(%r13),%r8d     ;*caload
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@16 (line 30)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  1.56%    1.26%  │      0x00007fd8b1278adb: cmp    $0x22,%r8d
+                  │      0x00007fd8b1278adf: je     0x00007fd8b12791b9  ;*aload
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@36 (line 35)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                  │                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.44%    0.42%  ↘      0x00007fd8b1278ae5: mov    %r10d,%r8d
+  0.03%    0.04%         0x00007fd8b1278ae8: sub    %r9d,%r8d          ;*isub
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@45 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.17%    0.14%         0x00007fd8b1278aeb: mov    0x28(%rsp),%rcx
+  0.06%    0.11%         0x00007fd8b1278af0: mov    0x8(%rcx),%edx     ; implicit exception: dispatches to 0x00007fd8b127924d
+  0.41%    0.40%         0x00007fd8b1278af3: cmp    $0xf8019315,%edx   ;   {metadata(&apos;org/github/arnaudroger/csv/StringArrayCellConsumer&apos;)}
+                         0x00007fd8b1278af9: jne    0x00007fd8b127901d
+  0.15%    0.15%         0x00007fd8b1278aff: mov    %rbx,0x28(%rsp)
+  0.10%    0.09%         0x00007fd8b1278b04: mov    %rcx,%r11          ;*invokeinterface newCell
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.09%    0.09%         0x00007fd8b1278b07: mov    0x10(%r11),%ebp    ;*getfield currentIndex
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@1 (line 28)
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.35%    0.24%         0x00007fd8b1278b0b: mov    0x14(%r11),%edx    ;*getfield currentLength
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@5 (line 28)
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.12%    0.19%         0x00007fd8b1278b0f: cmp    %edx,%ebp
+                         0x00007fd8b1278b11: jge    0x00007fd8b12790d1  ;*if_icmplt
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.29%    0.31%         0x00007fd8b1278b17: mov    0x60(%r15),%rbx
+  0.06%    0.09%         0x00007fd8b1278b1b: mov    0x1c(%r11),%esi    ;*getfield currentRow
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@5 (line 23)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.37%    0.27%         0x00007fd8b1278b1f: mov    %esi,0x80(%rsp)
+  0.04%    0.04%         0x00007fd8b1278b26: mov    %rbx,%rdx
+  0.27%    0.42%         0x00007fd8b1278b29: add    $0x18,%rdx
+  0.06%    0.07%         0x00007fd8b1278b2d: cmp    0x70(%r15),%rdx
+                         0x00007fd8b1278b31: jae    0x00007fd8b1278e54
+  0.30%    0.21%         0x00007fd8b1278b37: mov    %rdx,0x60(%r15)
+  0.04%    0.06%         0x00007fd8b1278b3b: prefetchnta 0xc0(%rdx)
+  0.25%    0.41%         0x00007fd8b1278b42: mov    0x18(%rsp),%rdx
+  0.06%    0.03%         0x00007fd8b1278b47: mov    0xa8(%rdx),%rdx
+  0.30%    0.30%         0x00007fd8b1278b4e: mov    %rdx,(%rbx)
+  0.11%    0.09%         0x00007fd8b1278b51: movl   $0xf80002da,0x8(%rbx)  ;   {metadata(&apos;java/lang/String&apos;)}
+  0.31%    0.28%         0x00007fd8b1278b58: mov    %r12d,0xc(%rbx)
+  0.07%    0.09%         0x00007fd8b1278b5c: mov    %r12,0x10(%rbx)    ;*new  ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@12 (line 23)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.27%    0.27%         0x00007fd8b1278b60: test   %r9d,%r9d
+                         0x00007fd8b1278b63: jl     0x00007fd8b1279109  ;*ifge
+                                                                       ; - java.lang.String::&lt;init&gt;@5 (line 191)
+                                                                       ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                                                       ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                                                       ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.08%    0.16%         0x00007fd8b1278b69: test   %r8d,%r8d
+                   ╭     0x00007fd8b1278b6c: jle    0x00007fd8b1278d8d  ;*iload_2
+                   │                                                   ; - java.lang.String::&lt;init&gt;@50 (line 204)
+                   │                                                   ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │                                                   ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │                                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │                                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.19%    0.23%   │ ↗   0x00007fd8b1278b72: mov    (%rsp),%eax
+  0.04%    0.12%   │ │   0x00007fd8b1278b75: sub    %r8d,%eax          ;*isub
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@54 (line 204)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.25%    0.29%   │ │   0x00007fd8b1278b78: cmp    %eax,%r9d
+                   │ │   0x00007fd8b1278b7b: jg     0x00007fd8b1279141  ;*if_icmple
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@55 (line 204)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.09%    0.12%   │ │   0x00007fd8b1278b81: test   %r8d,%r8d
+                   │ │   0x00007fd8b1278b84: jl     0x00007fd8b127917d  ;*ifge
+                   │ │                                                 ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.21%    0.23%   │ │   0x00007fd8b1278b8a: cmp    $0x80000,%r8d
+                   │ │   0x00007fd8b1278b91: ja     0x00007fd8b1279015
+  0.06%    0.08%   │ │   0x00007fd8b1278b97: movslq %r8d,%rax
+  0.32%    0.22%   │ │   0x00007fd8b1278b9a: shl    %rax
+  0.07%    0.10%   │ │   0x00007fd8b1278b9d: add    $0x17,%rax
+  0.14%    0.27%   │ │   0x00007fd8b1278ba1: cmp    $0x80000,%r8d
+                   │ │   0x00007fd8b1278ba8: ja     0x00007fd8b1278f4d
+  0.04%    0.08%   │ │   0x00007fd8b1278bae: mov    0x60(%r15),%r14
+  0.28%    0.21%   │ │   0x00007fd8b1278bb2: mov    %rax,%rdx
+  0.06%    0.09%   │ │   0x00007fd8b1278bb5: and    $0xfffffffffffffff8,%rdx
+  0.15%    0.24%   │ │   0x00007fd8b1278bb9: mov    %r14,%rsi
+  0.02%    0.04%   │ │   0x00007fd8b1278bbc: add    %rdx,%rsi
+  0.35%    0.21%   │ │   0x00007fd8b1278bbf: cmp    0x70(%r15),%rsi
+                   │ │   0x00007fd8b1278bc3: jae    0x00007fd8b1278f4d
+  0.09%    0.17%   │ │   0x00007fd8b1278bc9: mov    %rsi,0x60(%r15)
+  0.16%    0.22%   │ │   0x00007fd8b1278bcd: prefetchnta 0xc0(%rsi)
+  0.08%    0.14%   │ │   0x00007fd8b1278bd4: movq   $0x1,(%r14)
+  1.00%    0.76%   │ │   0x00007fd8b1278bdb: prefetchnta 0x100(%rsi)
+  0.08%    0.11%   │ │   0x00007fd8b1278be2: movl   $0xf8000041,0x8(%r14)  ;   {metadata({type array char})}
+  0.44%    0.46%   │ │   0x00007fd8b1278bea: mov    %r8d,0xc(%r14)
+  0.37%    0.27%   │ │   0x00007fd8b1278bee: prefetchnta 0x140(%rsi)
+  0.13%    0.10%   │ │   0x00007fd8b1278bf5: prefetchnta 0x180(%rsi)
+  0.08%    0.07%   │ │   0x00007fd8b1278bfc: mov    %rcx,0x8(%rsp)
+  0.11%    0.06%   │ │   0x00007fd8b1278c01: mov    %edi,0x4(%rsp)
+  0.45%    0.33%   │ │   0x00007fd8b1278c05: mov    %r10d,0x14(%rsp)
+  0.09%    0.12%   │ │   0x00007fd8b1278c0a: mov    %r9d,0x30(%rsp)
+  0.08%    0.06%   │ │   0x00007fd8b1278c0f: mov    %r13,0x38(%rsp)
+  0.02%    0.04%   │ │   0x00007fd8b1278c14: mov    %r8d,0x34(%rsp)
+  0.30%    0.32%   │ │   0x00007fd8b1278c19: mov    %r11,0x40(%rsp)
+  0.20%    0.13%   │ │   0x00007fd8b1278c1e: mov    %ebp,0x48(%rsp)
+  0.17%    0.20%   │ │   0x00007fd8b1278c22: mov    %rbx,0x58(%rsp)
+  0.31%    0.33%   │ │   0x00007fd8b1278c27: mov    %rax,0x60(%rsp)    ;*newarray
+                   │ │                                                 ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.44%    0.57%   │ │   0x00007fd8b1278c2c: mov    (%rsp),%r10d
+  0.04%    0.07%   │ │   0x00007fd8b1278c30: sub    0x30(%rsp),%r10d   ;*isub
+                   │ │                                                 ; - java.util.Arrays::copyOfRange@52 (line 3665)
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.07%    0.13%   │ │   0x00007fd8b1278c35: mov    %r14,%r11
+  0.03%    0.03%   │ │   0x00007fd8b1278c38: add    $0x10,%r11         ;*invokestatic arraycopy
+                   │ │                                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.49%    0.57%   │ │   0x00007fd8b1278c3c: mov    %r11,%rsi
+  0.05%    0.07%   │ │   0x00007fd8b1278c3f: mov    %r14,0x68(%rsp)
+  0.06%    0.10%   │ │   0x00007fd8b1278c44: cmp    0x34(%rsp),%r10d
+  0.44%    0.38%   │ │   0x00007fd8b1278c49: mov    0x34(%rsp),%r9d
+  0.33%    0.34%   │ │   0x00007fd8b1278c4e: cmovl  %r10d,%r9d         ;*invokestatic min
+                   │ │                                                 ; - java.util.Arrays::copyOfRange@54 (line 3666)
+                   │ │                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │ │                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │ │                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.64%    0.68%   │ │   0x00007fd8b1278c52: mov    %r9d,%r10d
+  0.02%    0.04%   │ │   0x00007fd8b1278c55: add    0x30(%rsp),%r10d
+  0.45%    0.78%   │ │   0x00007fd8b1278c5a: mov    0x60(%rsp),%r11
+  0.06%    0.07%   │ │   0x00007fd8b1278c5f: shr    $0x3,%r11
+  0.13%    0.16%   │ │   0x00007fd8b1278c63: mov    %r11,%rcx
+  0.01%    0.04%   │ │   0x00007fd8b1278c66: add    $0xfffffffffffffffe,%rcx
+  0.39%    0.88%   │ │   0x00007fd8b1278c6a: mov    (%rsp),%ebx
+  0.03%    0.02%   │ │   0x00007fd8b1278c6d: cmp    %r10d,%ebx
+                   │ │   0x00007fd8b1278c70: jb     0x00007fd8b1279061
+  0.03%    0.05%   │ │   0x00007fd8b1278c76: mov    0x34(%rsp),%ebp
+  0.03%    0.01%   │ │   0x00007fd8b1278c7a: cmp    %r9d,%ebp
+                   │ │   0x00007fd8b1278c7d: jb     0x00007fd8b1279061
+  0.45%    0.65%   │ │   0x00007fd8b1278c83: test   %r9d,%r9d
+                   │ │   0x00007fd8b1278c86: jle    0x00007fd8b1279089
+  0.08%    0.09%   │ │   0x00007fd8b1278c8c: movslq %r9d,%rdx
+  0.01%    0.06%   │ │   0x00007fd8b1278c8f: cmp    0x34(%rsp),%r9d
+                   │╭│   0x00007fd8b1278c94: jl     0x00007fd8b1278e11
+  0.19%    0.23%   │││   0x00007fd8b1278c9a: mov    0x38(%rsp),%rdi
+  0.34%    0.47%   │││   0x00007fd8b1278c9f: movabs $0x7fd8b1052580,%r10
+  0.03%    0.03%   │││   0x00007fd8b1278ca9: callq  *%r10              ;*invokestatic arraycopy
+                   │││                                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                   │││                                                 ; - java.lang.String::&lt;init&gt;@75 (line 207)
+                   │││                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.34%    0.22%   │││   0x00007fd8b1278cac: mov    0x68(%rsp),%r10
+  0.14%    0.11%   │││   0x00007fd8b1278cb1: shr    $0x3,%r10
+  0.16%    0.13%   │││   0x00007fd8b1278cb5: mov    0x58(%rsp),%rbx
+  0.30%    0.31%   │││   0x00007fd8b1278cba: mov    %r10d,0xc(%rbx)
+  0.15%    0.11%   │││   0x00007fd8b1278cbe: mov    %rbx,%r10
+  0.11%    0.07%   │││   0x00007fd8b1278cc1: shr    $0x9,%r10
+  0.17%    0.12%   │││   0x00007fd8b1278cc5: movabs $0x7fd8c192f000,%r11
+  0.26%    0.21%   │││   0x00007fd8b1278ccf: mov    %r12b,(%r11,%r10,1)  ;*putfield value
+                   │││                                                 ; - java.lang.String::&lt;init&gt;@78 (line 207)
+                   │││                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.14%    0.06%   │││   0x00007fd8b1278cd3: mov    0x8(%rsp),%rcx
+  0.09%    0.07%   │││   0x00007fd8b1278cd8: mov    0x4(%rsp),%edi
+  0.19%    0.14%   │││   0x00007fd8b1278cdc: mov    0x14(%rsp),%r10d
+  0.29%    0.27%   │││   0x00007fd8b1278ce1: mov    0x40(%rsp),%r11
+  0.12%    0.06%   │││   0x00007fd8b1278ce6: mov    0x48(%rsp),%ebp    ;*synchronization entry
+                   │││                                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@-1 (line 22)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   │││                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.22%    0.17%   │││↗  0x00007fd8b1278cea: mov    0x80(%rsp),%r9d
+  0.18%    0.17%   ││││  0x00007fd8b1278cf2: mov    0xc(%r12,%r9,8),%r9d  ; implicit exception: dispatches to 0x00007fd8b1279265
+  0.39%    0.39%   ││││  0x00007fd8b1278cf7: cmp    %r9d,%ebp
+                   ││││  0x00007fd8b1278cfa: jae    0x00007fd8b1278fe5  ;*aastore
+                   ││││                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.20%    0.17%   ││││  0x00007fd8b1278d00: mov    0x20(%rsp),%r10
+  0.09%    0.13%   ││││  0x00007fd8b1278d05: mov    %edi,0x14(%r10)    ;*putfield cellStart
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::startNextCell@4 (line 165)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@13 (line 161)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.27%    0.25%   ││││  0x00007fd8b1278d09: incl   0x10(%r11)         ;*putfield currentIndex
+                   ││││                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@30 (line 24)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.53%    0.45%   ││││  0x00007fd8b1278d0d: mov    0x80(%rsp),%r10d
+  0.18%    0.11%   ││││  0x00007fd8b1278d15: shl    $0x3,%r10          ;*getfield currentRow
+                   ││││                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@5 (line 23)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.24%    0.24%   ││││  0x00007fd8b1278d19: lea    0x10(%r10,%rbp,4),%r11
+  0.10%    0.10%   ││││  0x00007fd8b1278d1e: mov    %rbx,%r10
+  0.15%    0.11%   ││││  0x00007fd8b1278d21: shr    $0x3,%r10
+  0.19%    0.08%   ││││  0x00007fd8b1278d25: mov    %r10d,(%r11)
+  0.55%    0.61%   ││││  0x00007fd8b1278d28: mov    %r11,%r10
+  0.08%    0.05%   ││││  0x00007fd8b1278d2b: shr    $0x9,%r10
+  0.12%    0.07%   ││││  0x00007fd8b1278d2f: movabs $0x7fd8c192f000,%r11
+  0.14%    0.11%   ││││  0x00007fd8b1278d39: mov    %r12b,(%r11,%r10,1)  ;*aastore
+                   ││││                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.37%    0.26%   ││││  0x00007fd8b1278d3d: mov    $0x4,%ebp
+  0.04%    0.06%   ││││  0x00007fd8b1278d42: mov    0x28(%rsp),%rbx
+  0.13%    0.10%   ││││  0x00007fd8b1278d47: jmpq   0x00007fd8b1278a2c
+  0.06%    0.10%   ││││  0x00007fd8b1278d4c: and    $0x2,%ebp          ;*iand
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::lastCharWasNotCr@2 (line 190)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+  0.11%    0.18%   ││││  0x00007fd8b1278d4f: test   %ebp,%ebp
+                   ││││  0x00007fd8b1278d51: jne    0x00007fd8b12791f1  ;*ifne
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+  0.07%    0.13%   ││││  0x00007fd8b1278d57: mov    %r10d,%ebp
+  0.03%    0.02%   ││││  0x00007fd8b1278d5a: mov    %rbx,0x8(%rsp)
+  0.15%    0.18%   ││││  0x00007fd8b1278d5f: mov    %edi,0x4(%rsp)
+  0.04%    0.02%   ││││  0x00007fd8b1278d63: mov    0x20(%rsp),%rsi
+  0.07%    0.14%   ││││  0x00007fd8b1278d68: mov    %rbx,%rdx
+  0.02%    0.02%   ││││  0x00007fd8b1278d6b: mov    %r10d,%ecx
+  0.02%    0.03%   ││││  0x00007fd8b1278d6e: mov    0x28(%rsp),%r8
+  0.03%    0.03%   ││││  0x00007fd8b1278d73: callq  0x00007fd8b1046020  ; OopMap{[8]=Oop [32]=Oop [40]=Oop [80]=NarrowOop off=1016}
+                   ││││                                                ;*invokespecial endOfRow
+                   ││││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                   ││││                                                ;   {optimized virtual_call}
+  0.04%    0.01%   ││││  0x00007fd8b1278d78: xor    %ebp,%ebp
+  0.07%    0.05%   ││││  0x00007fd8b1278d7a: mov    0x28(%rsp),%rcx
+  0.01%    0.03%   ││││  0x00007fd8b1278d7f: mov    0x4(%rsp),%edi
+  0.02%    0.04%   ││││  0x00007fd8b1278d83: mov    0x8(%rsp),%rbx
+  0.07%    0.07%   ││││  0x00007fd8b1278d88: jmpq   0x00007fd8b1278a2c
+  0.09%    0.12%   ↘│││  0x00007fd8b1278d8d: test   %r8d,%r8d
+                    │││  0x00007fd8b1278d90: jl     0x00007fd8b1279205  ;*ifge
+                    │││                                                ; - java.lang.String::&lt;init&gt;@22 (line 195)
+                    │││                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                    │││                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                    │││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                    │││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+           0.02%    │││  0x00007fd8b1278d96: cmp    (%rsp),%r9d
+                    │╰│  0x00007fd8b1278d9a: jg     0x00007fd8b1278b72  ;*if_icmpgt
+                    │ │                                                ; - java.lang.String::&lt;init&gt;@37 (line 198)
+                    │ │                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.01%    0.01%    │ │  0x00007fd8b1278da0: movl   $0xed9e14c7,0xc(%rbx)  ;   {oop([C)}
+           0.01%    │ │  0x00007fd8b1278da7: mov    %rbx,%r8
+  0.12%    0.13%    │ │  0x00007fd8b1278daa: shr    $0x9,%r8
+  0.01%    0.02%    │ │  0x00007fd8b1278dae: movabs $0x7fd8c192f000,%r9
+                    │ │  0x00007fd8b1278db8: mov    %r12b,(%r9,%r8,1)  ;*putfield value
+                    │ │                                                ; - java.lang.String::&lt;init&gt;@46 (line 199)
+                    │ │                                                ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                    │ │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  0.01%    0.01%    │ ╰  0x00007fd8b1278dbc: jmpq   0x00007fd8b1278cea
+  0.01%             │    0x00007fd8b1278dc1: mov    %r10d,0x14(%rsp)
+                    │    0x00007fd8b1278dc6: mov    %rbx,0x8(%rsp)
+                    │    0x00007fd8b1278dcb: mov    %edi,0x4(%rsp)
+                    │    0x00007fd8b1278dcf: mov    %ebp,%esi
+                    │    0x00007fd8b1278dd1: xchg   %ax,%ax
+                    │    0x00007fd8b1278dd3: callq  0x00007fd8b1046420  ; OopMap{[8]=Oop [32]=Oop [40]=Oop [80]=NarrowOop off=1112}
+                    │                                                  ;*invokestatic canEscaped
+                    │                                                  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@179 (line 67)
+                    │                                                  ;   {static_call}
+  0.01%             │    0x00007fd8b1278dd8: test   %eax,%eax
+                    │    0x00007fd8b1278dda: je     0x00007fd8b1278e41  ;*ifeq
+                    │                                                  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@182 (line 67)
+                    │    0x00007fd8b1278ddc: xor    $0x1,%ebp
+                    │    0x00007fd8b1278ddf: or     $0x8,%ebp          ;*ior  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@191 (line 68)
+                    │    0x00007fd8b1278de2: mov    0x28(%rsp),%rcx
+                    │    0x00007fd8b1278de7: mov    0x4(%rsp),%edi
+                    │    0x00007fd8b1278deb: mov    0x8(%rsp),%rbx
+                    │    0x00007fd8b1278df0: jmpq   0x00007fd8b1278a2c  ;*if_icmpge
+                    │                                                  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+  0.01%    0.02%    │    0x00007fd8b1278df5: mov    0x20(%rsp),%r10
+  0.01%    0.02%    │    0x00007fd8b1278dfa: mov    %ebp,0x10(%r10)    ;*putfield _currentState
+                    │                                                  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@203 (line 71)
+  0.01%    0.02%    │    0x00007fd8b1278dfe: mov    %edi,0xc(%r10)     ;*synchronization entry
+                    │                                                  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+  0.01%             │    0x00007fd8b1278e02: add    $0xa0,%rsp
+                    │    0x00007fd8b1278e09: pop    %rbp
+                    │    0x00007fd8b1278e0a: test   %eax,0x17c3f1f0(%rip)        # 0x00007fd8c8eb8000
+                    │                                                  ;   {poll_return}
+                    │    0x00007fd8b1278e10: retq   
+                    ↘    0x00007fd8b1278e11: mov    %rdx,%r10
+                         0x00007fd8b1278e14: shl    %r10
+                         0x00007fd8b1278e17: add    $0x10,%r10
+                         0x00007fd8b1278e1b: mov    %r10,%r8
+                         0x00007fd8b1278e1e: and    $0xfffffffffffffff9,%r8
+....................................................................................................
+ 29.11%   30.07%  <total for region 1>
+
+....[Hottest Region 2]..............................................................................
+C2, level 4, org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer, version 584 (214 bytes) 
+
+                      0x00007fd8b127898b: jne    0x00007fd8b1045e20  ;   {runtime_call}
+                      0x00007fd8b1278991: data16 xchg %ax,%ax
+                      0x00007fd8b1278994: nopl   0x0(%rax,%rax,1)
+                      0x00007fd8b127899c: data16 data16 xchg %ax,%ax
+                    [Verified Entry Point]
+                      0x00007fd8b12789a0: mov    %eax,-0x14000(%rsp)
+                      0x00007fd8b12789a7: push   %rbp
+                      0x00007fd8b12789a8: sub    $0xa0,%rsp         ;*synchronization entry
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+                      0x00007fd8b12789af: mov    %rdx,0x28(%rsp)
+  0.01%    0.01%      0x00007fd8b12789b4: mov    %rsi,0x20(%rsp)
+                      0x00007fd8b12789b9: mov    0x1c(%rsi),%r10d   ;*getfield _csvBuffer
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@1 (line 36)
+  0.01%               0x00007fd8b12789bd: mov    0xc(%r12,%r10,8),%r8d  ;*getfield bufferSize
+                                                                    ; - org.github.arnaudroger.csv.alt.CharBuffer2::getBufferSize@1 (line 24)
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@12 (line 37)
+                                                                    ; implicit exception: dispatches to 0x00007fd8b1279279
+  0.01%    0.01%      0x00007fd8b12789c2: mov    %r8d,0x10(%rsp)
+                      0x00007fd8b12789c7: mov    0x10(%rsi),%ebp    ;*getfield _currentState
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@17 (line 39)
+                      0x00007fd8b12789ca: mov    0xc(%rsi),%edi     ;*getfield _currentIndex
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@23 (line 42)
+                      0x00007fd8b12789cd: cmp    %r8d,%edi
+                      0x00007fd8b12789d0: jge    0x00007fd8b1278df5  ;*if_icmpge
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+  0.02%               0x00007fd8b12789d6: mov    0x10(%r12,%r10,8),%r10d  ;*getfield buffer
+                                                                    ; - org.github.arnaudroger.csv.alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+                      0x00007fd8b12789db: mov    %r10d,0x50(%rsp)
+                      0x00007fd8b12789e0: mov    0xc(%r12,%r10,8),%r11d  ;*caload
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+                                                                    ; implicit exception: dispatches to 0x00007fd8b1279239
+  0.01%               0x00007fd8b12789e5: mov    %r11d,(%rsp)
+                      0x00007fd8b12789e9: cmp    %r11d,%edi
+                      0x00007fd8b12789ec: jae    0x00007fd8b1279239
+  0.01%               0x00007fd8b12789f2: mov    %r8d,%r11d
+                      0x00007fd8b12789f5: dec    %r11d
+                      0x00007fd8b12789f8: cmp    (%rsp),%r11d
+                      0x00007fd8b12789fc: jae    0x00007fd8b1279239  ;*aload_2
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+  0.02%               0x00007fd8b1278a02: lea    (%r12,%r10,8),%rbx  ;*getfield buffer
+                                                                    ; - org.github.arnaudroger.csv.alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+                      0x00007fd8b1278a06: mov    $0xf80002da,%r11d  ;   {metadata(&apos;java/lang/String&apos;)}
+                      0x00007fd8b1278a0c: movabs $0x0,%r10
+                      0x00007fd8b1278a16: lea    (%r10,%r11,8),%r10
+  0.01%    0.01%      0x00007fd8b1278a1a: mov    %r10,0x18(%rsp)
+                      0x00007fd8b1278a1f: mov    %edi,%r10d
+                  ╭   0x00007fd8b1278a22: jmp    0x00007fd8b1278a3e
+  1.37%    1.12%  │↗  0x00007fd8b1278a24: or     $0x10,%ebp         ;*ior  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@171 (line 66)
+  1.12%    0.87%  ││  0x00007fd8b1278a27: mov    0x28(%rsp),%rcx    ;*goto
+                  ││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@106 (line 54)
+  1.57%    1.59%  ││  0x00007fd8b1278a2c: cmp    0x10(%rsp),%edi
+                  ││  0x00007fd8b1278a30: jge    0x00007fd8b1278df5
+  1.45%    1.35%  ││  0x00007fd8b1278a36: mov    %edi,%r10d
+  1.25%    1.51%  ││  0x00007fd8b1278a39: mov    %rcx,0x28(%rsp)    ;*aload_2
+                  ││                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+  1.25%    1.87%  ↘│  0x00007fd8b1278a3e: movzwl 0x10(%rbx,%r10,2),%r8d  ;*caload
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+  1.24%    1.65%   │  0x00007fd8b1278a44: mov    %r10d,%edi
+  1.48%    1.96%   │  0x00007fd8b1278a47: inc    %edi               ;*iadd
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::startNextCell@3 (line 165)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@13 (line 161)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+  1.26%    2.07%   │  0x00007fd8b1278a49: cmp    $0x22,%r8d
+                   │  0x00007fd8b1278a4d: je     0x00007fd8b1278dc1  ;*if_icmpeq
+                   │                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::isNotEscapeCharacter@3 (line 21)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@43 (line 44)
+  1.52%    2.14%   │  0x00007fd8b1278a53: mov    %ebp,%r9d
+  1.27%    1.55%   │  0x00007fd8b1278a56: and    $0x1,%r9d          ;*iand
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@2 (line 186)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+  1.43%    1.57%   │  0x00007fd8b1278a5a: test   %r9d,%r9d
+                   │  0x00007fd8b1278a5d: jne    0x00007fd8b1278f98  ;*ifne
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@3 (line 186)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+  1.35%    1.61%   │  0x00007fd8b1278a63: cmp    $0x2c,%r8d
+                   │  0x00007fd8b1278a67: je     0x00007fd8b1278ab9  ;*if_icmpne
+                   │                                                ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::isSeparator@3 (line 16)
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@60 (line 46)
+  1.46%    1.59%   │  0x00007fd8b1278a69: cmp    $0xa,%r8d
+                   │  0x00007fd8b1278a6d: je     0x00007fd8b1278d4c  ;*if_icmpne
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@84 (line 50)
+  1.22%    1.37%   │  0x00007fd8b1278a73: cmp    $0xd,%r8d
+                   │  0x00007fd8b1278a77: je     0x00007fd8b1278fc1  ;*if_icmpne
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+  1.14%    1.41%   │  0x00007fd8b1278a7d: mov    0x20(%rsp),%r11
+  1.44%    1.47%   │  0x00007fd8b1278a82: movzbl 0x18(%r11),%r11d   ;*getfield notIgnoreLeadingSpace
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@152 (line 66)
+  1.71%    1.94%   │  0x00007fd8b1278a87: and    $0xfffffff9,%ebp   ;*iand
+                   │                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@146 (line 65)
+  0.93%    1.14%   │  0x00007fd8b1278a8a: test   %r11d,%r11d
+                   ╰  0x00007fd8b1278a8d: jne    0x00007fd8b1278a24  ;*ifne
+                                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                      0x00007fd8b1278a8f: mov    $0xffffff65,%esi
+                      0x00007fd8b1278a94: rex.W pushq 0x20(%rsp)
+                      0x00007fd8b1278a99: rex.W popq (%rsp)
+                      0x00007fd8b1278a9d: mov    %r10d,0x14(%rsp)
+                      0x00007fd8b1278aa2: mov    %r8d,0x18(%rsp)
+                      0x00007fd8b1278aa7: mov    %r11d,0x1c(%rsp)
+                      0x00007fd8b1278aac: data16 xchg %ax,%ax
+....................................................................................................
+ 25.56%   29.81%  <total for region 2>
+
+....[Hottest Region 3]..............................................................................
+C2, level 4, sun.nio.cs.UTF_8$Decoder::decodeArrayLoop, version 677 (902 bytes) 
+
+                                    #           [sp+0x80]  (sp of caller)
+                                    0x00007fd8b1336900: mov    0x8(%rsi),%r10d
+                                    0x00007fd8b1336904: shl    $0x3,%r10
+                                    0x00007fd8b1336908: cmp    %r10,%rax
+                                    0x00007fd8b133690b: jne    0x00007fd8b1045e20  ;   {runtime_call}
+                                    0x00007fd8b1336911: data16 xchg %ax,%ax
+                                    0x00007fd8b1336914: nopl   0x0(%rax,%rax,1)
+                                    0x00007fd8b133691c: data16 data16 xchg %ax,%ax
+                                  [Verified Entry Point]
+                                    0x00007fd8b1336920: mov    %eax,-0x14000(%rsp)
+  0.01%    0.02%                    0x00007fd8b1336927: push   %rbp
+                                    0x00007fd8b1336928: sub    $0x70,%rsp         ;*synchronization entry
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@-1 (line 223)
+  0.02%    0.01%                    0x00007fd8b133692c: mov    %rcx,0x18(%rsp)
+  0.01%    0.01%                    0x00007fd8b1336931: mov    %rdx,0x20(%rsp)
+                                    0x00007fd8b1336936: mov    0x2c(%rdx),%r10d   ;*getfield hb
+                                                                                  ; - java.nio.ByteBuffer::array@1 (line 993)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@1 (line 223)
+                                                                                  ; implicit exception: dispatches to 0x00007fd8b1337f85
+                                    0x00007fd8b133693a: mov    %r10d,0x28(%rsp)
+  0.01%    0.03%                    0x00007fd8b133693f: mov    0xc(%r12,%r10,8),%r14d  ;*baload
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+                                                                                  ; implicit exception: dispatches to 0x00007fd8b1337fa5
+           0.01%                    0x00007fd8b1336944: movzbl 0x28(%rdx),%ebp    ;*getfield isReadOnly
+                                                                                  ; - java.nio.ByteBuffer::array@16 (line 995)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@1 (line 223)
+                                    0x00007fd8b1336948: test   %ebp,%ebp
+                                    0x00007fd8b133694a: jne    0x00007fd8b1337715  ;*ifeq
+                                                                                  ; - java.nio.ByteBuffer::array@19 (line 995)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@1 (line 223)
+                                    0x00007fd8b1336950: mov    0x2c(%rcx),%edi    ;*getfield hb
+                                                                                  ; - java.nio.CharBuffer::array@1 (line 993)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@28 (line 227)
+                                                                                  ; implicit exception: dispatches to 0x00007fd8b1337f95
+  0.02%    0.02%                    0x00007fd8b1336953: mov    0x18(%rdx),%ecx    ;*getfield position
+                                                                                  ; - java.nio.Buffer::position@1 (line 226)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@10 (line 224)
+                                    0x00007fd8b1336956: mov    0x1c(%rdx),%r9d    ;*getfield limit
+                                                                                  ; - java.nio.Buffer::limit@1 (line 256)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@21 (line 225)
+                                    0x00007fd8b133695a: mov    0x24(%rdx),%r8d    ;*getfield offset
+                                                                                  ; - java.nio.ByteBuffer::arrayOffset@31 (line 1025)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@6 (line 224)
+                                    0x00007fd8b133695e: mov    %r8d,%r10d
+  0.02%    0.02%                    0x00007fd8b1336961: add    %ecx,%r10d         ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@13 (line 224)
+           0.01%                    0x00007fd8b1336964: add    %r9d,%r8d          ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@24 (line 225)
+                                    0x00007fd8b1336967: mov    0xc(%r12,%rdi,8),%esi  ;*castore
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+                                                                                  ; implicit exception: dispatches to 0x00007fd8b1337fb9
+  0.02%                             0x00007fd8b133696c: mov    0x18(%rsp),%r11
+  0.01%    0.03%                    0x00007fd8b1336971: movzbl 0x28(%r11),%ebp    ;*getfield isReadOnly
+                                                                                  ; - java.nio.CharBuffer::array@16 (line 995)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@28 (line 227)
+                                    0x00007fd8b1336976: test   %ebp,%ebp
+                                    0x00007fd8b1336978: jne    0x00007fd8b1337729  ;*ifeq
+                                                                                  ; - java.nio.CharBuffer::array@19 (line 995)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@28 (line 227)
+                                    0x00007fd8b133697e: mov    0x1c(%r11),%r11d   ;*getfield limit
+                                                                                  ; - java.nio.Buffer::limit@1 (line 256)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@49 (line 229)
+                                    0x00007fd8b1336982: mov    0x18(%rsp),%rbx
+  0.01%    0.01%                    0x00007fd8b1336987: mov    0x18(%rbx),%ebp    ;*getfield position
+                                                                                  ; - java.nio.Buffer::position@1 (line 226)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@38 (line 228)
+           0.01%                    0x00007fd8b133698a: sub    %ecx,%r9d          ;*isub
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@61 (line 230)
+                                    0x00007fd8b133698d: mov    %r11d,%ecx
+                                    0x00007fd8b1336990: sub    %ebp,%ecx          ;*isub
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@66 (line 230)
+  0.03%    0.02%                    0x00007fd8b1336992: mov    0x24(%rbx),%eax    ;*getfield offset
+                                                                                  ; - java.nio.CharBuffer::arrayOffset@31 (line 1025)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@34 (line 228)
+                                    0x00007fd8b1336995: cmp    %ecx,%r9d
+  0.01%                             0x00007fd8b1336998: cmovl  %r9d,%ecx
+  0.01%    0.02%                    0x00007fd8b133699c: mov    %eax,%edx
+                                    0x00007fd8b133699e: add    %r11d,%edx         ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@52 (line 229)
+                                    0x00007fd8b13369a1: add    %ebp,%eax          ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@41 (line 228)
+                                    0x00007fd8b13369a3: add    %eax,%ecx          ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@70 (line 230)
+  0.02%    0.03%                    0x00007fd8b13369a5: lea    (%r12,%rdi,8),%r11  ;*getfield hb
+                                                                                  ; - java.nio.CharBuffer::array@1 (line 993)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@28 (line 227)
+                                    0x00007fd8b13369a9: mov    0x28(%rsp),%ebx
+                                    0x00007fd8b13369ad: lea    (%r12,%rbx,8),%rbp  ;*getfield hb
+                                                                                  ; - java.nio.ByteBuffer::array@1 (line 993)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@1 (line 223)
+                                    0x00007fd8b13369b1: cmp    %ecx,%eax
+                                    0x00007fd8b13369b3: jge    0x00007fd8b13370c5  ;*if_icmpge
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@77 (line 233)
+  0.01%    0.02%                    0x00007fd8b13369b9: cmp    %r14d,%r10d
+                                    0x00007fd8b13369bc: jae    0x00007fd8b133766d
+                                    0x00007fd8b13369c2: mov    %r10d,%r9d
+                                    0x00007fd8b13369c5: add    %ecx,%r9d
+                                    0x00007fd8b13369c8: sub    %eax,%r9d
+  0.01%    0.01%                    0x00007fd8b13369cb: dec    %r9d
+                                    0x00007fd8b13369ce: cmp    %r14d,%r9d
+                                    0x00007fd8b13369d1: jae    0x00007fd8b133766d  ;*aload_3
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+                                    0x00007fd8b13369d7: sub    %eax,%r10d         ;*iadd
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@13 (line 224)
+                                    0x00007fd8b13369da: mov    %r10d,(%rsp)
+           0.03%                    0x00007fd8b13369de: mov    %eax,%r10d
+                                    0x00007fd8b13369e1: inc    %r10d
+  0.01%                             0x00007fd8b13369e4: xor    %r9d,%r9d
+                                    0x00007fd8b13369e7: cmp    %r9d,%r10d
+  0.02%    0.01%                    0x00007fd8b13369ea: cmovl  %r9d,%r10d
+  0.01%                             0x00007fd8b13369ee: cmp    %ecx,%r10d
+           0.01%                    0x00007fd8b13369f1: cmovg  %ecx,%r10d
+           0.02%   ↗                0x00007fd8b13369f5: mov    %eax,%ebx
+           0.01%   │                0x00007fd8b13369f7: add    (%rsp),%ebx        ;*aload_3
+                   │                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+                   │                0x00007fd8b13369fa: movslq %ebx,%r9
+  0.02%    0.03%   │                0x00007fd8b13369fd: movsbl 0x10(%rbp,%r9,1),%r9d  ;*baload
+                   │                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.02%    0.02%   │                0x00007fd8b1336a03: test   %r9d,%r9d
+                   │                0x00007fd8b1336a06: jl     0x00007fd8b1337069  ;*iflt
+                   │                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+                   │                0x00007fd8b1336a0c: mov    %eax,%r13d
+                   │                0x00007fd8b1336a0f: inc    %r13d              ;*iinc
+                   │                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+  0.01%    0.02%   │                0x00007fd8b1336a12: cmp    %esi,%eax
+                   │                0x00007fd8b1336a14: jae    0x00007fd8b133759d
+                   │                0x00007fd8b1336a1a: mov    %r9w,0x10(%r11,%rax,2)  ;*castore
+                   │                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+                   │                0x00007fd8b1336a20: cmp    %r10d,%r13d
+                  ╭│                0x00007fd8b1336a23: jge    0x00007fd8b1336a2a  ;*if_icmpge
+                  ││                                                              ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@77 (line 233)
+                  ││                0x00007fd8b1336a25: mov    %r13d,%eax
+                  │╰                0x00007fd8b1336a28: jmp    0x00007fd8b13369f5
+                  ↘                 0x00007fd8b1336a2a: cmp    %esi,%ecx
+  0.02%    0.01%                    0x00007fd8b1336a2c: mov    %ecx,%r10d
+                                    0x00007fd8b1336a2f: cmovg  %esi,%r10d
+                                    0x00007fd8b1336a33: mov    %r10d,%eax
+  0.02%                             0x00007fd8b1336a36: add    $0xfffffffd,%eax
+                                    0x00007fd8b1336a39: mov    $0x80000000,%r9d
+                                    0x00007fd8b1336a3f: cmp    %eax,%r10d
+                                    0x00007fd8b1336a42: cmovl  %r9d,%eax
+  0.01%    0.01%                    0x00007fd8b1336a46: cmp    %eax,%r13d
+                                    0x00007fd8b1336a49: jge    0x00007fd8b13376a5
+                    ╭               0x00007fd8b1336a4f: jmp    0x00007fd8b1336a57
+  0.46%    0.52%    │    ↗          0x00007fd8b1336a51: mov    %ecx,%r8d
+  0.31%    0.41%    │    │          0x00007fd8b1336a54: mov    %r9d,%ecx
+  0.38%    0.41%    ↘    │          0x00007fd8b1336a57: mov    %r13d,%ebx
+  0.29%    0.23%         │          0x00007fd8b1336a5a: add    (%rsp),%ebx        ;*aload_3
+                         │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+  0.43%    0.40%         │          0x00007fd8b1336a5d: movslq %ebx,%r10
+  0.30%    0.42%         │          0x00007fd8b1336a60: movsbl 0x10(%rbp,%r10,1),%r10d  ;*baload
+                         │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.51%    0.53%         │          0x00007fd8b1336a66: test   %r10d,%r10d
+                     ╭   │          0x00007fd8b1336a69: jl     0x00007fd8b1336b7b  ;*iflt
+                     │   │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+  0.27%    0.46%     │   │          0x00007fd8b1336a6f: mov    %r10w,0x10(%r11,%r13,2)  ;*castore
+                     │   │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+  0.40%    0.48%     │   │          0x00007fd8b1336a75: movslq %ebx,%r10
+  0.43%    0.38%     │   │          0x00007fd8b1336a78: movsbl 0x11(%rbp,%r10,1),%r10d  ;*baload
+                     │   │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.24%    0.53%     │   │          0x00007fd8b1336a7e: test   %r10d,%r10d
+                     │╭  │          0x00007fd8b1336a81: jl     0x00007fd8b1336b66  ;*iflt
+                     ││  │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+  0.40%    0.57%     ││  │          0x00007fd8b1336a87: mov    %ecx,%r9d
+  0.33%    0.47%     ││  │          0x00007fd8b1336a8a: mov    %r8d,%ecx
+  0.28%    0.35%     ││  │          0x00007fd8b1336a8d: mov    %r13d,%r8d
+  0.30%    0.33%     ││  │          0x00007fd8b1336a90: add    (%rsp),%r8d
+  0.38%    0.60%     ││  │          0x00007fd8b1336a94: movslq %r13d,%rbx
+  0.37%    0.45%     ││  │          0x00007fd8b1336a97: mov    %r10w,0x12(%r11,%rbx,2)  ;*castore
+                     ││  │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+  0.28%    0.27%     ││  │          0x00007fd8b1336a9d: vmovd  %r8d,%xmm1
+  0.27%    0.40%     ││  │          0x00007fd8b1336aa2: movslq %r8d,%r8
+  0.40%    0.50%     ││  │          0x00007fd8b1336aa5: movsbl 0x12(%rbp,%r8,1),%r10d  ;*baload
+                     ││  │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.38%    0.46%     ││  │          0x00007fd8b1336aab: test   %r10d,%r10d
+                     ││╭ │          0x00007fd8b1336aae: jl     0x00007fd8b1336b6d  ;*iflt
+                     │││ │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+  0.33%    0.36%     │││ │          0x00007fd8b1336ab4: mov    %r10w,0x14(%r11,%rbx,2)  ;*castore
+                     │││ │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+  0.28%    0.37%     │││ │          0x00007fd8b1336aba: movsbl 0x13(%rbp,%r8,1),%r8d  ;*baload
+                     │││ │                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.46%    0.50%     │││ │          0x00007fd8b1336ac0: test   %r8d,%r8d
+                     │││╭│          0x00007fd8b1336ac3: jl     0x00007fd8b1336b58  ;*iflt
+                     │││││                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+  0.38%    0.56%     │││││          0x00007fd8b1336ac9: mov    %r8w,0x16(%r11,%rbx,2)  ;*castore
+                     │││││                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+  0.26%    0.43%     │││││          0x00007fd8b1336acf: add    $0x4,%r13d         ;*iinc
+                     │││││                                                        ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+  0.22%    0.36%     │││││          0x00007fd8b1336ad3: cmp    %eax,%r13d
+                     ││││╰          0x00007fd8b1336ad6: jl     0x00007fd8b1336a51  ;*aload_3
+                     ││││                                                         ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+  0.01%              ││││           0x00007fd8b1336adc: vmovd  %xmm1,%ebx
+  0.02%    0.01%     ││││           0x00007fd8b1336ae0: add    $0x4,%ebx          ;*iinc
+                     ││││                                                         ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@97 (line 234)
+  0.01%    0.01%     ││││           0x00007fd8b1336ae3: mov    %ecx,%r8d
+                     ││││           0x00007fd8b1336ae6: mov    %r9d,%ecx
+                     ││││           0x00007fd8b1336ae9: cmp    %ecx,%r13d
+                     ││││ ╭         0x00007fd8b1336aec: jge    0x00007fd8b1336b27
+  0.01%              ││││ │  ↗      0x00007fd8b1336aee: mov    %r13d,%ebx
+  0.01%              ││││ │  │      0x00007fd8b1336af1: add    (%rsp),%ebx        ;*aload_3
+                     ││││ │  │                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+  0.02%    0.01%     ││││ │  │      0x00007fd8b1336af4: movslq %ebx,%r10
+           0.01%     ││││ │  │      0x00007fd8b1336af7: movsbl 0x10(%rbp,%r10,1),%r9d  ;*baload
+                     ││││ │  │                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@83 (line 233)
+  0.02%    0.01%     ││││ │  │      0x00007fd8b1336afd: test   %r9d,%r9d
+  0.01%    0.01%     ││││ │╭ │      0x00007fd8b1336b00: jl     0x00007fd8b1336b7b  ;*iflt
+                     ││││ ││ │                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+                     ││││ ││ │      0x00007fd8b1336b06: mov    %r13d,%eax
+                     ││││ ││ │      0x00007fd8b1336b09: inc    %eax               ;*iinc
+                     ││││ ││ │                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+                     ││││ ││ │      0x00007fd8b1336b0b: cmp    %esi,%r13d
+                     ││││ ││ │      0x00007fd8b1336b0e: jae    0x00007fd8b1337949
+                     ││││ ││ │      0x00007fd8b1336b14: mov    %r9w,0x10(%r11,%r13,2)  ;*castore
+                     ││││ ││ │                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@102 (line 234)
+                     ││││ ││ │      0x00007fd8b1336b1a: cmp    %ecx,%eax
+                     ││││ ││╭│      0x00007fd8b1336b1c: jge    0x00007fd8b1336b23  ;*if_icmpge
+                     ││││ ││││                                                    ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@77 (line 233)
+  0.01%              ││││ ││││      0x00007fd8b1336b1e: mov    %eax,%r13d
+  0.01%              ││││ │││╰      0x00007fd8b1336b21: jmp    0x00007fd8b1336aee  ;*aload_3
+                     ││││ │││                                                     ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+                     ││││ ││↘       0x00007fd8b1336b23: inc    %ebx               ;*iinc
+                     ││││ ││                                                      ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@97 (line 234)
+  0.01%              ││││ ││  ╭     0x00007fd8b1336b25: jmp    0x00007fd8b1336b7e
+  0.01%    0.01%     ││││ ↘│  │     0x00007fd8b1336b27: mov    %r13d,%eax
+  0.01%              ││││  │  │╭    0x00007fd8b1336b2a: jmp    0x00007fd8b1336b7e
+                     ││││  │  ││    0x00007fd8b1336b2c: nopl   0x0(%rax)
+  0.02%    0.04%     ││││  │  ││    0x00007fd8b1336b30: mov    (%rsp),%r14d
+  0.01%              ││││  │  ││    0x00007fd8b1336b34: mov    0x2c(%rsp),%edi
+  0.01%    0.01%     ││││  │  ││    0x00007fd8b1336b38: mov    0x14(%rsp),%r8d
+                     ││││  │  ││    0x00007fd8b1336b3d: mov    0x4(%rsp),%esi
+  0.01%    0.02%     ││││  │  ││    0x00007fd8b1336b41: mov    0x10(%rsp),%eax
+           0.01%     ││││  │  ││    0x00007fd8b1336b45: mov    0x34(%rsp),%edx
+  0.01%    0.02%     ││││  │  ││    0x00007fd8b1336b49: mov    0x38(%rsp),%rbp
+           0.01%     ││││  │  ││    0x00007fd8b1336b4e: mov    %r10d,%ebx
+  0.03%    0.02%     ││││  │  ││    0x00007fd8b1336b51: mov    0x48(%rsp),%r10
+                     ││││  │  ││╭   0x00007fd8b1336b56: jmp    0x00007fd8b1336b91
+  0.01%    0.02%     │││↘  │  │││   0x00007fd8b1336b58: vmovd  %xmm1,%ebx
+  0.01%    0.03%     │││   │  │││   0x00007fd8b1336b5c: add    $0x2,%ebx          ;*aload_3
+                     │││   │  │││                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+  0.01%    0.01%     │││   │  │││   0x00007fd8b1336b5f: add    $0x2,%r13d         ;*iinc
+                     │││   │  │││                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+                     │││   │  │││   0x00007fd8b1336b63: mov    %ecx,%r8d          ;*aload_3
+                     │││   │  │││                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+  0.02%    0.02%     │↘│   │  │││   0x00007fd8b1336b66: inc    %r13d              ;*iinc
+                     │ │   │  │││                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+  0.02%    0.01%     │ │   │  │││   0x00007fd8b1336b69: inc    %ebx
+                     │ │   │  │││╭  0x00007fd8b1336b6b: jmp    0x00007fd8b1336b7b
+  0.03%    0.03%     │ ↘   │  ││││  0x00007fd8b1336b6d: vmovd  %xmm1,%ebx
+  0.02%    0.05%     │     │  ││││  0x00007fd8b1336b71: add    $0x2,%ebx          ;*aload_3
+                     │     │  ││││                                                ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@80 (line 233)
+           0.01%     │     │  ││││  0x00007fd8b1336b74: add    $0x2,%r13d         ;*iinc
+                     │     │  ││││                                                ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@91 (line 234)
+                     │     │  ││││  0x00007fd8b1336b78: mov    %ecx,%r8d
+  0.01%    0.01%     ↘     ↘  │││↘  0x00007fd8b1336b7b: mov    %r13d,%eax         ;*iflt
+                              │││                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@84 (line 233)
+  0.02%    0.01%              ↘↘│   0x00007fd8b1336b7e: cmp    %r8d,%ebx
+                                │   0x00007fd8b1336b81: jge    0x00007fd8b1336e32  ;*if_icmpge
+                                │                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@110 (line 235)
+  0.03%    0.03%                │   0x00007fd8b1336b87: movabs $0x6c6c000b0,%r10  ;*aload_3
+                                │                                                 ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@113 (line 236)
+                                │                                                 ;   {oop(a &apos;java/nio/charset/CoderResult&apos;)}
+  0.04%    0.01%                ↘   0x00007fd8b1336b91: cmp    %r14d,%ebx
+                                    0x00007fd8b1336b94: jae    0x00007fd8b1337559  ;*baload
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@116 (line 236)
+  0.01%    0.01%                    0x00007fd8b1336b9a: mov    %r10,0x48(%rsp)
+  0.07%    0.07%                    0x00007fd8b1336b9f: mov    %rbp,0x38(%rsp)
+  0.04%    0.02%                    0x00007fd8b1336ba4: mov    %r11,0x8(%rsp)
+  0.02%    0.01%                    0x00007fd8b1336ba9: mov    %edx,0x34(%rsp)
+  0.03%    0.01%                    0x00007fd8b1336bad: mov    %esi,0x4(%rsp)
+  0.03%    0.01%                    0x00007fd8b1336bb1: mov    %edi,0x2c(%rsp)
+  0.01%    0.01%                    0x00007fd8b1336bb5: mov    %r14d,(%rsp)
+  0.02%    0.01%                    0x00007fd8b1336bb9: mov    %eax,0x30(%rsp)
+  0.01%                             0x00007fd8b1336bbd: mov    %eax,%edi
+  0.01%    0.01%                    0x00007fd8b1336bbf: mov    0x18(%rsp),%r10
+           0.01%                    0x00007fd8b1336bc4: sub    0x24(%r10),%edi    ;*isub
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@17 (line 78)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.03%    0.02%                    0x00007fd8b1336bc8: mov    %ebx,%r11d
+                                    0x00007fd8b1336bcb: mov    0x20(%rsp),%r10
+  0.01%    0.01%                    0x00007fd8b1336bd0: sub    0x24(%r10),%r11d   ;*isub
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@6 (line 77)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%    0.01%                    0x00007fd8b1336bd4: mov    %r8d,0x14(%rsp)
+  0.04%    0.01%                    0x00007fd8b1336bd9: mov    %ebx,0x40(%rsp)
+                                    0x00007fd8b1336bdd: sub    %ebx,%r8d          ;*isub
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@15 (line 209)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%    0.02%                    0x00007fd8b1336be0: vmovd  %r8d,%xmm0
+                                    0x00007fd8b1336be5: movzbl 0x28(%r10),%r14d   ;*getfield isReadOnly
+                                                                                  ; - java.nio.ByteBuffer::arrayOffset@16 (line 1023)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@3 (line 77)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%    0.01%                    0x00007fd8b1336bea: mov    0x1c(%r10),%ebp    ;*getfield limit
+                                                                                  ; - java.nio.Buffer::position@2 (line 243)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@7 (line 77)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+                                    0x00007fd8b1336bee: mov    0xc(%r10),%r8d     ;*getfield mark
+                                                                                  ; - java.nio.Buffer::position@26 (line 246)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@7 (line 77)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.02%    0.01%                    0x00007fd8b1336bf2: mov    0x18(%rsp),%r10
+                                    0x00007fd8b1336bf7: mov    0x2c(%r10),%r9d    ;*getfield hb
+                                                                                  ; - java.nio.CharBuffer::arrayOffset@1 (line 1021)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@14 (line 78)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.03%    0.02%                    0x00007fd8b1336bfb: movzbl 0x28(%r10),%ecx    ;*getfield isReadOnly
+                                                                                  ; - java.nio.CharBuffer::arrayOffset@16 (line 1023)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@14 (line 78)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%                             0x00007fd8b1336c00: mov    0x1c(%r10),%ebx    ;*getfield limit
+                                                                                  ; - java.nio.Buffer::position@2 (line 243)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@18 (line 78)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.03%    0.02%                    0x00007fd8b1336c04: mov    0xc(%r10),%edx     ;*getfield mark
+                                                                                  ; - java.nio.Buffer::position@26 (line 246)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@18 (line 78)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%                             0x00007fd8b1336c08: mov    0x20(%rsp),%r10
+  0.02%    0.01%                    0x00007fd8b1336c0d: mov    0x2c(%r10),%eax    ;*getfield hb
+                                                                                  ; - java.nio.ByteBuffer::arrayOffset@1 (line 1021)
+                                                                                  ; - sun.nio.cs.UTF_8::updatePositions@3 (line 77)
+                                                                                  ; - sun.nio.cs.UTF_8::access$200@4 (line 57)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::xflow@5 (line 208)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@140 (line 240)
+  0.01%                             0x00007fd8b1336c11: mov    0x30(%rsp),%esi
+  0.01%                             0x00007fd8b1336c15: inc    %esi               ;*iinc
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@148 (line 241)
+           0.01%                    0x00007fd8b1336c17: mov    %esi,0x10(%rsp)
+  0.03%    0.01%                    0x00007fd8b1336c1b: movslq 0x40(%rsp),%r10
+  0.01%                             0x00007fd8b1336c20: mov    0x38(%rsp),%rsi
+  0.01%    0.01%                    0x00007fd8b1336c25: movsbl 0x10(%rsi,%r10,1),%r10d  ;*baload
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@116 (line 236)
+  0.14%    0.05%                    0x00007fd8b1336c2b: vmovd  %r10d,%xmm1
+  0.06%    0.02%                    0x00007fd8b1336c30: mov    0x40(%rsp),%r10d
+                                    0x00007fd8b1336c35: inc    %r10d              ;*iinc
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@155 (line 242)
+           0.01%                    0x00007fd8b1336c38: vmovd  %xmm1,%esi
+  0.06%    0.04%                    0x00007fd8b1336c3c: test   %esi,%esi
+                                    0x00007fd8b1336c3e: jge    0x00007fd8b1336dec  ;*iflt
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@121 (line 237)
+  0.02%                             0x00007fd8b1336c44: mov    %esi,%r13d
+                                    0x00007fd8b1336c47: sar    $0x5,%r13d
+  0.01%    0.01%                    0x00007fd8b1336c4b: mov    0x40(%rsp),%esi
+                                    0x00007fd8b1336c4f: add    $0x2,%esi          ;*iinc
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@255 (line 261)
+  0.04%                             0x00007fd8b1336c52: mov    %esi,0x44(%rsp)
+  0.01%                             0x00007fd8b1336c56: movslq 0x40(%rsp),%rsi    ;*baload
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@521 (line 293)
+                                    0x00007fd8b1336c5b: mov    %rsi,0x50(%rsp)
+                                    0x00007fd8b1336c60: movabs $0x6c6c04000,%rsi  ;   {oop(a &apos;java/lang/Class&apos; = &apos;java/nio/charset/CoderResult&apos;)}
+  0.02%                             0x00007fd8b1336c6a: mov    0x74(%rsi),%esi    ;*getstatic malformedCache
+                                                                                  ; - java.nio.charset.CoderResult::malformedForLength@0 (line 236)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::malformedForLength@9 (line 194)
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@230 (line 256)
+                                    0x00007fd8b1336c6d: cmp    $0xfffffffe,%r13d
+                                    0x00007fd8b1336c71: je     0x00007fd8b1336f82  ;*iload
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@261 (line 262)
+                                    0x00007fd8b1336c77: vmovd  %edi,%xmm3
+                                    0x00007fd8b1336c7b: vmovd  %xmm1,%r13d
+  0.01%    0.01%                    0x00007fd8b1336c80: sar    $0x4,%r13d
+           0.01%                    0x00007fd8b1336c84: mov    0x40(%rsp),%edi
+  0.01%    0.01%                    0x00007fd8b1336c88: add    $0x3,%edi          ;*iinc
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@422 (line 284)
+                                    0x00007fd8b1336c8b: mov    %edi,0x58(%rsp)
+  0.02%                             0x00007fd8b1336c8f: cmp    $0xfffffffe,%r13d
+                                    0x00007fd8b1336c93: je     0x00007fd8b1336d51  ;*if_icmpne
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@267 (line 262)
+                                    0x00007fd8b1336c99: vmovd  %xmm1,%r13d
+  0.02%                             0x00007fd8b1336c9e: sar    $0x3,%r13d
+           0.01%                    0x00007fd8b1336ca2: cmp    $0xfffffffe,%r13d
+                                    0x00007fd8b1336ca6: je     0x00007fd8b1336ccd  ;*if_icmpne
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@434 (line 285)
+                                    0x00007fd8b1336ca8: mov    0x20(%rsp),%rsi
+           0.01%                    0x00007fd8b1336cad: mov    0x40(%rsp),%edx
+                                    0x00007fd8b1336cb1: mov    0x18(%rsp),%rcx
+                                    0x00007fd8b1336cb6: mov    0x30(%rsp),%r8d
+                                    0x00007fd8b1336cbb: mov    $0x1,%r9d
+                                    0x00007fd8b1336cc1: xchg   %ax,%ax
+                                    0x00007fd8b1336cc3: callq  0x00007fd8b1046420  ; OopMap{off=968}
+                                                                                  ;*invokestatic malformed
+                                                                                  ; - sun.nio.cs.UTF_8$Decoder::decodeArrayLoop@671 (line 317)
+                                                                                  ;   {static_call}
+                                    0x00007fd8b1336cc8: jmpq   0x00007fd8b1336de0
+                                    0x00007fd8b1336ccd: vmovd  %xmm0,%edi
+....................................................................................................
+ 10.93%   12.96%  <total for region 3>
+
+....[Hottest Region 4]..............................................................................
+runtime stub, StubRoutines::jshort_disjoint_arraycopy (205 bytes) 
+
+                               0x00007fd8b1052490: vpxor  %ymm0,%ymm0,%ymm0
+                               0x00007fd8b1052494: vpxor  %ymm1,%ymm1,%ymm1
+                               0x00007fd8b1052498: add    $0x4,%rdx
+                               0x00007fd8b105249c: jg     Stub::jbyte_arraycopy+101 0x0x7fd8b1052445
+                               0x00007fd8b105249e: xor    %rax,%rax
+                               0x00007fd8b10524a1: leaveq 
+                               0x00007fd8b10524a2: retq   
+                             StubRoutines::jshort_disjoint_arraycopy [0x00007fd8b10524c0, 0x00007fd8b1052568[ (168 bytes)
+                               0x00007fd8b10524c0: push   %rbp
+                               0x00007fd8b10524c1: mov    %rsp,%rbp
+  0.08%    0.09%          ↗↗   0x00007fd8b10524c4: mov    %rdx,%rcx
+  0.15%    0.16%          ││   0x00007fd8b10524c7: shr    $0x2,%rdx
+  0.33%    0.27%          ││   0x00007fd8b10524cb: lea    -0x8(%rdi,%rdx,8),%rdi
+  0.37%    0.26%          ││   0x00007fd8b10524d0: lea    -0x8(%rsi,%rdx,8),%rsi
+  0.39%    0.24%          ││   0x00007fd8b10524d5: neg    %rdx
+  0.32%    0.21%  ╭       ││   0x00007fd8b10524d8: jmpq   Stub::jshort_disjoint_arraycopy+120 0x0x7fd8b1052538
+  0.42%    0.45%  │↗    ↗ ││   0x00007fd8b10524dd: mov    0x8(%rdi,%rdx,8),%rax
+  1.65%    1.49%  ││    │ ││   0x00007fd8b10524e2: mov    %rax,0x8(%rsi,%rdx,8)
+  0.91%    0.87%  ││    │ ││   0x00007fd8b10524e7: inc    %rdx
+                  │╰    │ ││   0x00007fd8b10524ea: jne    Stub::jshort_disjoint_arraycopy+29 0x0x7fd8b10524dd
+  0.24%    0.19%  │     │↗││   0x00007fd8b10524ec: test   $0x2,%ecx
+                  │ ╭   ││││   0x00007fd8b10524f2: je     Stub::jshort_disjoint_arraycopy+66 0x0x7fd8b1052502
+  0.03%    0.04%  │ │   ││││   0x00007fd8b10524f4: mov    0x8(%rdi),%eax
+  0.29%    0.21%  │ │   ││││   0x00007fd8b10524f7: mov    %eax,0x8(%rsi)
+  0.83%    0.64%  │ │   ││││   0x00007fd8b10524fa: add    $0x4,%rdi
+  0.04%    0.02%  │ │   ││││   0x00007fd8b10524fe: add    $0x4,%rsi
+  0.07%    0.08%  │ ↘   ││││   0x00007fd8b1052502: test   $0x1,%ecx
+                  │  ╭  ││││   0x00007fd8b1052508: je     Stub::jshort_disjoint_arraycopy+82 0x0x7fd8b1052512
+  0.01%           │  │  ││││   0x00007fd8b105250a: mov    0x8(%rdi),%ax
+  0.22%    0.19%  │  │  ││││   0x00007fd8b105250e: mov    %ax,0x8(%rsi)
+  0.34%    0.18%  │  ↘  ││││   0x00007fd8b1052512: xor    %rax,%rax
+  0.25%    0.37%  │     ││││   0x00007fd8b1052515: leaveq 
+  0.43%    0.37%  │     ││││   0x00007fd8b1052516: retq   
+                  │     ││││   0x00007fd8b1052517: nopw   0x0(%rax,%rax,1)
+                  │   ↗ ││││   0x00007fd8b1052520: vmovdqu -0x38(%rdi,%rdx,8),%ymm0
+                  │   │ ││││   0x00007fd8b1052526: vmovdqu %ymm0,-0x38(%rsi,%rdx,8)
+  0.01%           │   │ ││││   0x00007fd8b105252c: vmovdqu -0x18(%rdi,%rdx,8),%ymm1
+                  │   │ ││││   0x00007fd8b1052532: vmovdqu %ymm1,-0x18(%rsi,%rdx,8)
+  0.11%    0.12%  ↘   │ ││││   0x00007fd8b1052538: add    $0x8,%rdx
+                      ╰ ││││   0x00007fd8b105253c: jle    Stub::jshort_disjoint_arraycopy+96 0x0x7fd8b1052520
+  0.37%    0.23%        ││││   0x00007fd8b105253e: sub    $0x4,%rdx
+                       ╭││││   0x00007fd8b1052542: jg     Stub::jshort_disjoint_arraycopy+148 0x0x7fd8b1052554
+  0.03%    0.01%       │││││   0x00007fd8b1052544: vmovdqu -0x18(%rdi,%rdx,8),%ymm0
+  0.24%    0.11%       │││││   0x00007fd8b105254a: vmovdqu %ymm0,-0x18(%rsi,%rdx,8)
+  0.09%    0.09%       │││││   0x00007fd8b1052550: add    $0x4,%rdx
+  0.55%    0.39%       ↘││││   0x00007fd8b1052554: vpxor  %ymm0,%ymm0,%ymm0
+                        ││││   0x00007fd8b1052558: vpxor  %ymm1,%ymm1,%ymm1
+                        ││││   0x00007fd8b105255c: sub    $0x4,%rdx
+                        ╰│││   0x00007fd8b1052560: jl     Stub::jshort_disjoint_arraycopy+29 0x0x7fd8b10524dd
+  0.15%    0.11%         ╰││   0x00007fd8b1052566: jmp    Stub::jshort_disjoint_arraycopy+44 0x0x7fd8b10524ec
+                          ││ StubRoutines::jshort_arraycopy [0x00007fd8b1052580, 0x00007fd8b1052623[ (163 bytes)
+  0.27%    0.37%          ││   0x00007fd8b1052580: push   %rbp
+  0.41%    0.45%          ││   0x00007fd8b1052581: mov    %rsp,%rbp
+  0.09%    0.09%          ││   0x00007fd8b1052584: cmp    %rdi,%rsi
+  0.25%    0.19%          ││   0x00007fd8b1052587: lea    (%rdi,%rdx,2),%rax
+  0.43%    0.33%          ╰│   0x00007fd8b105258b: jbe    Stub::jshort_disjoint_arraycopy+4 0x0x7fd8b10524c4
+  0.03%    0.03%           │   0x00007fd8b1052591: cmp    %rax,%rsi
+                           ╰   0x00007fd8b1052594: jae    Stub::jshort_disjoint_arraycopy+4 0x0x7fd8b10524c4
+                               0x00007fd8b105259a: mov    %rdx,%rcx
+                               0x00007fd8b105259d: shr    $0x2,%rdx
+                               0x00007fd8b10525a1: test   $0x1,%ecx
+                            ╭  0x00007fd8b10525a7: je     Stub::jshort_arraycopy+51 0x0x7fd8b10525b3
+                            │  0x00007fd8b10525a9: mov    -0x2(%rdi,%rcx,2),%ax
+                            │  0x00007fd8b10525ae: mov    %ax,-0x2(%rsi,%rcx,2)
+                            ↘  0x00007fd8b10525b3: test   $0x2,%ecx
+                               0x00007fd8b10525b9: je     Stub::jshort_arraycopy+118 0x0x7fd8b10525f6
+                               0x00007fd8b10525bf: mov    (%rdi,%rdx,8),%eax
+....................................................................................................
+ 10.38%    8.84%  <total for region 4>
+
+....[Hottest Regions]...............................................................................
+ 29.11%   30.07%         C2, level 4  org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer, version 584 (841 bytes) 
+ 25.56%   29.81%         C2, level 4  org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer, version 584 (214 bytes) 
+ 10.93%   12.96%         C2, level 4  sun.nio.cs.UTF_8$Decoder::decodeArrayLoop, version 677 (902 bytes) 
+ 10.38%    8.84%        runtime stub  StubRoutines::jshort_disjoint_arraycopy (205 bytes) 
+  7.66%    7.34%         C2, level 4  org.github.arnaudroger.csv.alt.CharConsumer2::endOfRow, version 560 (1015 bytes) 
+  1.85%    1.86%           [unknown]  [unknown] (3 bytes) 
+  1.74%    0.08%           [unknown]  [unknown] (12 bytes) 
+  1.34%    1.27%        runtime stub  StubRoutines::jint_disjoint_arraycopy (128 bytes) 
+  1.30%    0.90%           libjvm.so  SpinPause (9 bytes) 
+  0.61%    0.56%         C2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 541 (63 bytes) 
+  0.54%    0.59%           libjvm.so  ParallelTaskTerminator::offer_termination (15 bytes) 
+  0.36%                 libc-2.23.so  __memmove_avx_unaligned (0 bytes) 
+  0.33%    0.16%         C2, level 4  java.nio.charset.CoderResult$Cache::get, version 664 (199 bytes) 
+  0.30%                    [unknown]  [unknown] (23 bytes) 
+  0.29%    0.18%         C2, level 4  java.nio.charset.CoderResult$Cache::get, version 664 (28 bytes) 
+  0.27%    0.23%           libjvm.so  StringTable::unlink_or_oops_do (69 bytes) 
+  0.23%    0.02%           [unknown]  [unknown] (59 bytes) 
+  0.22%    0.18%         C2, level 4  sun.nio.cs.UTF_8$Decoder::malformed, version 675 (442 bytes) 
+  0.19%    0.19%         C2, level 4  java.nio.charset.CoderResult$Cache::get, version 664 (0 bytes) 
+  0.17%    0.11%         C2, level 4  sun.nio.cs.UTF_8$Decoder::decodeArrayLoop, version 677 (137 bytes) 
+  6.56%    4.66%  <...other 712 warm regions...>
+....................................................................................................
+ 99.94%  100.00%  <totals>
+
+....[Hottest Methods (after inlining)]..............................................................
+ 54.68%   59.88%         C2, level 4  org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer, version 584 
+ 11.21%   13.11%         C2, level 4  sun.nio.cs.UTF_8$Decoder::decodeArrayLoop, version 677 
+ 10.38%    8.84%        runtime stub  StubRoutines::jshort_disjoint_arraycopy 
+  7.66%    7.34%         C2, level 4  org.github.arnaudroger.csv.alt.CharConsumer2::endOfRow, version 560 
+  7.18%    3.97%           [unknown]  [unknown] 
+  1.34%    1.27%        runtime stub  StubRoutines::jint_disjoint_arraycopy 
+  1.30%    0.90%           libjvm.so  SpinPause 
+  1.02%    0.63%         C2, level 4  java.nio.charset.CoderResult$Cache::get, version 664 
+  0.61%    0.56%         C2, level 4  org.openjdk.jmh.infra.Blackhole::consume, version 541 
+  0.55%    0.59%           libjvm.so  ParallelTaskTerminator::offer_termination 
+  0.39%    0.42%           libjvm.so  StringTable::unlink_or_oops_do 
+  0.36%                 libc-2.23.so  __memmove_avx_unaligned 
+  0.32%    0.29%         C2, level 4  java.nio.charset.CharsetDecoder::decode, version 726 
+  0.32%    0.19%         C2, level 4  sun.nio.cs.UTF_8$Decoder::malformed, version 675 
+  0.19%    0.05%         C2, level 4  java.io.InputStreamReader::read, version 741 
+  0.18%    0.04%           libjvm.so  jni_GetObjectField 
+  0.13%    0.01%         C2, level 4  org.github.arnaudroger.csv.alt.CsvReader2::_parseAll, version 745 
+  0.13%    0.18%        libc-2.23.so  vfprintf 
+  0.11%    0.15%           libjvm.so  fileStream::write 
+  0.09%    0.06%      hsdis-amd64.so  [unknown] 
+  1.81%    1.16%  <...other 153 warm methods...>
+....................................................................................................
+ 99.94%   99.65%  <totals>
+
+....[Distribution by Source]........................................................................
+ 76.13%   82.06%         C2, level 4
+ 11.73%   10.11%        runtime stub
+  7.18%    3.97%           [unknown]
+  3.70%    3.15%           libjvm.so
+  0.81%    0.51%        libc-2.23.so
+  0.19%    0.11%  libpthread-2.23.so
+  0.09%    0.06%      hsdis-amd64.so
+  0.03%    0.02%    Unknown, level 0
+  0.03%    0.02%          libjava.so
+  0.02%                  interpreter
+  0.01%                             
+  0.01%                  C1, level 1
+  0.01%               perf-26257.map
+....................................................................................................
+ 99.94%  100.00%  <totals>
+
+
+
+# Run complete. Total time: 00:00:37
+
+Benchmark                                  Mode  Cnt  Score   Error  Units
+Csv2Benchmark.parseCsv                   sample   20  0.705 ± 0.029   s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.00    sample       0.688           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.50    sample       0.695           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.90    sample       0.766           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.95    sample       0.824           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.99    sample       0.826           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.999   sample       0.826           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.9999  sample       0.826           s/op
+Csv2Benchmark.parseCsv:parseCsv·p1.00    sample       0.826           s/op
+Csv2Benchmark.parseCsv:·asm              sample         NaN            ---
