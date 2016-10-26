@@ -1,0 +1,89 @@
+Benchmark                                       Mode  Cnt           Score   Error  Units
+Csv1Benchmark.parseCsv:CPI                    sample                 0.289           #/op
+Csv2Benchmark.parseCsv:CPI                    sample                 0.286           #/op
+
+Csv1Benchmark.parseCsv:L1-dcache-load-misses  sample          25109173.800           #/op
+Csv2Benchmark.parseCsv:L1-dcache-load-misses  sample          16385956.700           #/op
+
+Csv1Benchmark.parseCsv:L1-dcache-loads        sample        2158389014.050           #/op
+Csv2Benchmark.parseCsv:L1-dcache-loads        sample        3286066544.600           #/op
+
+Csv1Benchmark.parseCsv:L1-dcache-stores       sample        1089761385.850           #/op
+Csv2Benchmark.parseCsv:L1-dcache-stores       sample        2870298020.300           #/op
+
+Csv1Benchmark.parseCsv:L1-icache-load-misses  sample           1285784.700           #/op
+Csv2Benchmark.parseCsv:L1-icache-load-misses  sample           1115255.400           #/op
+
+Csv1Benchmark.parseCsv:LLC-loads              sample           6966152.300           #/op
+Csv2Benchmark.parseCsv:LLC-loads              sample           4671400.900           #/op
+
+Csv1Benchmark.parseCsv:LLC-stores             sample            151286.400           #/op
+Csv2Benchmark.parseCsv:LLC-stores             sample            379791.100           #/op
+
+Csv1Benchmark.parseCsv:branch-misses          sample           8200913.050           #/op
+Csv2Benchmark.parseCsv:branch-misses          sample           9414845.100           #/op
+
+Csv1Benchmark.parseCsv:branches               sample        1981555887.250           #/op
+Csv2Benchmark.parseCsv:branches               sample        2029692642.300           #/op
+
+Csv1Benchmark.parseCsv:bus-cycles             sample          75722621.700           #/op
+Csv2Benchmark.parseCsv:bus-cycles             sample         122143296.800           #/op
+
+Csv1Benchmark.parseCsv:context-switches       sample               232.050           #/op
+Csv2Benchmark.parseCsv:context-switches       sample               398.700           #/op
+
+Csv1Benchmark.parseCsv:cpu-migrations         sample                15.350           #/op
+Csv2Benchmark.parseCsv:cpu-migrations         sample                34.900           #/op
+
+Csv1Benchmark.parseCsv:cycles                 sample        2698866722.750           #/op
+Csv2Benchmark.parseCsv:cycles                 sample        4373243338.900           #/op
+
+Csv1Benchmark.parseCsv:dTLB-load-misses       sample             86961.350           #/op
+Csv2Benchmark.parseCsv:dTLB-load-misses       sample            201185.900           #/op
+
+Csv1Benchmark.parseCsv:dTLB-loads             sample        2199696452.400           #/op
+Csv2Benchmark.parseCsv:dTLB-loads             sample        3355239296.600           #/op
+
+Csv1Benchmark.parseCsv:dTLB-store-misses      sample             10384.400           #/op
+Csv2Benchmark.parseCsv:dTLB-store-misses      sample             20211.600           #/op
+
+Csv1Benchmark.parseCsv:dTLB-stores            sample        1063388493.700           #/op
+Csv2Benchmark.parseCsv:dTLB-stores            sample        2886901499.100           #/op
+
+Csv1Benchmark.parseCsv:iTLB-load-misses       sample             31894.250           #/op
+Csv2Benchmark.parseCsv:iTLB-load-misses       sample             15006.200           #/op
+
+Csv1Benchmark.parseCsv:iTLB-loads             sample            141502.200           #/op
+Csv2Benchmark.parseCsv:iTLB-loads             sample             79448.000           #/op
+
+Csv1Benchmark.parseCsv:instructions           sample        9344666865.850           #/op
+Csv2Benchmark.parseCsv:instructions           sample       15267921778.900           #/op
+
+Csv1Benchmark.parseCsv:minor-faults           sample               822.500           #/op
+Csv2Benchmark.parseCsv:minor-faults           sample              1605.100           #/op
+
+Csv1Benchmark.parseCsv:page-faults            sample               822.600           #/op
+Csv2Benchmark.parseCsv:page-faults            sample              1605.200           #/op
+
+Csv1Benchmark.parseCsv:ref-cycles             sample        2649986260.000           #/op
+Csv2Benchmark.parseCsv:ref-cycles             sample        4310016108.200           #/op
+
+
+Csv1Benchmark.parseCsv:parseCsv·p0.00         sample                0.673           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.50         sample                0.677           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.90         sample                0.686           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.95         sample                0.690           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.99         sample                0.690           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.999        sample                0.690           s/op
+Csv1Benchmark.parseCsv:parseCsv·p0.9999       sample                0.690           s/op
+Csv1Benchmark.parseCsv:parseCsv·p1.00         sample                0.690           s/op
+
+
+Csv2Benchmark.parseCsv:parseCsv·p0.00         sample                 1.078           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.50         sample                 1.085           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.90         sample                 1.095           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.95         sample                 1.095           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.99         sample                 1.095           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.999        sample                 1.095           s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.9999       sample                 1.095           s/op
+Csv2Benchmark.parseCsv:parseCsv·p1.00         sample                 1.095           s/op
