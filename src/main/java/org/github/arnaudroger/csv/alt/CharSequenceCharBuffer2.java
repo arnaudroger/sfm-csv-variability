@@ -5,15 +5,9 @@ import org.github.arnaudroger.csv.orig.CharBuffer;
 import java.io.IOException;
 
 public final class CharSequenceCharBuffer2 extends CharBuffer2 {
-
-	public CharSequenceCharBuffer2(final String str)
+	public CharSequenceCharBuffer2(final char[] chars)
 			throws IOException {
-		super(str.toCharArray(), str.length());
-	}
-
-	public CharSequenceCharBuffer2(final CharSequence str)
-			throws IOException {
-		super(toCharArray(str), str.length());
+		super(chars, chars.length);
 	}
 
 	@Override

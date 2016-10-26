@@ -25,32 +25,33 @@
 
 package org.github.arnaudroger;
 
+import org.github.arnaudroger.csv.alt.CharSequenceCharBuffer2;
 import org.github.arnaudroger.csv.alt.CsvCharConsumer2;
 import org.github.arnaudroger.csv.alt.CsvReader2;
-import org.github.arnaudroger.csv.alt.ReaderCharBuffer2;
-import org.github.arnaudroger.csv.orig.ReaderCharBuffer;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Mode;
 import org.openjdk.jmh.annotations.Scope;
+import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.io.IOException;
-import java.io.Reader;
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.SampleTime)
-public class Csv2Benchmark {
+public class Csv2InMemBenchmark {
+
+    private char[] chars;
+
+    @Setup
+    public void setUp() throws IOException {
+        this.chars = CsvParam.readAll().toCharArray();
+    }
     @Benchmark
     public void parseCsv(Blackhole blackhole) throws IOException {
-        try(Reader reader = CsvParam.getReader()) {
-            getCsvReader(reader).read(blackhole::consume);
-        }
+        new CsvReader2(new CsvCharConsumer2(new CharSequenceCharBuffer2(chars))).read(blackhole::consume);
     }
 
-    private CsvReader2 getCsvReader(Reader reader) {
-        return new CsvReader2(new CsvCharConsumer2(new ReaderCharBuffer2(4 * 1024, Integer.MAX_VALUE, reader)));
-    }
 
 }

@@ -39,11 +39,11 @@ import java.io.IOException;
 import java.io.Reader;
 
 @State(Scope.Benchmark)
-@BenchmarkMode(Mode.AverageTime)
+@BenchmarkMode(Mode.SampleTime)
 public class Csv1Benchmark {
     @Benchmark
-    public void parseCsv(Blackhole blackhole, CsvParam csvParam) throws IOException {
-        try(Reader reader = csvParam.getReader()) {
+    public void parseCsv(Blackhole blackhole) throws IOException {
+        try(Reader reader = CsvParam.getReader()) {
             getCsvReader(reader).read(blackhole::consume);
         }
     }

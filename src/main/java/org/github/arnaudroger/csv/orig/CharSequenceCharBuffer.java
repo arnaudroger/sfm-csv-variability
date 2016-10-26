@@ -4,16 +4,10 @@ import java.io.IOException;
 
 public final class CharSequenceCharBuffer extends CharBuffer {
 
-	public CharSequenceCharBuffer(final String str)
+	public CharSequenceCharBuffer(final char[] chars)
 			throws IOException {
-		super(str.toCharArray(), str.length());
+		super(chars, chars.length);
 	}
-
-	public CharSequenceCharBuffer(final CharSequence str)
-			throws IOException {
-		super(toCharArray(str), str.length());
-	}
-
 	@Override
 	public final int fillBuffer() throws IOException {
 		return -1;

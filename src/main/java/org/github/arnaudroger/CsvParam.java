@@ -15,11 +15,7 @@ import java.io.Reader;
 import java.net.URL;
 import java.util.zip.GZIPInputStream;
 
-@State(Scope.Benchmark)
 public class CsvParam {
-
-
-
     public static final String url = new String("http://www.maxmind.com/download/worldcities/worldcitiespop.txt.gz");
 
     public static final String fileName = getFileDirectory() + File.separator + "worldcitiespop.txt";
@@ -28,8 +24,13 @@ public class CsvParam {
         return System.getProperty("csv.dir", System.getProperty("java.io.tmpdir"));
     }
 
-    public Reader getReader() throws IOException {
+    public static Reader getReader() throws IOException {
         File file = new File(fileName);
+        fetchFileIfNeeded(file);
+        return newReader(file);
+    }
+
+    private static void fetchFileIfNeeded(File file) throws IOException {
         if (!file.exists()) {
             byte[] buffer = new byte[4096];
             try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
@@ -41,11 +42,21 @@ public class CsvParam {
                 }
             }
         }
-        return newReader(file);
     }
 
     private static Reader newReader(File file) throws FileNotFoundException {
         return new InputStreamReader(new FileInputStream(file));
     }
 
+    public static String readAll() throws IOException {
+        StringBuilder sb = new StringBuilder();
+        char[] buffer = new char[4096];
+        try (Reader reader = getReader()) {
+            int l;
+            while((l = reader.read(buffer)) >= 0) {
+                sb.append(buffer, 0, l);
+            }
+        }
+        return sb.toString();
+    }
 }
