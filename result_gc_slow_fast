@@ -1,0 +1,69 @@
+Good run
+
+Benchmark                                                  Mode  Cnt           Score           Error   Units
+Csv2Benchmark.parseCsv                                   sample   20           0.682 ±         0.003    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.00                    sample                0.677                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.50                    sample                0.682                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.90                    sample                0.687                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.95                    sample                0.690                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.99                    sample                0.690                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.999                   sample                0.690                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.9999                  sample                0.690                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p1.00                    sample                0.690                    s/op
+Csv2Benchmark.parseCsv:·gc.alloc.rate                    sample   10        1854.096 ±        11.222  MB/sec
+Csv2Benchmark.parseCsv:·gc.alloc.rate.norm               sample   10  1328138086.800 ±      2905.976    B/op
+Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space           sample   10        1860.818 ±       162.917  MB/sec
+Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space.norm      sample   10  1332897382.400 ± 114628157.636    B/op
+Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space       sample   10           0.110 ±         0.065  MB/sec
+Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space.norm  sample   10       78643.200 ±     46414.431    B/op
+Csv2Benchmark.parseCsv:·gc.count                         sample   10          85.000                  counts
+Csv2Benchmark.parseCsv:·gc.time                          sample   10         107.000                      ms
+
+
+Bad run
+
+Benchmark                                                  Mode  Cnt           Score           Error   Units
+Csv2Benchmark.parseCsv                                   sample   10           1.128 ±         0.105    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.00                    sample                1.073                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.50                    sample                1.092                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.90                    sample                1.253                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.95                    sample                1.256                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.99                    sample                1.256                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.999                   sample                1.256                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p0.9999                  sample                1.256                    s/op
+Csv2Benchmark.parseCsv:parseCsv·p1.00                    sample                1.256                    s/op
+Csv2Benchmark.parseCsv:·gc.alloc.rate                    sample   10        1125.038 ±        99.285  MB/sec
+Csv2Benchmark.parseCsv:·gc.alloc.rate.norm               sample   10  1328153652.000 ±      5846.085    B/op
+Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space           sample   10        1118.947 ±       154.425  MB/sec
+Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space.norm      sample   10  1321834905.600 ± 160022479.976    B/op
+Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space       sample   10           0.089 ±         0.035  MB/sec
+Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space.norm  sample   10      104857.600 ±     39078.105    B/op
+Csv2Benchmark.parseCsv:·gc.count                         sample   10          43.000                  counts
+Csv2Benchmark.parseCsv:·gc.time                          sample   10          61.000                      ms
+
+
+
+
+FAST_Csv2Benchmark.parseCsv:·gc.alloc.rate                    sample   10        1854.096 ±        11.222  MB/sec
+SLOW_Csv2Benchmark.parseCsv:·gc.alloc.rate                    sample   10        1125.038 ±        99.285  MB/sec
+
+FAST_Csv2Benchmark.parseCsv:·gc.alloc.rate.norm               sample   10  1328138086.800 ±      2905.976    B/op
+SLOW_Csv2Benchmark.parseCsv:·gc.alloc.rate.norm               sample   10  1328153652.000 ±      5846.085    B/op
+
+FAST_Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space           sample   10        1860.818 ±       162.917  MB/sec
+SLOW_Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space           sample   10        1118.947 ±       154.425  MB/sec
+
+FAST_Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space.norm      sample   10  1332897382.400 ± 114628157.636    B/op
+SLOW_Csv2Benchmark.parseCsv:·gc.churn.PS_Eden_Space.norm      sample   10  1321834905.600 ± 160022479.976    B/op
+
+FAST_Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space       sample   10           0.110 ±         0.065  MB/sec
+SLOW_Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space       sample   10           0.089 ±         0.035  MB/sec
+
+FAST_Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space.norm  sample   10       78643.200 ±     46414.431    B/op
+SLOW_Csv2Benchmark.parseCsv:·gc.churn.PS_Survivor_Space.norm  sample   10      104857.600 ±     39078.105    B/op
+
+FAST_Csv2Benchmark.parseCsv:·gc.count                         sample   10          85.000                  counts
+SLOW_Csv2Benchmark.parseCsv:·gc.count                         sample   10          43.000                  counts
+
+FAST_Csv2Benchmark.parseCsv:·gc.time                          sample   10         107.000                      ms
+SLOW_Csv2Benchmark.parseCsv:·gc.time                          sample   10          61.000                      ms
