@@ -1,4 +1,4 @@
-package org.simpleflatmapper.csv.parser;
+package org.github.arnaudroger.csv;
 
 //IFJAVA8_START
 import java.util.function.Consumer;

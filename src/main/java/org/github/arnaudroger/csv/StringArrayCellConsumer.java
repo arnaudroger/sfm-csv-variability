@@ -1,8 +1,6 @@
-package org.simpleflatmapper.csv.parser;
+package org.github.arnaudroger.csv;
 
-import org.simpleflatmapper.csv.impl.cellreader.StringCellValueReader;
-import org.simpleflatmapper.util.CheckedConsumer;
-import org.simpleflatmapper.util.ErrorHelper;
+
 import java.util.Arrays;
 
 public final class StringArrayCellConsumer<RH extends CheckedConsumer<? super String[]>> implements CellConsumer {

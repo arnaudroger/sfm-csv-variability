@@ -1,5 +1,7 @@
-package org.github.arnaudroger.csv;
+package org.github.arnaudroger.csv.alt;
 
+
+import org.github.arnaudroger.csv.BufferOverflowException;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -26,21 +28,18 @@ public final class ReaderCharBuffer2 extends CharBuffer2 {
 	}
 
 	@Override
-	public final int shiftBufferToMark() throws BufferOverflowException {
+	public final int shiftBufferToMark(int mark) throws BufferOverflowException {
 		// shift buffer consumer data
-		int lMark = this.mark;
-		int usedLength = Math.max(bufferSize - lMark, 0);
+		int usedLength = Math.max(bufferSize - mark, 0);
 
 		// if buffer tight double the size
 		resizeIfNeeded(usedLength);
 
-		System.arraycopy(buffer, lMark, buffer, 0, usedLength);
+		System.arraycopy(buffer, mark, buffer, 0, usedLength);
 
 		bufferSize = usedLength;
 
-		mark = 0;
-
-		return lMark;
+		return mark;
 	}
 
 	private void resizeIfNeeded(int requireLength) throws BufferOverflowException {

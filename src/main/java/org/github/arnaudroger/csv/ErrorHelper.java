@@ -1,4 +1,4 @@
-package org.simpleflatmapper.util;
+package org.github.arnaudroger.csv;
 
 public class ErrorHelper {
 

@@ -25,9 +25,10 @@
 
 package org.github.arnaudroger;
 
-import org.github.arnaudroger.csv.CsvCharConsumer;
-import org.github.arnaudroger.csv.CsvReader;
-import org.github.arnaudroger.csv.ReaderCharBuffer;
+import org.github.arnaudroger.csv.alt.CsvCharConsumer2;
+import org.github.arnaudroger.csv.alt.CsvReader2;
+import org.github.arnaudroger.csv.alt.ReaderCharBuffer2;
+import org.github.arnaudroger.csv.orig.ReaderCharBuffer;
 import org.openjdk.jmh.annotations.Benchmark;
 import org.openjdk.jmh.annotations.BenchmarkMode;
 import org.openjdk.jmh.annotations.Mode;
@@ -40,7 +41,7 @@ import java.io.Reader;
 
 @State(Scope.Benchmark)
 @BenchmarkMode(Mode.AverageTime)
-public class Csv1Benchmark {
+public class Csv2Benchmark {
     @Benchmark
     public void parseCsv(Blackhole blackhole, CsvParam csvParam) throws IOException {
         try(Reader reader = csvParam.getReader()) {
@@ -48,8 +49,8 @@ public class Csv1Benchmark {
         }
     }
 
-    private CsvReader getCsvReader(Reader reader) {
-        return new CsvReader(new CsvCharConsumer(new ReaderCharBuffer(4 * 1024, Integer.MAX_VALUE, reader)));
+    private CsvReader2 getCsvReader(Reader reader) {
+        return new CsvReader2(new CsvCharConsumer2(new ReaderCharBuffer2(4 * 1024, Integer.MAX_VALUE, reader)));
     }
 
 }

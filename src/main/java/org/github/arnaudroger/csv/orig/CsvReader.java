@@ -1,4 +1,8 @@
-package org.github.arnaudroger.csv;
+package org.github.arnaudroger.csv.orig;
+
+import org.github.arnaudroger.csv.CellConsumer;
+import org.github.arnaudroger.csv.CheckedConsumer;
+import org.github.arnaudroger.csv.StringArrayCellConsumer;
 
 import java.io.IOException;
 

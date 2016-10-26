@@ -1,5 +1,8 @@
-package org.github.arnaudroger.csv;
+package org.github.arnaudroger.csv.alt;
 
+
+import org.github.arnaudroger.csv.BufferOverflowException;
+import org.github.arnaudroger.csv.CellConsumer;
 
 import java.io.IOException;
 
@@ -22,6 +25,7 @@ public abstract class CharConsumer2 {
 
 	private int _currentIndex = 0;
 	private int _currentState = NONE;
+	private int cellStart = 0;
 
 	public CharConsumer2(CharBuffer2 csvBuffer, boolean ignoreLeadingSpace) {
 		this._csvBuffer = csvBuffer;
@@ -137,7 +141,9 @@ public abstract class CharConsumer2 {
 	}
 
 	public final void shiftBufferToMark() throws BufferOverflowException {
-		_currentIndex -= _csvBuffer.shiftBufferToMark();
+		int shift = _csvBuffer.shiftBufferToMark(cellStart);
+		cellStart -= shift;
+		_currentIndex -= shift;
 	}
 
 	private void endOfRow(char[] chars, int currentIndex, CellConsumer cellConsumer) {
@@ -151,16 +157,16 @@ public abstract class CharConsumer2 {
 	}
 
 	private void newCell(char[] chars, int currentIndex, CellConsumer cellConsumer) {
-		pushCell(chars, _csvBuffer.mark, currentIndex, cellConsumer);
+		pushCell(chars, cellStart, currentIndex, cellConsumer);
 		startNextCell(currentIndex);
 	}
 
 	private void startNextCell(int currentIndex) {
-		_csvBuffer.mark = currentIndex + 1;
+		cellStart = currentIndex + 1;
 	}
 
 	private boolean hasUnconsumedData() {
-		return _currentIndex > _csvBuffer.mark;
+		return _currentIndex > cellStart;
 	}
 
 	private void exitOnState(int currentIndex, int none) {

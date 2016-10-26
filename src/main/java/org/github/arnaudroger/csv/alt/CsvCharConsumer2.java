@@ -1,4 +1,6 @@
-package org.github.arnaudroger.csv;
+package org.github.arnaudroger.csv.alt;
+
+import org.github.arnaudroger.csv.CellConsumer;
 
 public final class CsvCharConsumer2 extends CharConsumer2 {
 

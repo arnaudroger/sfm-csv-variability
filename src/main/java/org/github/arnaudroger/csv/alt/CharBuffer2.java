@@ -1,4 +1,6 @@
-package org.github.arnaudroger.csv;
+package org.github.arnaudroger.csv.alt;
+
+import org.github.arnaudroger.csv.BufferOverflowException;
 
 import java.io.IOException;
 
@@ -6,7 +8,6 @@ public abstract class CharBuffer2 {
 
 	protected char[] buffer;
 	protected int bufferSize;
-	protected int mark;
 
     public CharBuffer2(char[] buffer, final int bufferSize) {
 		this.buffer = buffer;
@@ -14,7 +15,7 @@ public abstract class CharBuffer2 {
 	}
 
 	public abstract int fillBuffer() throws IOException;
-	public abstract int shiftBufferToMark() throws BufferOverflowException;
+	public abstract int shiftBufferToMark(int mark) throws BufferOverflowException;
 
 	public final char[] getCharBuffer() {
 		return buffer;
