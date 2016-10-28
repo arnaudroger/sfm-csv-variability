@@ -1,0 +1,550 @@
+<task_queued method="org/github/arnaudroger/csv/orig/CharConsumer consumeAllBuffer (Lorg/github/arnaudroger/csv/CellConsumer;)V" bytes="213" count="315" backedge_count="1284096" stamp="1.916" comment="tiered" hot_count="315" compile_id="492" iicount="315"/>
+
+<nmethod stub_offset="5840" dependencies_offset="13968" address="0x00007f385d236e90" method="org/github/arnaudroger/csv/orig/CharConsumer consumeAllBuffer (Lorg/github/arnaudroger/csv/CellConsumer;)V" level="4" count="512" backedge_count="2087428" stamp="2.055" nul_chk_table_offset="14200" scopes_data_offset="6168" iicount="512" handler_table_offset="13984" oops_offset="5896" entry="0x00007f385d2370e0" size="14304" scopes_pcs_offset="10032" insts_offset="592" bytes="213" relocation_offset="296" compile_id="492" compiler="C2"/>
+
+<task method="org/github/arnaudroger/csv/orig/CharConsumer consumeAllBuffer (Lorg/github/arnaudroger/csv/CellConsumer;)V" bytes="213" count="315" backedge_count="1284096" stamp="1.916" compile_id="492" iicount="315">
+  <phase nodes="3" name="parse" stamp="1.917" live="3">
+    <klass name="org/github/arnaudroger/csv/orig/CharConsumer" flags="1025" id="831"/>
+    <klass name="org/github/arnaudroger/csv/orig/CsvCharConsumer" flags="17" id="836"/>
+    <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+    <type name="void" id="723"/>
+    <klass name="org/github/arnaudroger/csv/CellConsumer" flags="1537" id="832"/>
+    <method level="3" bytes="213" name="consumeAllBuffer" flags="17" holder="831" arguments="832" id="833" compile_id="460" compiler="C1" iicount="315" return="723"/>
+    <parse method="833" stamp="1.918" uses="315">
+      <bc code="180" bci="1"/>
+      <klass name="org/github/arnaudroger/csv/orig/CharBuffer" flags="1025" id="837"/>
+      <klass name="org/github/arnaudroger/csv/orig/ReaderCharBuffer" flags="17" id="835"/>
+      <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+      <bc code="182" bci="4"/>
+      <klass name="[C" flags="1041" id="820"/>
+      <method level="1" bytes="5" name="getCharBuffer" flags="17" holder="837" id="838" compile_id="468" compiler="C1" iicount="128" return="820"/>
+      <call method="838" inline="1" count="284" prof_factor="1"/>
+      <inline_success reason="accessor"/>
+      <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+      <parse method="838" stamp="1.919" uses="284">
+        <uncommon_trap reason="null_check" bci="4" action="maybe_recompile"/>
+        <parse_done nodes="56" memory="28040" stamp="1.919" live="54"/>
+      </parse>
+      <bc code="180" bci="9"/>
+      <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+      <bc code="182" bci="12"/>
+      <type name="int" id="721"/>
+      <method level="1" bytes="5" name="getBufferSize" flags="17" holder="837" id="839" compile_id="469" compiler="C1" iicount="128" return="721"/>
+      <call method="839" inline="1" count="284" prof_factor="1"/>
+      <inline_success reason="accessor"/>
+      <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+      <parse method="839" stamp="1.919" uses="284">
+        <parse_done nodes="76" memory="32384" stamp="1.919" live="73"/>
+      </parse>
+      <bc code="162" bci="31"/>
+      <branch prob="0.000244397" not_taken="1161761" taken="284" cnt="1.16204e+06" target_bci="200"/>
+      <uncommon_trap reason="predicate" bci="34" action="maybe_recompile"/>
+      <uncommon_trap reason="loop_limit_check" bci="34" action="maybe_recompile"/>
+      <bc code="52" bci="37"/>
+      <uncommon_trap reason="null_check" bci="37" action="maybe_recompile"/>
+      <uncommon_trap reason="range_check" bci="37" action="make_not_entrant" comment="range_check"/>
+      <bc code="182" bci="43"/>
+      <type name="boolean" id="715"/>
+      <type name="char" id="716"/>
+      <method level="4" bytes="12" name="isNotEscapeCharacter" flags="20" holder="836" arguments="716" id="850" compile_id="484" compiler="C2" iicount="39023" return="715"/>
+      <dependency x="850" ctxk="836" type="unique_concrete_method"/>
+      <call method="850" inline="1" count="1161761" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <parse method="850" stamp="1.919" uses="1.16176e+06">
+        <observe total="1" count="1" trap="unstable_if"/>
+        <bc code="159" bci="3"/>
+        <branch prob="0.000358754" not_taken="39010" taken="14" cnt="39024" target_bci="10"/>
+        <parse_done nodes="186" memory="51512" stamp="1.919" live="178"/>
+      </parse>
+      <bc code="153" bci="46"/>
+      <branch prob="1.20507e-05" not_taken="1161747" taken="14" cnt="1.16176e+06" target_bci="177"/>
+      <bc code="184" bci="51"/>
+      <method level="4" bytes="12" name="isCharEscaped" flags="10" holder="831" arguments="721" id="842" compile_id="438" compiler="C2" iicount="1015223" return="715"/>
+      <call method="842" inline="1" count="1161747" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <parse method="842" stamp="1.919" uses="1.16175e+06">
+        <bc code="154" bci="3"/>
+        <branch prob="never" not_taken="1046503" taken="0" cnt="1.0465e+06" target_bci="10"/>
+        <uncommon_trap reason="unstable_if" bci="3" action="reinterpret" comment="taken never"/>
+        <parse_done nodes="221" memory="56984" stamp="1.919" live="211"/>
+      </parse>
+      <bc code="153" bci="54"/>
+      <branch prob="never" not_taken="1161747" taken="0" cnt="1.16175e+06" target_bci="142"/>
+      <bc code="182" bci="60"/>
+      <method level="4" bytes="12" name="isSeparator" flags="20" holder="836" arguments="716" id="853" compile_id="439" compiler="C2" iicount="17134" return="715"/>
+      <dependency x="853" ctxk="836" type="unique_concrete_method"/>
+      <call method="853" inline="1" count="1161747" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <parse method="853" stamp="1.919" uses="1.16175e+06">
+        <bc code="160" bci="3"/>
+        <branch prob="0.865239" not_taken="2309" taken="14825" cnt="17134" target_bci="10"/>
+        <parse_done nodes="252" memory="62096" stamp="1.919" live="241"/>
+      </parse>
+      <bc code="153" bci="63"/>
+      <branch prob="0.87864" not_taken="140990" taken="1020757" cnt="1.16175e+06" target_bci="80"/>
+      <bc code="183" bci="71"/>
+      <method level="4" bytes="20" name="newCell" flags="2" holder="831" arguments="820 721 832" id="847" compile_id="449" compiler="C2" iicount="155756" return="723"/>
+      <call method="847" inline="1" count="140990" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+      <parse method="847" stamp="1.919" uses="140990">
+        <bc code="180" bci="3"/>
+        <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+        <bc code="180" bci="6"/>
+        <uncommon_trap reason="null_check" bci="6" action="maybe_recompile"/>
+        <bc code="182" bci="11"/>
+        <method level="4" bytes="52" name="pushCell" flags="20" holder="836" arguments="820 721 721 832" id="857" compile_id="450" compiler="C2" iicount="10919" return="723"/>
+        <dependency x="857" ctxk="836" type="unique_concrete_method"/>
+        <call method="857" inline="1" count="161341" prof_factor="0.905198"/>
+        <inline_success reason="inline (hot)"/>
+        <parse method="857" stamp="1.919" uses="146046">
+          <bc code="162" bci="10"/>
+          <branch prob="0.13536" not_taken="9441" taken="1478" cnt="10919" target_bci="36"/>
+          <bc code="52" bci="16"/>
+          <uncommon_trap reason="range_check" bci="16" action="make_not_entrant" comment="range_check"/>
+          <bc code="160" bci="19"/>
+          <branch prob="always" not_taken="0" taken="9441" cnt="9441" target_bci="36"/>
+          <uncommon_trap reason="unstable_if" bci="19" action="reinterpret" comment="taken always"/>
+          <bc code="185" bci="46"/>
+          <klass name="org/github/arnaudroger/csv/StringArrayCellConsumer" flags="17" id="861"/>
+          <method bytes="0" name="newCell" flags="1025" holder="832" arguments="820 721 721" id="858" iicount="1" return="723"/>
+          <call receiver_count="10407" virtual="1" method="858" inline="1" receiver="861" count="10407" prof_factor="1"/>
+          <method level="4" bytes="34" name="newCell" flags="1" holder="861" arguments="820 721 721" id="862" compile_id="451" compiler="C2" iicount="10919" return="723"/>
+          <call method="862" inline="1" count="10407" prof_factor="1"/>
+          <inline_success reason="inline (hot)"/>
+          <predicted_call klass="861" bci="46"/>
+          <uncommon_trap reason="null_check" bci="46" action="maybe_recompile"/>
+          <uncommon_trap reason="class_check" bci="46" action="maybe_recompile" comment="monomorphic vcall checkcast"/>
+          <parse method="862" stamp="1.920" uses="10919">
+            <bc code="183" bci="1"/>
+            <method level="4" bytes="81" name="ensureCapacity" flags="2" holder="861" id="863" compile_id="452" compiler="C2" iicount="8961" return="723"/>
+            <call method="863" inline="1" count="10407" prof_factor="1"/>
+            <klass name="java/lang/ArrayIndexOutOfBoundsException" flags="1" id="870"/>
+            <uncommon_trap reason="unloaded" method="863" klass="870" bci="22" action="reinterpret" index="10"/>
+            <inline_success reason="inline (hot)"/>
+            <parse method="863" stamp="1.920" uses="10919">
+              <bc code="161" bci="8"/>
+              <branch prob="always" not_taken="0" taken="8961" cnt="8961" target_bci="80"/>
+              <uncommon_trap reason="unstable_if" bci="8" action="reinterpret" comment="taken always"/>
+              <parse_done nodes="407" memory="96920" stamp="1.920" live="389"/>
+            </parse>
+            <bc code="183" bci="19"/>
+            <klass name="java/lang/String" flags="17" id="729"/>
+            <method level="4" bytes="82" name="&lt;init&gt;" flags="1" holder="729" arguments="820 721 721" id="865" compile_id="408" compiler="C2" iicount="5705" return="723"/>
+            <call method="865" inline="1" count="10407" prof_factor="1"/>
+            <klass unloaded="1" name="java/lang/StringIndexOutOfBoundsException" id="874"/>
+            <uncommon_trap reason="unloaded" method="865" klass="874" bci="58" action="reinterpret" index="6"/>
+            <uncommon_trap reason="unloaded" method="865" klass="874" bci="25" action="reinterpret" index="6"/>
+            <uncommon_trap reason="unloaded" method="865" klass="874" bci="8" action="reinterpret" index="6"/>
+            <inline_success reason="inline (hot)"/>
+            <parse method="865" stamp="1.920" uses="10919">
+              <bc code="183" bci="1"/>
+              <klass name="java/lang/Object" flags="1" id="728"/>
+              <method level="1" bytes="1" name="&lt;init&gt;" flags="1" holder="728" id="872" compile_id="29" compiler="C1" iicount="21230" return="723"/>
+              <call method="872" inline="1" count="5332" prof_factor="1"/>
+              <inline_success reason="inline (hot)"/>
+              <parse method="872" stamp="1.920" uses="5705">
+                <parse_done nodes="472" memory="110544" stamp="1.920" live="453"/>
+              </parse>
+              <bc code="156" bci="5"/>
+              <branch prob="always" not_taken="0" taken="5705" cnt="5705" target_bci="17"/>
+              <uncommon_trap reason="unstable_if" bci="5" action="reinterpret" comment="taken always"/>
+              <bc code="157" bci="18"/>
+              <branch prob="0.994741" not_taken="30" taken="5675" cnt="5705" target_bci="50"/>
+              <bc code="156" bci="22"/>
+              <branch not_taken="0" taken="30" target_bci="34"/>
+              <bc code="187" bci="25"/>
+              <uncommon_trap reason="unloaded" bci="25" action="reinterpret" index="6"/>
+              <bc code="163" bci="37"/>
+              <branch not_taken="30" taken="0" target_bci="50"/>
+              <bc code="164" bci="55"/>
+              <branch prob="always" not_taken="0" taken="5675" cnt="5675" target_bci="69"/>
+              <uncommon_trap reason="unstable_if" bci="55" action="reinterpret" comment="taken always"/>
+              <bc code="184" bci="75"/>
+              <klass name="java/util/Arrays" flags="1" id="867"/>
+              <method level="4" bytes="63" name="copyOfRange" flags="9" holder="867" arguments="820 721 721" id="873" compile_id="385" compiler="C2" iicount="5525" return="820"/>
+              <call method="873" inline="1" count="5304" prof_factor="1"/>
+              <klass name="java/lang/IllegalArgumentException" flags="1" id="882"/>
+              <uncommon_trap reason="unloaded" method="873" klass="882" bci="8" action="reinterpret" index="2"/>
+              <inline_success reason="inline (hot)"/>
+              <parse method="873" stamp="1.920" uses="5675">
+                <bc code="156" bci="5"/>
+                <branch prob="always" not_taken="0" taken="5525" cnt="5525" target_bci="39"/>
+                <uncommon_trap reason="unstable_if" bci="5" action="reinterpret" comment="taken always"/>
+                <bc code="184" bci="54"/>
+                <klass name="java/lang/Math" flags="17" id="879"/>
+                <method level="4" bytes="11" name="min" flags="9" holder="879" arguments="721 721" id="880" compile_id="412" compiler="C2" iicount="19054" return="721"/>
+                <call method="880" inline="1" count="5141" prof_factor="1"/>
+                <intrinsic nodes="3" id="_min"/>
+                <bc code="184" bci="57"/>
+                <klass name="java/lang/System" flags="17" id="734"/>
+                <method compile_kind="c2n" level="0" bytes="0" name="arraycopy" flags="265" holder="734" arguments="728 721 728 721 721" id="881" compile_id="6" iicount="640" return="723"/>
+                <call method="881" inline="1" count="5141" prof_factor="1"/>
+                <intrinsic nodes="113" id="_arraycopy"/>
+                <parse_done nodes="748" memory="175392" stamp="1.920" live="723"/>
+              </parse>
+              <parse_done nodes="763" memory="178888" stamp="1.922" live="737"/>
+            </parse>
+            <bc code="83" bci="22"/>
+            <uncommon_trap reason="null_check" bci="22" action="maybe_recompile"/>
+            <uncommon_trap reason="range_check" bci="22" action="make_not_entrant" comment="range_check"/>
+            <parse_done nodes="831" memory="192080" stamp="1.922" live="802"/>
+          </parse>
+          <parse_done nodes="837" memory="194256" stamp="1.922" live="807"/>
+        </parse>
+        <bc code="183" bci="16"/>
+        <method level="2" bytes="11" name="startNextCell" flags="2" holder="831" arguments="721" id="846" compile_id="436" compiler="C1" iicount="155755" return="723"/>
+        <call method="846" inline="1" count="161341" prof_factor="0.905198"/>
+        <inline_success reason="inline (hot)"/>
+        <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+        <parse method="846" stamp="1.922" uses="146046">
+          <bc code="180" bci="1"/>
+          <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+          <bc code="181" bci="7"/>
+          <uncommon_trap reason="null_check" bci="7" action="maybe_recompile"/>
+          <parse_done nodes="872" memory="202976" stamp="1.922" live="840"/>
+        </parse>
+        <parse_done nodes="876" memory="204032" stamp="1.922" live="843"/>
+      </parse>
+      <bc code="160" bci="84"/>
+      <branch prob="0.97698" not_taken="23498" taken="997259" cnt="1.02076e+06" target_bci="121"/>
+      <bc code="184" bci="89"/>
+      <method level="4" bytes="12" name="lastCharWasNotCr" flags="10" holder="831" arguments="721" id="845" compile_id="493" compiler="C2" iicount="26112" return="715"/>
+      <call method="845" inline="1" count="23498" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <parse method="845" stamp="1.922" uses="23498">
+        <bc code="154" bci="3"/>
+        <branch prob="never" not_taken="27586" taken="0" cnt="27586" target_bci="10"/>
+        <uncommon_trap reason="unstable_if" bci="3" action="reinterpret" comment="taken never"/>
+        <parse_done nodes="915" memory="210328" stamp="1.922" live="880"/>
+      </parse>
+      <bc code="153" bci="92"/>
+      <branch prob="never" not_taken="23498" taken="0" cnt="23498" target_bci="109"/>
+      <bc code="183" bci="100"/>
+      <method level="3" bytes="15" name="endOfRow" flags="2" holder="831" arguments="820 721 832" id="844" compile_id="443" compiler="C1" iicount="26112" return="723"/>
+      <call method="844" inline="1" count="23498" prof_factor="1"/>
+      <inline_success reason="inline (hot)"/>
+      <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+      <parse method="844" stamp="1.922" uses="23498">
+        <bc code="183" bci="4"/>
+        <call method="847" inline="1" count="27704" prof_factor="0.899893"/>
+        <inline_success reason="inline (hot)"/>
+        <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+        <parse method="847" stamp="1.923" uses="24931">
+          <bc code="180" bci="3"/>
+          <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+          <bc code="180" bci="6"/>
+          <uncommon_trap reason="null_check" bci="6" action="maybe_recompile"/>
+          <bc code="182" bci="11"/>
+          <dependency x="857" ctxk="836" type="unique_concrete_method"/>
+          <call method="857" inline="1" count="161341" prof_factor="0.160064"/>
+          <inline_success reason="inline (hot)"/>
+          <parse method="857" stamp="1.923" uses="25825">
+            <bc code="162" bci="10"/>
+            <branch prob="0.13536" not_taken="9441" taken="1478" cnt="10919" target_bci="36"/>
+            <bc code="52" bci="16"/>
+            <uncommon_trap reason="range_check" bci="16" action="make_not_entrant" comment="range_check"/>
+            <bc code="160" bci="19"/>
+            <branch prob="always" not_taken="0" taken="9441" cnt="9441" target_bci="36"/>
+            <uncommon_trap reason="unstable_if" bci="19" action="reinterpret" comment="taken always"/>
+            <bc code="185" bci="46"/>
+            <call receiver_count="10407" virtual="1" method="858" inline="1" receiver="861" count="10407" prof_factor="1"/>
+            <call method="862" inline="1" count="10407" prof_factor="1"/>
+            <inline_success reason="inline (hot)"/>
+            <predicted_call klass="861" bci="46"/>
+            <uncommon_trap reason="null_check" bci="46" action="maybe_recompile"/>
+            <uncommon_trap reason="class_check" bci="46" action="maybe_recompile" comment="monomorphic vcall checkcast"/>
+            <parse method="862" stamp="1.923" uses="10919">
+              <bc code="183" bci="1"/>
+              <call method="863" inline="1" count="10407" prof_factor="1"/>
+              <inline_success reason="inline (hot)"/>
+              <parse method="863" stamp="1.923" uses="10919">
+                <bc code="161" bci="8"/>
+                <branch prob="always" not_taken="0" taken="8961" cnt="8961" target_bci="80"/>
+                <uncommon_trap reason="unstable_if" bci="8" action="reinterpret" comment="taken always"/>
+                <parse_done nodes="1078" memory="265192" stamp="1.923" live="1036"/>
+              </parse>
+              <bc code="183" bci="19"/>
+              <call method="865" inline="1" count="10407" prof_factor="1"/>
+              <inline_success reason="inline (hot)"/>
+              <parse method="865" stamp="1.923" uses="10919">
+                <bc code="183" bci="1"/>
+                <call method="872" inline="1" count="5332" prof_factor="1"/>
+                <inline_success reason="inline (hot)"/>
+                <parse method="872" stamp="1.923" uses="5705">
+                  <parse_done nodes="1137" memory="278424" stamp="1.923" live="1094"/>
+                </parse>
+                <bc code="156" bci="5"/>
+                <branch prob="always" not_taken="0" taken="5705" cnt="5705" target_bci="17"/>
+                <uncommon_trap reason="unstable_if" bci="5" action="reinterpret" comment="taken always"/>
+                <bc code="157" bci="18"/>
+                <branch prob="0.994741" not_taken="30" taken="5675" cnt="5705" target_bci="50"/>
+                <bc code="156" bci="22"/>
+                <branch not_taken="0" taken="30" target_bci="34"/>
+                <bc code="187" bci="25"/>
+                <uncommon_trap reason="unloaded" bci="25" action="reinterpret" index="6"/>
+                <bc code="163" bci="37"/>
+                <branch not_taken="30" taken="0" target_bci="50"/>
+                <bc code="164" bci="55"/>
+                <branch prob="always" not_taken="0" taken="5675" cnt="5675" target_bci="69"/>
+                <uncommon_trap reason="unstable_if" bci="55" action="reinterpret" comment="taken always"/>
+                <bc code="184" bci="75"/>
+                <call method="873" inline="1" count="5304" prof_factor="1"/>
+                <inline_success reason="inline (hot)"/>
+                <parse method="873" stamp="1.924" uses="5675">
+                  <bc code="156" bci="5"/>
+                  <branch prob="always" not_taken="0" taken="5525" cnt="5525" target_bci="39"/>
+                  <uncommon_trap reason="unstable_if" bci="5" action="reinterpret" comment="taken always"/>
+                  <bc code="184" bci="54"/>
+                  <call method="880" inline="1" count="5141" prof_factor="1"/>
+                  <intrinsic nodes="3" id="_min"/>
+                  <bc code="184" bci="57"/>
+                  <call method="881" inline="1" count="5141" prof_factor="1"/>
+                  <intrinsic nodes="108" id="_arraycopy"/>
+                  <parse_done nodes="1397" memory="326000" stamp="1.924" live="1348"/>
+                </parse>
+                <parse_done nodes="1412" memory="329656" stamp="1.926" live="1362"/>
+              </parse>
+              <bc code="83" bci="22"/>
+              <uncommon_trap reason="null_check" bci="22" action="maybe_recompile"/>
+              <uncommon_trap reason="range_check" bci="22" action="make_not_entrant" comment="range_check"/>
+              <parse_done nodes="1476" memory="341840" stamp="1.926" live="1423"/>
+            </parse>
+            <parse_done nodes="1482" memory="344016" stamp="1.926" live="1428"/>
+          </parse>
+          <bc code="183" bci="16"/>
+          <call method="846" inline="1" count="161341" prof_factor="0.160064"/>
+          <inline_success reason="inline (hot)"/>
+          <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+          <parse method="846" stamp="1.926" uses="25825">
+            <bc code="180" bci="1"/>
+            <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+            <bc code="181" bci="7"/>
+            <uncommon_trap reason="null_check" bci="7" action="maybe_recompile"/>
+            <parse_done nodes="1517" memory="353744" stamp="1.926" live="1461"/>
+          </parse>
+          <parse_done nodes="1521" memory="354800" stamp="1.926" live="1464"/>
+        </parse>
+        <bc code="185" bci="8"/>
+        <method level="4" bytes="17" name="endOfRow" flags="1" holder="861" id="888" compile_id="463" compiler="C2" iicount="8038" return="715"/>
+        <dependency x="888" ctxk="861" type="unique_concrete_method"/>
+        <call method="888" inline="1" count="27704" prof_factor="0.899893"/>
+        <klass unloaded="1" name="org/github/arnaudroger/csv/ErrorHelper" id="890"/>
+        <uncommon_trap reason="unloaded" method="888" klass="890" bci="7" action="reinterpret" index="103"/>
+        <inline_success reason="inline (hot)"/>
+        <parse method="888" stamp="1.926" uses="24931">
+          <observe that="has_exception_handlers"/>
+          <bc code="183" bci="1"/>
+          <method level="4" bytes="40" name="_endOfRow" flags="2" holder="861" id="889" compile_id="465" compiler="C2" iicount="8038" return="715"/>
+          <call method="889" inline="1" count="7526" prof_factor="1"/>
+          <inline_success reason="inline (hot)"/>
+          <parse method="889" stamp="1.928" uses="8038">
+            <bc code="184" bci="12"/>
+            <klass name="[Ljava/lang/Object;" flags="1041" id="868"/>
+            <method level="3" bytes="13" name="copyOf" flags="9" holder="867" arguments="868 721" id="869" compile_id="374" compiler="C1" iicount="8320" return="868"/>
+            <call method="869" inline="1" count="7526" prof_factor="1"/>
+            <inline_success reason="inline (hot)"/>
+            <parse method="869" stamp="1.928" uses="8038">
+              <bc code="182" bci="3"/>
+              <klass name="java/lang/Class" flags="17" id="730"/>
+              <method compile_kind="c2n" level="0" bytes="0" name="getClass" flags="273" holder="728" id="899" compile_id="72" iicount="256" return="730"/>
+              <call method="899" inline="1" count="8064" prof_factor="0.966106"/>
+              <uncommon_trap reason="null_check" bci="3" action="maybe_recompile"/>
+              <intrinsic nodes="20" id="_getClass"/>
+              <bc code="184" bci="6"/>
+              <method level="4" bytes="46" name="copyOf" flags="9" holder="867" arguments="868 721 730" id="900" compile_id="457" compiler="C2" iicount="5856" return="868"/>
+              <call method="900" inline="1" count="8064" prof_factor="0.966106"/>
+              <uncommon_trap reason="intrinsic" bci="6" action="maybe_recompile"/>
+              <intrinsic nodes="116" id="_copyOf"/>
+              <parse_done nodes="1705" memory="387136" stamp="1.928" live="1645"/>
+            </parse>
+            <bc code="185" bci="15"/>
+            <klass name="org/github/arnaudroger/Csv1Benchmark$$Lambda$2" flags="4112" id="898"/>
+            <klass name="org/github/arnaudroger/csv/CheckedConsumer" flags="1537" id="893"/>
+            <method bytes="0" name="accept" flags="1025" holder="893" arguments="728" id="894" iicount="1" return="723"/>
+            <call receiver_count="7526" virtual="1" method="894" inline="1" receiver="898" count="7526" prof_factor="1"/>
+            <method level="3" bytes="15" name="accept" flags="1" holder="898" arguments="728" id="903" compile_id="446" compiler="C1" iicount="8038" return="723"/>
+            <call method="903" inline="1" count="7526" prof_factor="1"/>
+            <inline_success reason="inline (hot)"/>
+            <predicted_call klass="898" bci="15"/>
+            <uncommon_trap reason="null_check" bci="15" action="maybe_recompile"/>
+            <uncommon_trap reason="class_check" bci="15" action="maybe_recompile" comment="monomorphic vcall checkcast"/>
+            <parse method="903" stamp="1.929" uses="8038">
+              <bc code="182" bci="11"/>
+              <klass name="org/openjdk/jmh/infra/Blackhole" flags="17" id="904"/>
+              <method level="4" bytes="42" name="consume" flags="17" holder="904" arguments="868" id="905" compile_id="472" compiler="C2" iicount="13360" return="723"/>
+              <call method="905" inline="1" count="7526" prof_factor="1"/>
+              <inline_fail reason="disallowed by CompilerOracle"/>
+              <direct_call bci="11"/>
+              <uncommon_trap reason="null_check" bci="11" action="maybe_recompile"/>
+              <parse_done nodes="1780" memory="401840" stamp="1.929" live="1716"/>
+            </parse>
+            <bc code="184" bci="30"/>
+            <method level="3" bytes="28" name="fill" flags="9" holder="867" arguments="868 721 721 728" id="895" compile_id="440" compiler="C1" iicount="8070" return="723"/>
+            <call method="895" inline="1" count="7526" prof_factor="1"/>
+            <inline_success reason="inline (hot)"/>
+            <parse method="895" stamp="1.929" uses="8038">
+              <bc code="190" bci="1"/>
+              <uncommon_trap reason="null_check" bci="1" action="maybe_recompile"/>
+              <bc code="184" bci="4"/>
+              <method level="4" bytes="74" name="rangeCheck" flags="10" holder="867" arguments="721 721 721" id="908" compile_id="461" compiler="C2" iicount="5823" return="723"/>
+              <call method="908" inline="1" count="7603" prof_factor="0.996035"/>
+              <uncommon_trap reason="unloaded" method="908" klass="870" bci="64" action="reinterpret" index="12"/>
+              <uncommon_trap reason="unloaded" method="908" klass="870" bci="50" action="reinterpret" index="12"/>
+              <uncommon_trap reason="unloaded" method="908" klass="882" bci="5" action="reinterpret" index="2"/>
+              <inline_success reason="inline (hot)"/>
+              <parse method="908" stamp="1.929" uses="7573">
+                <bc code="164" bci="2"/>
+                <branch prob="always" not_taken="0" taken="5823" cnt="5823" target_bci="46"/>
+                <uncommon_trap reason="unstable_if" bci="2" action="reinterpret" comment="taken always"/>
+                <bc code="156" bci="47"/>
+                <branch prob="always" not_taken="0" taken="5823" cnt="5823" target_bci="59"/>
+                <bc code="164" bci="61"/>
+                <branch prob="always" not_taken="0" taken="5823" cnt="5823" target_bci="73"/>
+                <uncommon_trap reason="unstable_if" bci="61" action="reinterpret" comment="taken always"/>
+                <parse_done nodes="1864" memory="418592" stamp="1.929" live="1796"/>
+              </parse>
+              <bc code="162" bci="13"/>
+              <branch prob="0.125" not_taken="53221" taken="7603" cnt="60824" target_bci="27"/>
+              <uncommon_trap reason="predicate" bci="16" action="maybe_recompile"/>
+              <uncommon_trap reason="loop_limit_check" bci="16" action="maybe_recompile"/>
+              <bc code="83" bci="20"/>
+              <uncommon_trap reason="range_check" bci="20" action="make_not_entrant" comment="range_check"/>
+              <bc code="162" bci="13"/>
+              <branch prob="0.125" not_taken="53221" taken="7603" cnt="53221" target_bci="27"/>
+              <parse_done nodes="1948" memory="434008" stamp="1.930" live="1876"/>
+            </parse>
+            <parse_done nodes="1955" memory="435944" stamp="1.930" live="1882"/>
+          </parse>
+          <bc code="184" bci="7"/>
+          <uncommon_trap reason="unloaded" bci="7" action="reinterpret" index="103"/>
+          <parse_done nodes="2004" memory="443960" stamp="1.930" live="1929"/>
+        </parse>
+        <parse_done nodes="2011" memory="446224" stamp="1.930" live="1935"/>
+      </parse>
+      <bc code="160" bci="125"/>
+      <branch prob="always" not_taken="0" taken="997259" cnt="997259" target_bci="142"/>
+      <uncommon_trap reason="unstable_if" bci="125" action="reinterpret" comment="taken always"/>
+      <bc code="154" bci="155"/>
+      <branch prob="always" not_taken="0" taken="997259" cnt="997259" target_bci="165"/>
+      <uncommon_trap reason="unstable_if" bci="155" action="reinterpret" comment="taken always"/>
+      <bc code="184" bci="179"/>
+      <method bytes="16" name="canEscaped" flags="10" holder="831" arguments="721" id="841" iicount="14" return="715"/>
+      <call method="841" inline="1" count="14" prof_factor="1"/>
+      <inline_fail reason="executed &lt; MinInliningThreshold times"/>
+      <direct_call bci="179"/>
+      <bc code="153" bci="182"/>
+      <branch not_taken="0" taken="14" target_bci="194"/>
+      <bc code="162" bci="31"/>
+      <branch prob="0.000244397" not_taken="1161761" taken="284" cnt="1.16176e+06" target_bci="200"/>
+      <parse_done nodes="2114" memory="538696" stamp="1.930" live="2035"/>
+    </parse>
+    <phase_done nodes="2116" name="parse" stamp="1.930" live="1168"/>
+  </phase>
+  <phase nodes="2116" name="optimizer" stamp="1.930" live="1168">
+    <phase nodes="2174" name="idealLoop" stamp="1.931" live="1119">
+      <loop_tree>
+        <loop idx="2181">
+          <loop idx="2187">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2188" name="idealLoop" stamp="1.931" live="1115"/>
+    </phase>
+    <phase nodes="2188" name="escapeAnalysis" stamp="1.931" live="1115">
+      <phase nodes="2188" name="connectionGraph" stamp="1.931" live="1115">
+        <phase_done nodes="2188" name="connectionGraph" stamp="1.931" live="1115"/>
+      </phase>
+      <phase_done nodes="2188" name="escapeAnalysis" stamp="1.931" live="1115"/>
+    </phase>
+    <phase nodes="2188" name="idealLoop" stamp="1.931" live="1115">
+      <loop_tree>
+        <loop idx="2181">
+          <loop idx="2187" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2203" name="idealLoop" stamp="1.932" live="1110"/>
+    </phase>
+    <phase nodes="2203" name="idealLoop" stamp="1.932" live="1110">
+      <loop_tree>
+        <loop idx="2181">
+          <loop idx="2187" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2241" name="idealLoop" stamp="1.933" live="1120"/>
+    </phase>
+    <phase nodes="2241" name="idealLoop" stamp="1.933" live="1120">
+      <loop_tree>
+        <loop idx="2181">
+          <loop idx="2312" main_loop="2312" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2322" name="idealLoop" stamp="1.933" live="1181"/>
+    </phase>
+    <phase nodes="2322" name="ccp" stamp="1.933" live="1181">
+      <phase_done nodes="2322" name="ccp" stamp="1.934" live="1181"/>
+    </phase>
+    <phase nodes="2348" name="idealLoop" stamp="1.934" live="1156">
+      <loop_tree>
+        <loop idx="2181">
+          <loop pre_loop="2187" idx="2275" inner_loop="1">
+          </loop>
+          <loop idx="2380" main_loop="2380" inner_loop="1">
+          </loop>
+          <loop idx="2251" post_loop="2187" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2401" name="idealLoop" stamp="1.935" live="1170"/>
+    </phase>
+    <phase nodes="2401" name="idealLoop" stamp="1.935" live="1170">
+      <loop_tree>
+        <loop idx="2181">
+          <loop pre_loop="2187" idx="2275" inner_loop="1">
+          </loop>
+          <loop idx="2380" main_loop="2380" inner_loop="1">
+          </loop>
+          <loop idx="2251" post_loop="2187" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2424" name="idealLoop" stamp="1.935" live="1143"/>
+    </phase>
+    <phase nodes="2424" name="idealLoop" stamp="1.935" live="1143">
+      <loop_tree>
+        <loop idx="2181">
+          <loop pre_loop="2187" idx="2275" inner_loop="1">
+          </loop>
+          <loop idx="2380" main_loop="2380" inner_loop="1">
+          </loop>
+          <loop idx="2251" post_loop="2187" inner_loop="1">
+          </loop>
+        </loop>
+      </loop_tree>
+      <phase_done nodes="2449" name="idealLoop" stamp="1.936" live="1128"/>
+    </phase>
+    <phase_done nodes="2766" name="optimizer" stamp="1.936" live="1300"/>
+  </phase>
+  <phase nodes="2766" name="matcher" stamp="1.936" live="1300">
+    <phase_done nodes="1255" name="matcher" stamp="1.937" live="1255"/>
+  </phase>
+  <phase nodes="1597" name="regalloc" stamp="1.938" live="1585">
+    <regalloc success="1" attempts="3"/>
+    <phase_done nodes="2863" name="regalloc" stamp="1.953" live="2346"/>
+  </phase>
+  <phase nodes="2867" name="output" stamp="1.953" live="2350">
+    <phase_done nodes="2933" name="output" stamp="1.993" live="2397"/>
+  </phase>
+  <dependency x="836" ctxk="831" type="abstract_with_unique_concrete_subtype"/>
+  <dependency x="835" ctxk="837" type="abstract_with_unique_concrete_subtype"/>
+  <dependency x="850" ctxk="836" type="unique_concrete_method"/>
+  <dependency x="853" ctxk="836" type="unique_concrete_method"/>
+  <dependency x="857" ctxk="836" type="unique_concrete_method"/>
+  <dependency x="888" ctxk="861" type="unique_concrete_method"/>
+  <code_cache nmethods="500" free_code_cache="249355648" adapters="206" total_blobs="793"/>
+  <task_done inlined_bytes="933" success="1" count="512" backedge_count="2087428" stamp="2.055" nmsize="5304"/>
+</task>
+

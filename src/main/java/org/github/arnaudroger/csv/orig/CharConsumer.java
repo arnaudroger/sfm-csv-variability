@@ -42,7 +42,7 @@ public abstract class CharConsumer {
 			char character = chars[currentIndex];
 			if (isNotEscapeCharacter(character)) {
 				if (isCharEscaped(currentState)) {
-					if (isSeparator(character)) {
+					 if (isSeparator(character)) {
 						newCell(chars, currentIndex, cellConsumer);
 						currentState = LAST_CHAR_WAS_SEPARATOR;
 						continue;

@@ -1,0 +1,2209 @@
+# {method} {0x00007f1610cb4868} 'consumeAllBuffer' '(Lorg/github/arnaudroger/csv/CellConsumer;)V' in 'org/github/arnaudroger/csv/alt/CharConsumer2'
+# this:     rsi:rsi   = 'org/github/arnaudroger/csv/alt/CharConsumer2'
+# parm0:    rdx:rdx   = 'org/github/arnaudroger/csv/CellConsumer'
+#           [sp+0xc0]  (sp of caller)
+[Entry Point]
+0x00007f16112127c0: mov 0x8(%rsi),%r10d
+0x00007f16112127c4: shl $0x3,%r10
+0x00007f16112127c8: cmp %r10,%rax
+0x00007f16112127cb: jne 0x00007f1611045e20  ;   {runtime_call}
+0x00007f16112127d1: data16 xchg %ax,%ax
+0x00007f16112127d4: nopl 0x0(%rax,%rax,1)
+0x00007f16112127dc: data16 data16 xchg %ax,%ax
+[Verified Entry Point]
+0x00007f16112127e0: mov %eax,-0x14000(%rsp)
+0x00007f16112127e7: push %rbp
+0x00007f16112127e8: sub $0xb0,%rsp  ;*synchronization entry
+                                    ; - alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+0x00007f16112127ef: mov %rdx,0x38(%rsp)
+0x00007f16112127f4: mov %rsi,%rbx
+0x00007f16112127f7: mov 0x1c(%rsi),%r11d  ;*getfield _csvBuffer
+                                          ; - alt.CharConsumer2::consumeAllBuffer@1 (line 36)
+0x00007f16112127fb: mov 0xc(%r12,%r11,8),%ecx  ;*getfield bufferSize
+                                               ; - alt.CharBuffer2::getBufferSize@1 (line 24)
+                                               ; - alt.CharConsumer2::consumeAllBuffer@12 (line 37)
+                                               ; implicit exception: dispatches to 0x00007f1611213acd
+0x00007f1611212800: mov 0x10(%rsi),%r9d  ;*getfield _currentState
+                                         ; - alt.CharConsumer2::consumeAllBuffer@17 (line 39)
+0x00007f1611212804: mov 0xc(%rsi),%edi  ;*getfield _currentIndex
+                                        ; - alt.CharConsumer2::consumeAllBuffer@23 (line 42)
+0x00007f1611212807: cmp %ecx,%edi
+0x00007f1611212809: jge L001e  ;*if_icmpge
+                               ; - alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+0x00007f161121280f: mov 0x10(%r12,%r11,8),%eax  ;*getfield buffer
+                                                ; - alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                                ; - alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+0x00007f1611212814: mov 0xc(%r12,%rax,8),%r8d  ;*caload
+                                               ; - alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+                                               ; implicit exception: dispatches to 0x00007f16112139b9
+0x00007f1611212819: cmp %r8d,%edi
+0x00007f161121281c: jae L004c
+0x00007f1611212822: mov %ecx,%r10d
+0x00007f1611212825: dec %r10d
+0x00007f1611212828: cmp %r8d,%r10d
+0x00007f161121282b: jae L004c  ;*aload_2
+                               ; - alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+0x00007f1611212831: lea (%r12,%rax,8),%rsi  ;*getfield buffer
+                                            ; - alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+0x00007f1611212835: mov $0xf80002da,%r10d  ;   {metadata('java/lang/String')}
+0x00007f161121283b: movabs $0x0,%rbp
+0x00007f1611212845: lea 0x0(%rbp,%r10,8),%rbp
+0x00007f161121284a: jmp L0002
+             L0000: or $0x10,%r9d  ;*ior  ; - alt.CharConsumer2::consumeAllBuffer@171 (line 66)
+0x00007f1611212850: mov 0x4(%rsp),%ecx  ;*goto
+                                        ; - alt.CharConsumer2::consumeAllBuffer@106 (line 54)
+             L0001: cmp 0x10(%rsp),%ecx
+0x00007f1611212858: jge L001f
+0x00007f161121285e: mov %ecx,%r11d
+0x00007f1611212861: mov 0x10(%rsp),%ecx
+0x00007f1611212865: mov %r11d,%edi
+0x00007f1611212868: mov 0x50(%rsp),%eax
+0x00007f161121286c: mov (%rsp),%r8d
+0x00007f1611212870: mov 0x8(%rsp),%rsi
+0x00007f1611212875: mov 0x18(%rsp),%rbp  ;*aload_2
+                                         ; - alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+             L0002: movzwl 0x10(%rsi,%rdi,2),%r10d  ;*caload
+                                                    ; - alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+0x00007f1611212880: mov %edi,%r11d
+0x00007f1611212883: inc %r11d  ;*iadd
+                               ; - alt.CharConsumer2::startNextCell@3 (line 165)
+                               ; - alt.CharConsumer2::newCell@13 (line 161)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212886: cmp $0x22,%r10d
+0x00007f161121288a: je L001d  ;*if_icmpeq
+                              ; - alt.CsvCharConsumer2::isNotEscapeCharacter@3 (line 21)
+                              ; - alt.CharConsumer2::consumeAllBuffer@43 (line 44)
+0x00007f1611212890: mov %r9d,%edx
+0x00007f1611212893: and $0x1,%edx  ;*iand
+                                   ; - alt.CharConsumer2::isCharEscaped@2 (line 186)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+0x00007f1611212896: test %edx,%edx
+0x00007f1611212898: jne L002a  ;*ifne
+                               ; - alt.CharConsumer2::isCharEscaped@3 (line 186)
+                               ; - alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+0x00007f161121289e: mov %r11d,0x4(%rsp)
+0x00007f16112128a3: mov %rbp,0x18(%rsp)
+0x00007f16112128a8: mov %eax,0x50(%rsp)
+0x00007f16112128ac: mov %r9d,%eax
+0x00007f16112128af: mov %ecx,0x10(%rsp)
+0x00007f16112128b3: mov 0x14(%rbx),%r9d  ;*getfield cellStart
+                                         ; - alt.CharConsumer2::newCell@3 (line 160)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128b7: mov %rbx,0x30(%rsp)
+0x00007f16112128bc: lea 0x10(%rsi,%r9,2),%r11  ;*caload
+                                               ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f16112128c1: mov %r11,0x20(%rsp)
+0x00007f16112128c6: mov %rsi,0x8(%rsp)
+0x00007f16112128cb: mov %edi,0x44(%rsp)
+0x00007f16112128cf: sub %r9d,%edi  ;*isub
+                                   ; - alt.CsvCharConsumer2::pushCell@45 (line 35)
+                                   ; - alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128d2: mov %r8d,%r11d
+0x00007f16112128d5: sub %r9d,%r11d  ;*isub
+                                    ; - java.util.Arrays::copyOfRange@52 (line 3665)
+                                    ; - java.lang.String::<init>@75 (line 207)
+                                    ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                    ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                    ; - alt.CharConsumer2::newCell@8 (line 160)
+                                    ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128d8: mov %r8d,(%rsp)
+0x00007f16112128dc: mov %r8d,%ecx
+0x00007f16112128df: sub %edi,%ecx  ;*isub
+                                   ; - java.lang.String::<init>@54 (line 204)
+                                   ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                   ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128e1: cmp %edi,%r11d
+0x00007f16112128e4: mov %edi,0x48(%rsp)
+0x00007f16112128e8: cmovl %r11d,%edi  ;*invokestatic min
+                                      ; - java.util.Arrays::copyOfRange@54 (line 3666)
+                                      ; - java.lang.String::<init>@75 (line 207)
+                                      ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                      ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                      ; - alt.CharConsumer2::newCell@8 (line 160)
+                                      ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128ec: mov %edi,0x14(%rsp)
+0x00007f16112128f0: mov %r9d,0x40(%rsp)
+0x00007f16112128f5: add %r9d,%edi  ;*invokestatic arraycopy
+                                   ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                   ; - java.lang.String::<init>@75 (line 207)
+                                   ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                   ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128f8: movslq 0x48(%rsp),%r11  ;*newarray
+                                            ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                            ; - java.lang.String::<init>@75 (line 207)
+                                            ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112128fd: mov %r11,0x28(%rsp)
+0x00007f1611212902: movslq 0x14(%rsp),%r11  ;*invokestatic arraycopy
+                                            ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                            ; - java.lang.String::<init>@75 (line 207)
+                                            ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212907: mov %r11,0x58(%rsp)
+0x00007f161121290c: movslq 0x48(%rsp),%rdx  ;*newarray
+                                            ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                            ; - java.lang.String::<init>@75 (line 207)
+                                            ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212911: mov %r11,%r8
+0x00007f1611212914: shl %r8
+0x00007f1611212917: add $0x10,%r8
+0x00007f161121291b: mov %r8,%r9
+0x00007f161121291e: and $0xfffffffffffffff9,%r9
+0x00007f1611212922: shr $0x3,%r8  ;*invokestatic arraycopy
+                                  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                  ; - java.lang.String::<init>@75 (line 207)
+                                  ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                  ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                  ; - alt.CharConsumer2::newCell@8 (line 160)
+                                  ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212926: cmp $0x2c,%r10d
+0x00007f161121292a: je L0003  ;*if_icmpne
+                              ; - alt.CsvCharConsumer2::isSeparator@3 (line 16)
+                              ; - alt.CharConsumer2::consumeAllBuffer@60 (line 46)
+0x00007f161121292c: cmp $0xa,%r10d
+0x00007f1611212930: je L000c  ;*if_icmpne
+                              ; - alt.CharConsumer2::consumeAllBuffer@84 (line 50)
+0x00007f1611212936: cmp $0xd,%r10d
+0x00007f161121293a: je L002b  ;*if_icmpne
+                              ; - alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+0x00007f1611212940: movzbl 0x18(%rbx),%r8d  ;*getfield notIgnoreLeadingSpace
+                                            ; - alt.CharConsumer2::consumeAllBuffer@152 (line 66)
+0x00007f1611212945: mov %eax,%r9d
+0x00007f1611212948: and $0xfffffff9,%r9d  ;*iand
+                                          ; - alt.CharConsumer2::consumeAllBuffer@146 (line 65)
+0x00007f161121294c: test %r8d,%r8d
+0x00007f161121294f: jne L0000  ;*ifne
+                               ; - alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+0x00007f1611212955: mov $0xffffff65,%esi
+0x00007f161121295a: mov %rbx,%rbp
+0x00007f161121295d: mov 0x10(%rsp),%r11d
+0x00007f1611212962: mov %r11d,0x8(%rsp)
+0x00007f1611212967: mov %r10d,0x10(%rsp)
+0x00007f161121296c: mov %r9d,0x14(%rsp)
+0x00007f1611212971: mov %r8d,0x18(%rsp)
+0x00007f1611212976: nop
+0x00007f1611212977: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [56]=Oop [80]=NarrowOop off=444}
+                                              ;*ifne
+                                              ; - alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                              ;   {runtime_call}
+0x00007f161121297c: callq 0x00007f16282d80b0  ;*ifne
+                                              ; - alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                              ;   {runtime_call}
+             L0003: mov 0x40(%rsp),%r11d
+0x00007f1611212986: cmp 0x44(%rsp),%r11d
+0x00007f161121298b: jge L0004  ;*if_icmpge
+                               ; - alt.CsvCharConsumer2::pushCell@10 (line 30)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f161121298d: cmp (%rsp),%r11d
+0x00007f1611212991: jae L0031
+0x00007f1611212997: mov 0x20(%rsp),%r10
+0x00007f161121299c: movzwl (%r10),%ebx  ;*caload
+                                        ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                        ; - alt.CharConsumer2::newCell@8 (line 160)
+                                        ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129a0: cmp $0x22,%ebx
+0x00007f16112129a3: je L0036  ;*aload
+                              ; - alt.CsvCharConsumer2::pushCell@36 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0004: mov 0x38(%rsp),%r10
+0x00007f16112129ae: mov 0x8(%r10),%r11d  ; implicit exception: dispatches to 0x00007f1611213a11
+0x00007f16112129b2: cmp $0xf8015024,%r11d  ;   {metadata('org/github/arnaudroger/csv/StringArrayCellConsumer')}
+0x00007f16112129b9: jne L002e  ;*invokeinterface newCell
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129bf: mov %r10,0x60(%rsp)
+0x00007f16112129c4: mov 0x10(%r10),%r10d  ;*getfield currentIndex
+                                          ; - StringArrayCellConsumer::ensureCapacity@1 (line 28)
+                                          ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                          ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                          ; - alt.CharConsumer2::newCell@8 (line 160)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129c8: mov %r10d,0x4c(%rsp)
+0x00007f16112129cd: mov 0x60(%rsp),%r10
+0x00007f16112129d2: mov 0x14(%r10),%r10d  ;*getfield currentLength
+                                          ; - StringArrayCellConsumer::ensureCapacity@5 (line 28)
+                                          ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                          ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                          ; - alt.CharConsumer2::newCell@8 (line 160)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129d6: mov 0x4c(%rsp),%ebx
+0x00007f16112129da: cmp %r10d,%ebx
+0x00007f16112129dd: jge L0032  ;*if_icmplt
+                               ; - StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                               ; - StringArrayCellConsumer::newCell@1 (line 22)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129e3: mov 0x60(%r15),%r11
+0x00007f16112129e7: mov 0x60(%rsp),%r10
+0x00007f16112129ec: mov 0x1c(%r10),%ebp  ;*getfield currentRow
+                                         ; - StringArrayCellConsumer::newCell@5 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112129f0: mov %r11,%r10
+0x00007f16112129f3: add $0x18,%r10
+0x00007f16112129f7: cmp 0x70(%r15),%r10
+0x00007f16112129fb: jae L0025
+0x00007f1611212a01: mov %r10,0x60(%r15)
+0x00007f1611212a05: prefetchnta 0xc0(%r10)
+0x00007f1611212a0d: mov 0x18(%rsp),%r10
+0x00007f1611212a12: mov 0xa8(%r10),%r10
+0x00007f1611212a19: mov %r10,(%r11)
+0x00007f1611212a1c: movl $0xf80002da,0x8(%r11)  ;   {metadata('java/lang/String')}
+0x00007f1611212a24: mov %r12d,0xc(%r11)
+0x00007f1611212a28: mov %r12,0x10(%r11)  ;*new  ; - StringArrayCellConsumer::newCell@12 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0005: mov %r11,0x68(%rsp)
+0x00007f1611212a31: mov 0x40(%rsp),%r10d
+0x00007f1611212a36: test %r10d,%r10d
+0x00007f1611212a39: jl L0033  ;*ifge
+                              ; - java.lang.String::<init>@5 (line 191)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212a3f: mov 0x48(%rsp),%r11d
+0x00007f1611212a44: test %r11d,%r11d
+0x00007f1611212a47: jle L001c  ;*iload_2
+                               ; - java.lang.String::<init>@50 (line 204)
+                               ; - StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0006: mov 0x40(%rsp),%r10d
+0x00007f1611212a52: cmp %ecx,%r10d
+0x00007f1611212a55: jg L0034  ;*if_icmple
+                              ; - java.lang.String::<init>@55 (line 204)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212a5b: mov 0x48(%rsp),%r11d
+0x00007f1611212a60: test %r11d,%r11d
+0x00007f1611212a63: jl L0035  ;*ifge
+                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                              ; - java.lang.String::<init>@75 (line 207)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212a69: cmp $0x80000,%r11d
+0x00007f1611212a70: ja L002d
+             L0007: mov 0x28(%rsp),%r10
+0x00007f1611212a7b: shl %r10
+0x00007f1611212a7e: add $0x17,%r10
+0x00007f1611212a82: mov %r10,0x28(%rsp)
+0x00007f1611212a87: cmp $0x80000,%r11d
+0x00007f1611212a8e: ja L0026
+0x00007f1611212a94: mov 0x60(%r15),%rcx
+0x00007f1611212a98: and $0xfffffffffffffff8,%r10
+0x00007f1611212a9c: mov %rcx,%r11
+0x00007f1611212a9f: add %r10,%r11
+0x00007f1611212aa2: cmp 0x70(%r15),%r11
+0x00007f1611212aa6: jae L0026
+0x00007f1611212aac: mov %r11,0x60(%r15)
+0x00007f1611212ab0: prefetchnta 0xc0(%r11)
+0x00007f1611212ab8: movq $0x1,(%rcx)
+0x00007f1611212abf: prefetchnta 0x100(%r11)
+0x00007f1611212ac7: movl $0xf8000041,0x8(%rcx)  ;   {metadata({type array char})}
+0x00007f1611212ace: mov 0x48(%rsp),%r10d
+0x00007f1611212ad3: mov %r10d,0xc(%rcx)
+0x00007f1611212ad7: prefetchnta 0x140(%r11)
+0x00007f1611212adf: prefetchnta 0x180(%r11)  ;*newarray
+                                             ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                             ; - java.lang.String::<init>@75 (line 207)
+                                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0008: mov %rcx,0x70(%rsp)
+0x00007f1611212aec: mov %rcx,%rsi
+0x00007f1611212aef: add $0x10,%rsi
+0x00007f1611212af3: mov 0x28(%rsp),%rbx
+0x00007f1611212af8: shr $0x3,%rbx
+0x00007f1611212afc: mov %rbx,%rcx
+0x00007f1611212aff: add $0xfffffffffffffffe,%rcx
+0x00007f1611212b03: mov (%rsp),%r10d
+0x00007f1611212b07: cmp %edi,%r10d
+0x00007f1611212b0a: jb L002f
+0x00007f1611212b10: mov 0x48(%rsp),%r10d
+0x00007f1611212b15: cmp 0x14(%rsp),%r10d
+0x00007f1611212b1a: jb L002f
+0x00007f1611212b20: mov 0x14(%rsp),%r11d
+0x00007f1611212b25: test %r11d,%r11d
+0x00007f1611212b28: jle L0030
+0x00007f1611212b2e: cmp 0x48(%rsp),%r11d
+0x00007f1611212b33: jl L0020
+             L0009: mov 0x20(%rsp),%rdi
+0x00007f1611212b3e: mov 0x58(%rsp),%rdx
+0x00007f1611212b43: movabs $0x7f1611052580,%r10
+0x00007f1611212b4d: callq *%r10  ;*invokestatic arraycopy
+                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                 ; - java.lang.String::<init>@75 (line 207)
+                                 ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                 ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                 ; - alt.CharConsumer2::newCell@8 (line 160)
+                                 ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L000a: mov 0x70(%rsp),%r10
+0x00007f1611212b55: shr $0x3,%r10
+0x00007f1611212b59: mov 0x68(%rsp),%r11
+0x00007f1611212b5e: mov %r10d,0xc(%r11)
+0x00007f1611212b62: mov %r11,%r10
+0x00007f1611212b65: shr $0x9,%r10
+0x00007f1611212b69: movabs $0x7f1622453000,%r8
+0x00007f1611212b73: mov %r12b,(%r8,%r10,1)  ;*synchronization entry
+                                            ; - StringArrayCellConsumer::newCell@-1 (line 22)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L000b: mov 0xc(%r12,%rbp,8),%r9d  ; implicit exception: dispatches to 0x00007f1611213a25
+0x00007f1611212b7c: mov 0x4c(%rsp),%r8d
+0x00007f1611212b81: cmp %r9d,%r8d
+0x00007f1611212b84: jae L002c  ;*aastore
+                               ; - StringArrayCellConsumer::newCell@22 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212b8a: mov 0x30(%rsp),%rbx
+0x00007f1611212b8f: mov 0x4(%rsp),%ecx
+0x00007f1611212b93: mov %ecx,0x14(%rbx)  ;*putfield cellStart
+                                         ; - alt.CharConsumer2::startNextCell@4 (line 165)
+                                         ; - alt.CharConsumer2::newCell@13 (line 161)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212b96: mov 0x60(%rsp),%r10
+0x00007f1611212b9b: incl 0x10(%r10)  ;*putfield currentIndex
+                                     ; - StringArrayCellConsumer::newCell@30 (line 24)
+                                     ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                     ; - alt.CharConsumer2::newCell@8 (line 160)
+                                     ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212b9f: lea (%r12,%rbp,8),%r10  ;*getfield currentRow
+                                            ; - StringArrayCellConsumer::newCell@5 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212ba3: lea 0x10(%r10,%r8,4),%r10
+0x00007f1611212ba8: mov %r11,%r8
+0x00007f1611212bab: shr $0x3,%r8
+0x00007f1611212baf: mov %r8d,(%r10)
+0x00007f1611212bb2: shr $0x9,%r10
+0x00007f1611212bb6: movabs $0x7f1622453000,%r11
+0x00007f1611212bc0: mov %r12b,(%r11,%r10,1)  ;*aastore
+                                             ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611212bc4: mov $0x4,%r9d
+0x00007f1611212bca: jmpq L0001
+             L000c: mov %eax,%r10d
+0x00007f1611212bd2: and $0x2,%r10d  ;*iand
+                                    ; - alt.CharConsumer2::lastCharWasNotCr@2 (line 190)
+                                    ; - alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+0x00007f1611212bd6: test %r10d,%r10d
+0x00007f1611212bd9: jne L0043  ;*ifne
+                               ; - alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                               ; - alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+0x00007f1611212bdf: mov 0x40(%rsp),%r11d
+0x00007f1611212be4: cmp 0x44(%rsp),%r11d
+0x00007f1611212be9: jge L000d  ;*if_icmpge
+                               ; - alt.CsvCharConsumer2::pushCell@10 (line 30)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212beb: cmp (%rsp),%r11d
+0x00007f1611212bef: jae L0042
+0x00007f1611212bf5: mov 0x20(%rsp),%r10
+0x00007f1611212bfa: movzwl (%r10),%ebp  ;*caload
+                                        ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                        ; - alt.CharConsumer2::newCell@8 (line 160)
+                                        ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                        ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212bfe: cmp $0x22,%ebp
+0x00007f1611212c01: je L004a  ;*aload
+                              ; - alt.CsvCharConsumer2::pushCell@36 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L000d: mov 0x38(%rsp),%r10
+0x00007f1611212c0c: mov 0x8(%r10),%r11d  ; implicit exception: dispatches to 0x00007f1611213a3d
+0x00007f1611212c10: cmp $0xf8015024,%r11d  ;   {metadata('org/github/arnaudroger/csv/StringArrayCellConsumer')}
+0x00007f1611212c17: jne L003b  ;*invokeinterface newCell
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212c1d: mov %r10,0x60(%rsp)
+0x00007f1611212c22: mov 0x10(%r10),%r10d  ;*getfield currentIndex
+                                          ; - StringArrayCellConsumer::ensureCapacity@1 (line 28)
+                                          ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                          ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                          ; - alt.CharConsumer2::newCell@8 (line 160)
+                                          ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212c26: mov %r10d,0x4c(%rsp)
+0x00007f1611212c2b: mov 0x60(%rsp),%r10
+0x00007f1611212c30: mov 0x14(%r10),%ebp  ;*getfield currentLength
+                                         ; - StringArrayCellConsumer::ensureCapacity@5 (line 28)
+                                         ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212c34: mov 0x4c(%rsp),%r11d
+0x00007f1611212c39: cmp %ebp,%r11d
+0x00007f1611212c3c: jge L0044  ;*if_icmplt
+                               ; - StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                               ; - StringArrayCellConsumer::newCell@1 (line 22)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212c42: mov 0x60(%r15),%r10
+0x00007f1611212c46: mov 0x60(%rsp),%r11
+0x00007f1611212c4b: mov 0x1c(%r11),%ebp  ;*getfield currentRow
+                                         ; - StringArrayCellConsumer::newCell@5 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212c4f: mov %ebp,0x54(%rsp)
+0x00007f1611212c53: mov %r10,%r11
+0x00007f1611212c56: add $0x18,%r11
+0x00007f1611212c5a: cmp 0x70(%r15),%r11
+0x00007f1611212c5e: jae L0027
+0x00007f1611212c64: mov %r11,0x60(%r15)
+0x00007f1611212c68: prefetchnta 0xc0(%r11)
+0x00007f1611212c70: mov 0x18(%rsp),%r11
+0x00007f1611212c75: mov 0xa8(%r11),%r11
+0x00007f1611212c7c: mov %r11,(%r10)
+0x00007f1611212c7f: movl $0xf80002da,0x8(%r10)  ;   {metadata('java/lang/String')}
+0x00007f1611212c87: mov %r12d,0xc(%r10)
+0x00007f1611212c8b: mov %r12,0x10(%r10)  ;*new  ; - StringArrayCellConsumer::newCell@12 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L000e: mov %r10,0x68(%rsp)
+0x00007f1611212c94: mov 0x40(%rsp),%r10d
+0x00007f1611212c99: test %r10d,%r10d
+0x00007f1611212c9c: jl L0045  ;*ifge
+                              ; - java.lang.String::<init>@5 (line 191)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212ca2: mov 0x48(%rsp),%r11d
+0x00007f1611212ca7: test %r11d,%r11d
+0x00007f1611212caa: jle L0021  ;*iload_2
+                               ; - java.lang.String::<init>@50 (line 204)
+                               ; - StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L000f: mov 0x40(%rsp),%r10d
+0x00007f1611212cb5: cmp %ecx,%r10d
+0x00007f1611212cb8: jg L0048  ;*if_icmple
+                              ; - java.lang.String::<init>@55 (line 204)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212cbe: mov 0x48(%rsp),%r11d
+0x00007f1611212cc3: test %r11d,%r11d
+0x00007f1611212cc6: jl L0049  ;*ifge
+                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                              ; - java.lang.String::<init>@75 (line 207)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212ccc: cmp $0x80000,%r11d
+0x00007f1611212cd3: ja L003a
+             L0010: mov 0x28(%rsp),%rbp
+0x00007f1611212cde: shl %rbp
+0x00007f1611212ce1: add $0x17,%rbp
+0x00007f1611212ce5: cmp $0x80000,%r11d
+0x00007f1611212cec: ja L0029
+0x00007f1611212cf2: mov 0x60(%r15),%rcx
+0x00007f1611212cf6: mov %rbp,%r10
+0x00007f1611212cf9: and $0xfffffffffffffff8,%r10
+0x00007f1611212cfd: mov %rcx,%r11
+0x00007f1611212d00: add %r10,%r11
+0x00007f1611212d03: cmp 0x70(%r15),%r11
+0x00007f1611212d07: jae L0029
+0x00007f1611212d0d: mov %r11,0x60(%r15)
+0x00007f1611212d11: prefetchnta 0xc0(%r11)
+0x00007f1611212d19: movq $0x1,(%rcx)
+0x00007f1611212d20: prefetchnta 0x100(%r11)
+0x00007f1611212d28: movl $0xf8000041,0x8(%rcx)  ;   {metadata({type array char})}
+0x00007f1611212d2f: mov 0x48(%rsp),%r10d
+0x00007f1611212d34: mov %r10d,0xc(%rcx)
+0x00007f1611212d38: prefetchnta 0x140(%r11)
+0x00007f1611212d40: prefetchnta 0x180(%r11)  ;*newarray
+                                             ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                             ; - java.lang.String::<init>@75 (line 207)
+                                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0011: mov %rcx,0x28(%rsp)
+0x00007f1611212d4d: mov %rcx,%rsi
+0x00007f1611212d50: add $0x10,%rsi
+0x00007f1611212d54: shr $0x3,%rbp
+0x00007f1611212d58: mov %rbp,%rcx
+0x00007f1611212d5b: add $0xfffffffffffffffe,%rcx
+0x00007f1611212d5f: mov (%rsp),%r11d
+0x00007f1611212d63: cmp %edi,%r11d
+0x00007f1611212d66: jb L003e
+0x00007f1611212d6c: mov 0x48(%rsp),%r10d
+0x00007f1611212d71: cmp 0x14(%rsp),%r10d
+0x00007f1611212d76: jb L003e
+0x00007f1611212d7c: mov 0x14(%rsp),%r11d
+0x00007f1611212d81: test %r11d,%r11d
+0x00007f1611212d84: jle L003f
+0x00007f1611212d8a: cmp 0x48(%rsp),%r11d
+0x00007f1611212d8f: jl L0024
+             L0012: mov 0x20(%rsp),%rdi
+0x00007f1611212d9a: mov 0x58(%rsp),%rdx
+0x00007f1611212d9f: movabs $0x7f1611052580,%r10
+0x00007f1611212da9: callq *%r10  ;*invokestatic arraycopy
+                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                 ; - java.lang.String::<init>@75 (line 207)
+                                 ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                 ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                 ; - alt.CharConsumer2::newCell@8 (line 160)
+                                 ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                 ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0013: mov 0x28(%rsp),%r10
+0x00007f1611212db1: shr $0x3,%r10
+0x00007f1611212db5: mov 0x68(%rsp),%rcx
+0x00007f1611212dba: mov %r10d,0xc(%rcx)
+0x00007f1611212dbe: mov %rcx,%r10
+0x00007f1611212dc1: shr $0x9,%r10
+0x00007f1611212dc5: movabs $0x7f1622453000,%r11
+0x00007f1611212dcf: mov %r12b,(%r11,%r10,1)  ;*synchronization entry
+                                             ; - StringArrayCellConsumer::newCell@-1 (line 22)
+                                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0014: mov 0x54(%rsp),%r9d
+0x00007f1611212dd8: mov 0xc(%r12,%r9,8),%r11d  ; implicit exception: dispatches to 0x00007f1611213a51
+0x00007f1611212ddd: mov 0x4c(%rsp),%r8d
+0x00007f1611212de2: cmp %r11d,%r8d
+0x00007f1611212de5: jae L0037  ;*aastore
+                               ; - StringArrayCellConsumer::newCell@22 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212deb: mov %r8d,%ebx
+0x00007f1611212dee: mov 0x30(%rsp),%r10
+0x00007f1611212df3: mov 0x4(%rsp),%r8d
+0x00007f1611212df8: mov %r8d,0x14(%r10)  ;*putfield cellStart
+                                         ; - alt.CharConsumer2::startNextCell@4 (line 165)
+                                         ; - alt.CharConsumer2::newCell@13 (line 161)
+                                         ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212dfc: mov 0x60(%rsp),%r10
+0x00007f1611212e01: mov 0x1c(%r10),%r11d  ;*getfield currentRow
+                                          ; - StringArrayCellConsumer::_endOfRow@5 (line 45)
+                                          ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                          ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e05: mov %r11d,0x14(%rsp)
+0x00007f1611212e0a: mov 0x10(%r10),%r10d  ;*getfield currentIndex
+                                          ; - StringArrayCellConsumer::newCell@25 (line 24)
+                                          ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                          ; - alt.CharConsumer2::newCell@8 (line 160)
+                                          ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e0e: lea (%r12,%r9,8),%r11  ;*getfield currentRow
+                                           ; - StringArrayCellConsumer::newCell@5 (line 23)
+                                           ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                           ; - alt.CharConsumer2::newCell@8 (line 160)
+                                           ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                           ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e12: lea 0x10(%r11,%rbx,4),%r11  ;*aastore
+                                                ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                                ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                                ; - alt.CharConsumer2::newCell@8 (line 160)
+                                                ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                                ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e17: mov %r10d,%r9d
+0x00007f1611212e1a: inc %r9d  ;*iadd
+                              ; - StringArrayCellConsumer::newCell@29 (line 24)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e1d: mov %r9d,0x20(%rsp)
+0x00007f1611212e22: mov 0x60(%rsp),%r8
+0x00007f1611212e27: mov %r9d,0x10(%r8)  ;*putfield currentIndex
+                                        ; - StringArrayCellConsumer::newCell@30 (line 24)
+                                        ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                        ; - alt.CharConsumer2::newCell@8 (line 160)
+                                        ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                        ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e2b: mov %r11,%r8
+0x00007f1611212e2e: shr $0x3,%rcx
+0x00007f1611212e32: mov %ecx,(%r11)
+0x00007f1611212e35: shr $0x9,%r8
+0x00007f1611212e39: movabs $0x7f1622453000,%r11
+0x00007f1611212e43: mov %r12b,(%r11,%r8,1)  ;*aastore
+                                            ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e47: mov 0x14(%rsp),%r8d
+0x00007f1611212e4c: mov 0xc(%r12,%r8,8),%r11d  ;*invokestatic copyOf
+                                               ; - java.util.Arrays::copyOf@6 (line 3181)
+                                               ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                               ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                               ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                               ; implicit exception: dispatches to 0x00007f1611213a69
+0x00007f1611212e51: mov %r11d,0x24(%rsp)
+0x00007f1611212e56: mov 0x60(%rsp),%r11
+0x00007f1611212e5b: mov 0x18(%r11),%r8d  ;*getfield handler
+                                         ; - StringArrayCellConsumer::_endOfRow@1 (line 45)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e5f: mov %r8d,0x28(%rsp)
+0x00007f1611212e64: test %r9d,%r9d
+0x00007f1611212e67: jl L003c  ;*invokestatic copyOf
+                              ; - java.util.Arrays::copyOf@6 (line 3181)
+                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e6d: mov 0x14(%rsp),%r8d
+0x00007f1611212e72: lea (%r12,%r8,8),%rbp  ;*getfield currentRow
+                                           ; - StringArrayCellConsumer::_endOfRow@5 (line 45)
+                                           ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                           ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                           ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212e76: movslq %r10d,%r10
+0x00007f1611212e79: shl $0x2,%r10
+0x00007f1611212e7d: add $0x1b,%r10
+0x00007f1611212e81: mov %r10,0x48(%rsp)
+0x00007f1611212e86: cmp $0x40000,%r9d
+0x00007f1611212e8d: ja L0028
+0x00007f1611212e93: mov 0x60(%r15),%rbx
+0x00007f1611212e97: mov 0x48(%rsp),%r10
+0x00007f1611212e9c: and $0xfffffffffffffff8,%r10
+0x00007f1611212ea0: mov %rbx,%r11
+0x00007f1611212ea3: add %r10,%r11
+0x00007f1611212ea6: cmp 0x70(%r15),%r11
+0x00007f1611212eaa: jae L0028
+0x00007f1611212eb0: mov %r11,0x60(%r15)
+0x00007f1611212eb4: prefetchnta 0xc0(%r11)
+0x00007f1611212ebc: movq $0x1,(%rbx)
+0x00007f1611212ec3: prefetchnta 0x100(%r11)
+0x00007f1611212ecb: movl $0xf8003725,0x8(%rbx)  ;   {metadata('java/lang/String'[])}
+0x00007f1611212ed2: mov %r9d,0xc(%rbx)
+0x00007f1611212ed6: prefetchnta 0x140(%r11)
+0x00007f1611212ede: prefetchnta 0x180(%r11)
+             L0015: mov 0x24(%rsp),%r10d
+0x00007f1611212eeb: cmp 0x20(%rsp),%r10d
+0x00007f1611212ef0: mov 0x20(%rsp),%r11d
+0x00007f1611212ef5: cmovl %r10d,%r11d
+0x00007f1611212ef9: mov %rbx,%rsi
+0x00007f1611212efc: add $0x10,%rsi
+0x00007f1611212f00: mov 0x48(%rsp),%r8
+0x00007f1611212f05: shr $0x3,%r8
+0x00007f1611212f09: test %r11d,%r11d
+0x00007f1611212f0c: je L0038
+0x00007f1611212f12: movslq %r11d,%rdx
+0x00007f1611212f15: cmp 0x20(%rsp),%r11d
+0x00007f1611212f1a: jl L0023
+             L0016: mov 0x14(%rsp),%r11d
+0x00007f1611212f25: lea 0x10(%r12,%r11,8),%rdi
+0x00007f1611212f2a: movabs $0x7f1611052640,%r10
+0x00007f1611212f34: callq *%r10  ;*invokestatic copyOf
+                                 ; - java.util.Arrays::copyOf@6 (line 3181)
+                                 ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                 ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                 ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                 ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0017: mov 0x28(%rsp),%r10d
+0x00007f1611212f3c: mov 0x8(%r12,%r10,8),%r8d  ; implicit exception: dispatches to 0x00007f1611213a89
+0x00007f1611212f41: cmp $0xf8017a85,%r8d  ;   {metadata('org/github/arnaudroger/Csv2Benchmark$$Lambda$2')}
+0x00007f1611212f48: jne L003d
+0x00007f1611212f4e: shl $0x3,%r10  ;*invokeinterface accept
+                                   ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                   ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                   ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f52: mov 0xc(%r10),%r10d  ;*getfield arg$1
+                                         ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@1
+                                         ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f56: test %r10d,%r10d
+0x00007f1611212f59: je L0039  ;*invokevirtual consume
+                              ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@11
+                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f5f: lea (%r12,%r10,8),%rsi  ;*getfield arg$1
+                                            ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@1
+                                            ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                            ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                            ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f63: mov %rbx,%rdx
+0x00007f1611212f66: mov 0x44(%rsp),%ebp
+0x00007f1611212f6a: nop
+0x00007f1611212f6b: callq 0x00007f1611046020  ; OopMap{[8]=Oop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=1968}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@11
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {optimized virtual_call}
+0x00007f1611212f70: mov 0x60(%rsp),%rcx
+0x00007f1611212f75: mov 0x1c(%rcx),%r8d  ;*getfield currentRow
+                                         ; - StringArrayCellConsumer::_endOfRow@21 (line 46)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f79: mov 0xc(%r12,%r8,8),%ebx  ;*arraylength
+                                              ; - java.util.Arrays::fill@1 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ; implicit exception: dispatches to 0x00007f1611213aad
+0x00007f1611212f7e: mov 0x10(%rcx),%ebp  ;*getfield currentIndex
+                                         ; - StringArrayCellConsumer::_endOfRow@26 (line 46)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f81: test %ebp,%ebp
+0x00007f1611212f83: jl L0046  ;*if_icmple
+                              ; - java.util.Arrays::rangeCheck@2 (line 112)
+                              ; - java.util.Arrays::fill@4 (line 3153)
+                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f89: cmp %ebx,%ebp
+0x00007f1611212f8b: jg L0047  ;*if_icmple
+                              ; - java.util.Arrays::rangeCheck@61 (line 119)
+                              ; - java.util.Arrays::fill@4 (line 3153)
+                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f91: test %ebp,%ebp
+0x00007f1611212f93: jle L001b  ;*if_icmpge
+                               ; - java.util.Arrays::fill@13 (line 3154)
+                               ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                               ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                               ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212f99: test %ebx,%ebx
+0x00007f1611212f9b: jbe L0040
+0x00007f1611212fa1: mov %ebp,%r11d
+0x00007f1611212fa4: dec %r11d
+0x00007f1611212fa7: cmp %ebx,%r11d
+0x00007f1611212faa: jae L0040  ;*aload_0
+                               ; - java.util.Arrays::fill@16 (line 3155)
+                               ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                               ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                               ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212fb0: mov %r12d,0x10(%r12,%r8,8)  ;*aastore
+                                                ; - java.util.Arrays::fill@20 (line 3155)
+                                                ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                                ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                                ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                                ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212fb5: lea (%r12,%r8,8),%r10
+0x00007f1611212fb9: mov %ebp,%r8d
+0x00007f1611212fbc: add $0xfffffffd,%r8d
+0x00007f1611212fc0: cmp %r8d,%ebp
+0x00007f1611212fc3: mov $0x80000000,%r11d
+0x00007f1611212fc9: cmovl %r11d,%r8d
+0x00007f1611212fcd: cmp $0x1,%r8d
+0x00007f1611212fd1: jle L0041
+0x00007f1611212fd7: mov $0x1,%r9d
+0x00007f1611212fdd: data16 xchg %ax,%ax  ;*aload_0
+                                         ; - java.util.Arrays::fill@16 (line 3155)
+                                         ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0018: mov %r12d,0x10(%r10,%r9,4)
+0x00007f1611212fe5: movslq %r9d,%r11
+0x00007f1611212fe8: mov %r12d,0x14(%r10,%r11,4)
+0x00007f1611212fed: mov %r12d,0x18(%r10,%r11,4)
+0x00007f1611212ff2: mov %r12d,0x1c(%r10,%r11,4)  ;*aastore
+                                                 ; - java.util.Arrays::fill@20 (line 3155)
+                                                 ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                                 ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                                 ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                                 ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212ff7: add $0x4,%r9d  ;*iinc
+                                   ; - java.util.Arrays::fill@21 (line 3154)
+                                   ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                   ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                   ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611212ffb: cmp %r8d,%r9d
+0x00007f1611212ffe: jl L0018  ;*if_icmpge
+                              ; - java.util.Arrays::fill@13 (line 3154)
+                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0019: cmp %ebp,%r9d
+0x00007f1611213003: jge L001b
+0x00007f1611213005: data16 xchg %ax,%ax  ;*aload_0
+                                         ; - java.util.Arrays::fill@16 (line 3155)
+                                         ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L001a: mov %r12d,0x10(%r10,%r9,4)  ;*aastore
+                                                ; - java.util.Arrays::fill@20 (line 3155)
+                                                ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                                ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                                ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                                ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f161121300d: inc %r9d  ;*iinc
+                              ; - java.util.Arrays::fill@21 (line 3154)
+                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213010: cmp %ebp,%r9d
+0x00007f1611213013: jl L001a  ;*if_icmpge
+                              ; - java.util.Arrays::fill@13 (line 3154)
+                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L001b: mov %r12d,0x10(%rcx)  ;*putfield currentIndex
+                                          ; - StringArrayCellConsumer::_endOfRow@35 (line 47)
+                                          ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                          ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                          ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213019: xor %r9d,%r9d
+0x00007f161121301c: mov 0x30(%rsp),%rbx
+0x00007f1611213021: mov 0x4(%rsp),%ecx
+0x00007f1611213025: jmpq L0001
+             L001c: test %r11d,%r11d
+0x00007f161121302d: jl L004b  ;*ifge
+                              ; - java.lang.String::<init>@22 (line 195)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213033: mov 0x40(%rsp),%r11d
+0x00007f1611213038: cmp (%rsp),%r11d
+0x00007f161121303c: jg L0006  ;*if_icmpgt
+                              ; - java.lang.String::<init>@37 (line 198)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213042: mov 0x68(%rsp),%r11
+0x00007f1611213047: movl $0xed9e14c7,0xc(%r11)  ;   {oop([C)}
+0x00007f161121304f: mov %r11,%r10
+0x00007f1611213052: shr $0x9,%r10
+0x00007f1611213056: movabs $0x7f1622453000,%r8
+0x00007f1611213060: mov %r12b,(%r8,%r10,1)  ;*putfield value
+                                            ; - java.lang.String::<init>@46 (line 199)
+                                            ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                            ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213064: jmpq L000b
+             L001d: mov %r11d,0x28(%rsp)
+0x00007f161121306e: mov %rbp,0x18(%rsp)
+0x00007f1611213073: mov %rsi,0x8(%rsp)
+0x00007f1611213078: mov %r8d,(%rsp)
+0x00007f161121307c: mov %eax,0x50(%rsp)
+0x00007f1611213080: mov %edi,0x14(%rsp)
+0x00007f1611213084: mov %r9d,0x4(%rsp)
+0x00007f1611213089: mov %ecx,0x10(%rsp)
+0x00007f161121308d: mov %rbx,0x20(%rsp)
+0x00007f1611213092: mov %r9d,%esi
+0x00007f1611213095: mov 0x38(%rsp),%rbp
+0x00007f161121309a: nop
+0x00007f161121309b: callq 0x00007f1611046420  ; OopMap{rbp=Oop [8]=Oop [32]=Oop [56]=Oop [80]=NarrowOop off=2272}
+                                              ;*invokestatic canEscaped
+                                              ; - alt.CharConsumer2::consumeAllBuffer@179 (line 67)
+                                              ;   {static_call}
+0x00007f16112130a0: test %eax,%eax
+0x00007f16112130a2: je L0022  ;*ifeq
+                              ; - alt.CharConsumer2::consumeAllBuffer@182 (line 67)
+0x00007f16112130a8: mov 0x4(%rsp),%r9d
+0x00007f16112130ad: xor $0x1,%r9d
+0x00007f16112130b1: or $0x8,%r9d  ;*ior  ; - alt.CharConsumer2::consumeAllBuffer@191 (line 68)
+0x00007f16112130b5: mov 0x20(%rsp),%rbx
+0x00007f16112130ba: mov 0x28(%rsp),%ecx
+0x00007f16112130be: jmpq L0001
+             L001e: mov %edi,%ecx  ;*if_icmpge
+                                   ; - alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+             L001f: mov %r9d,0x10(%rbx)  ;*putfield _currentState
+                                         ; - alt.CharConsumer2::consumeAllBuffer@203 (line 71)
+0x00007f16112130c9: mov %ecx,0xc(%rbx)  ;*synchronization entry
+                                        ; - alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+0x00007f16112130cc: add $0xb0,%rsp
+0x00007f16112130d3: pop %rbp
+0x00007f16112130d4: test %eax,0x183b7f26(%rip)  # 0x00007f16295cb000
+                                                ;   {poll_return} *** SAFEPOINT POLL ***
+0x00007f16112130da: retq
+             L0020: mov 0x70(%rsp),%rdi
+0x00007f16112130e0: add %r9,%rdi
+0x00007f16112130e3: sub %r8,%rbx
+0x00007f16112130e6: mov %rbx,%rcx
+0x00007f16112130e9: xor %rax,%rax
+0x00007f16112130ec: shl $0x3,%rcx
+0x00007f16112130f0: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                             ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f16112130f3: jmpq L0009
+             L0021: test %r11d,%r11d
+0x00007f16112130fb: jl L004d  ;*ifge
+                              ; - java.lang.String::<init>@22 (line 195)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213101: mov 0x40(%rsp),%r11d
+0x00007f1611213106: cmp (%rsp),%r11d
+0x00007f161121310a: jg L000f  ;*if_icmpgt
+                              ; - java.lang.String::<init>@37 (line 198)
+                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213110: mov 0x68(%rsp),%rcx
+0x00007f1611213115: movl $0xed9e14c7,0xc(%rcx)  ;   {oop([C)}
+0x00007f161121311c: mov %rcx,%r10
+0x00007f161121311f: shr $0x9,%r10
+0x00007f1611213123: movabs $0x7f1622453000,%r11
+0x00007f161121312d: mov %r12b,(%r11,%r10,1)  ;*putfield value
+                                             ; - java.lang.String::<init>@46 (line 199)
+                                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213131: jmpq L0014
+             L0022: mov 0x20(%rsp),%rbx
+0x00007f161121313b: mov 0x4(%rsp),%r9d
+0x00007f1611213140: mov 0x28(%rsp),%ecx
+0x00007f1611213144: jmpq L0001
+             L0023: mov %rdx,%r10
+0x00007f161121314c: shl $0x2,%r10
+0x00007f1611213150: add $0x10,%r10
+0x00007f1611213154: mov %r10,%r11
+0x00007f1611213157: and $0xfffffffffffffffb,%r11
+0x00007f161121315b: mov %rbx,%rdi
+0x00007f161121315e: add %r11,%rdi
+0x00007f1611213161: shr $0x3,%r10
+0x00007f1611213165: sub %r10,%r8
+0x00007f1611213168: mov %r8,%rcx
+0x00007f161121316b: xor %rax,%rax
+0x00007f161121316e: shl $0x3,%rcx
+0x00007f1611213172: rep rex  ; - java.util.Arrays::copyOf@6 (line 3181)
+                             ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                             ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                             ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213175: jmpq L0016
+             L0024: mov 0x28(%rsp),%rdi
+0x00007f161121317f: add %r9,%rdi
+0x00007f1611213182: sub %r8,%rbp
+0x00007f1611213185: mov %rbp,%rcx
+0x00007f1611213188: xor %rax,%rax
+0x00007f161121318b: shl $0x3,%rcx
+0x00007f161121318f: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                             ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213192: jmpq L0012
+             L0025: mov %r9,0x90(%rsp)
+0x00007f161121319f: mov %r8,0x88(%rsp)
+0x00007f16112131a7: mov %rdx,0x80(%rsp)
+0x00007f16112131af: mov %edi,0x7c(%rsp)
+0x00007f16112131b3: mov %ecx,0x78(%rsp)
+0x00007f16112131b7: movabs $0x7c00016d0,%rsi  ;   {metadata('java/lang/String')}
+0x00007f16112131c1: xchg %ax,%ax
+0x00007f16112131c3: callq 0x00007f1611101ca0  ; OopMap{rbp=NarrowOop [8]=Oop [32]=Derived_oop_[8] [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=2568}
+                                              ;*new  ; - StringArrayCellConsumer::newCell@12 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112131c8: mov %rax,%r11
+0x00007f16112131cb: mov 0x78(%rsp),%ecx
+0x00007f16112131cf: mov 0x7c(%rsp),%edi
+0x00007f16112131d3: mov 0x80(%rsp),%rdx
+0x00007f16112131db: mov 0x88(%rsp),%r8
+0x00007f16112131e3: mov 0x90(%rsp),%r9
+0x00007f16112131eb: jmpq L0005
+             L0026: mov %r9,0x98(%rsp)
+0x00007f16112131f8: mov %r8,0x90(%rsp)
+0x00007f1611213200: mov %edi,0x88(%rsp)  ;*ifge
+                                         ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                         ; - java.lang.String::<init>@75 (line 207)
+                                         ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213207: movabs $0x7c0000208,%rsi  ;   {metadata({type array char})}
+0x00007f1611213211: mov 0x48(%rsp),%edx
+0x00007f1611213215: xchg %ax,%ax
+0x00007f1611213217: callq 0x00007f16111001a0  ; OopMap{rbp=NarrowOop [8]=Oop [32]=Derived_oop_[8] [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop [104]=Oop off=2652}
+                                              ;*newarray
+                                              ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f161121321c: mov %rax,%rcx
+0x00007f161121321f: mov 0x88(%rsp),%edi
+0x00007f1611213226: mov 0x90(%rsp),%r8
+0x00007f161121322e: mov 0x98(%rsp),%r9
+0x00007f1611213236: jmpq L0008
+             L0027: mov %r9,0x98(%rsp)
+0x00007f1611213243: mov %r8,0x90(%rsp)
+0x00007f161121324b: mov %rdx,0x88(%rsp)
+0x00007f1611213253: mov %edi,0x80(%rsp)
+0x00007f161121325a: mov %ecx,0x74(%rsp)
+0x00007f161121325e: movabs $0x7c00016d0,%rsi  ;   {metadata('java/lang/String')}
+0x00007f1611213268: mov %rbx,%rbp
+0x00007f161121326b: callq 0x00007f1611101ca0  ; OopMap{rbp=Oop [8]=Oop [32]=Derived_oop_[8] [48]=Oop [56]=Oop [80]=NarrowOop [84]=NarrowOop [96]=Oop off=2736}
+                                              ;*new  ; - StringArrayCellConsumer::newCell@12 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213270: mov %rax,%r10
+0x00007f1611213273: mov 0x74(%rsp),%ecx
+0x00007f1611213277: mov 0x80(%rsp),%edi
+0x00007f161121327e: mov 0x88(%rsp),%rdx
+0x00007f1611213286: mov 0x90(%rsp),%r8
+0x00007f161121328e: mov 0x98(%rsp),%r9
+0x00007f1611213296: jmpq L000e  ;*synchronization entry
+                                ; - java.util.Arrays::copyOf@-1 (line 3181)
+                                ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0028: movabs $0x7c001b928,%rsi  ;   {metadata('java/lang/String'[])}
+0x00007f16112132a5: mov %r9d,%edx
+0x00007f16112132a8: data16 xchg %ax,%ax
+0x00007f16112132ab: callq 0x00007f1611100260  ; OopMap{rbp=Oop [8]=Oop [20]=NarrowOop [40]=NarrowOop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=2800}
+                                              ;*invokestatic copyOf
+                                              ; - java.util.Arrays::copyOf@6 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112132b0: mov %rax,%rbx
+0x00007f16112132b3: jmpq L0015
+             L0029: mov %r9,0x98(%rsp)
+0x00007f16112132c0: mov %r8,0x90(%rsp)
+0x00007f16112132c8: mov %edi,0x7c(%rsp)  ;*ifge
+                                         ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                         ; - java.lang.String::<init>@75 (line 207)
+                                         ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                         ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f16112132cc: movabs $0x7c0000208,%rsi  ;   {metadata({type array char})}
+0x00007f16112132d6: mov 0x48(%rsp),%edx
+0x00007f16112132da: nop
+0x00007f16112132db: callq 0x00007f16111001a0  ; OopMap{[8]=Oop [32]=Derived_oop_[8] [48]=Oop [56]=Oop [80]=NarrowOop [84]=NarrowOop [96]=Oop [104]=Oop off=2848}
+                                              ;*newarray
+                                              ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112132e0: mov %rax,%rcx
+0x00007f16112132e3: mov 0x7c(%rsp),%edi
+0x00007f16112132e7: mov 0x90(%rsp),%r8
+0x00007f16112132ef: mov 0x98(%rsp),%r9
+0x00007f16112132f7: jmpq L0011
+             L002a: mov $0xffffff65,%esi
+0x00007f1611213301: mov %rbx,%rbp
+0x00007f1611213304: mov %ecx,0x8(%rsp)
+0x00007f1611213308: mov %r9d,0xc(%rsp)
+0x00007f161121330d: mov %edi,0x10(%rsp)
+0x00007f1611213311: mov %r10d,0x14(%rsp)
+0x00007f1611213316: mov %edx,0x18(%rsp)
+0x00007f161121331a: mov %eax,0x1c(%rsp)
+0x00007f161121331e: nop
+0x00007f161121331f: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [28]=NarrowOop [56]=Oop off=2916}
+                                              ;*ifne
+                                              ; - alt.CharConsumer2::isCharEscaped@3 (line 186)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+                                              ;   {runtime_call}
+0x00007f1611213324: callq 0x00007f16282d80b0  ;*ifne
+                                              ; - alt.CharConsumer2::isCharEscaped@3 (line 186)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+                                              ;   {runtime_call}
+             L002b: mov $0xffffff65,%esi
+0x00007f161121332e: mov %rbx,%rbp
+0x00007f1611213331: mov 0x10(%rsp),%r8d
+0x00007f1611213336: mov %r8d,0x8(%rsp)
+0x00007f161121333b: mov %eax,0xc(%rsp)
+0x00007f161121333f: mov %r10d,0x18(%rsp)
+0x00007f1611213344: data16 xchg %ax,%ax
+0x00007f1611213347: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [56]=Oop [80]=NarrowOop off=2956}
+                                              ;*if_icmpne
+                                              ; - alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+                                              ;   {runtime_call}
+0x00007f161121334c: callq 0x00007f16282d80b0  ;*if_icmpne
+                                              ; - alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+                                              ;   {runtime_call}
+             L002c: mov $0xffffffe4,%esi
+0x00007f1611213356: mov 0x30(%rsp),%r10
+0x00007f161121335b: mov %r10,(%rsp)
+0x00007f161121335f: mov 0x38(%rsp),%r10
+0x00007f1611213364: mov %r10,0x8(%rsp)
+0x00007f1611213369: mov 0x44(%rsp),%r9d
+0x00007f161121336e: mov %r9d,0x20(%rsp)
+0x00007f1611213373: mov %r11,0x30(%rsp)
+0x00007f1611213378: data16 xchg %ax,%ax
+0x00007f161121337b: callq 0x00007f16110051a0  ; OopMap{rbp=NarrowOop [0]=Oop [8]=Oop [48]=Oop [80]=NarrowOop [96]=Oop off=3008}
+                                              ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213380: callq 0x00007f16282d80b0  ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L002d: mov %rdx,0x28(%rsp)
+0x00007f161121338a: jmpq L0007
+             L002e: mov $0xffffffde,%esi
+0x00007f1611213394: mov 0x30(%rsp),%rbp
+0x00007f1611213399: mov %r10,(%rsp)
+0x00007f161121339d: mov 0x10(%rsp),%r10d
+0x00007f16112133a2: mov %r10d,0x8(%rsp)
+0x00007f16112133a7: mov 0x44(%rsp),%r11d
+0x00007f16112133ac: mov %r11d,0x18(%rsp)
+0x00007f16112133b1: mov 0x50(%rsp),%r11d
+0x00007f16112133b6: mov %r11d,0x30(%rsp)
+0x00007f16112133bb: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [48]=NarrowOop [80]=NarrowOop off=3072}
+                                              ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112133c0: callq 0x00007f16282d80b0  ;   {runtime_call}
+             L002f: mov %rsi,%rdi
+0x00007f16112133c8: xor %rax,%rax
+0x00007f16112133cb: shl $0x3,%rcx
+0x00007f16112133cf: rep rex
+0x00007f16112133d2: mov 0x8(%rsp),%rsi
+0x00007f16112133d7: mov 0x40(%rsp),%edx
+0x00007f16112133db: mov 0x70(%rsp),%rcx
+0x00007f16112133e0: xor %r8d,%r8d
+0x00007f16112133e3: mov 0x14(%rsp),%r9d
+0x00007f16112133e8: mov 0x44(%rsp),%r10d
+0x00007f16112133ed: mov %r10d,0x40(%rsp)
+0x00007f16112133f2: nop
+0x00007f16112133f3: callq 0x00007f161110b620  ; OopMap{rbp=NarrowOop [8]=Oop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop [104]=Oop [112]=Oop off=3128}
+                                              ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112133f8: jmpq L000a
+             L0030: test %r11d,%r11d
+0x00007f1611213400: jl L002f
+0x00007f1611213402: mov %rsi,%rdi
+0x00007f1611213405: xor %rax,%rax
+0x00007f1611213408: shl $0x3,%rcx
+0x00007f161121340c: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                             ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f161121340f: jmpq L000a
+             L0031: mov $0xffffffe4,%esi
+0x00007f1611213419: mov 0x38(%rsp),%r10
+0x00007f161121341e: mov %r10,(%rsp)
+0x00007f1611213422: mov 0x10(%rsp),%r10d
+0x00007f1611213427: mov %r10d,0x8(%rsp)
+0x00007f161121342c: mov 0x44(%rsp),%r11d
+0x00007f1611213431: mov %r11d,0xc(%rsp)
+0x00007f1611213436: mov %rbx,0x10(%rsp)
+0x00007f161121343b: mov %rbx,0x20(%rsp)
+0x00007f1611213440: mov 0x40(%rsp),%r11d
+0x00007f1611213445: mov %r11d,0x34(%rsp)
+0x00007f161121344a: mov 0x50(%rsp),%r10d
+0x00007f161121344f: mov %r10d,0x3c(%rsp)
+0x00007f1611213454: mov %r10d,0x40(%rsp)
+0x00007f1611213459: xchg %ax,%ax
+0x00007f161121345b: callq 0x00007f16110051a0  ; OopMap{[0]=Oop [16]=Oop [32]=Oop [60]=NarrowOop [64]=NarrowOop off=3232}
+                                              ;*caload
+                                              ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213460: callq 0x00007f16282d80b0  ;*caload
+                                              ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0032: mov $0xffffff65,%esi
+0x00007f161121346a: mov 0x30(%rsp),%rbp
+0x00007f161121346f: mov 0x38(%rsp),%r11
+0x00007f1611213474: mov %r11,(%rsp)
+0x00007f1611213478: mov 0x10(%rsp),%r8d
+0x00007f161121347d: mov %r8d,0x8(%rsp)
+0x00007f1611213482: mov 0x44(%rsp),%r11d
+0x00007f1611213487: mov %r11d,0xc(%rsp)
+0x00007f161121348c: mov 0x60(%rsp),%r11
+0x00007f1611213491: mov %r11,0x20(%rsp)
+0x00007f1611213496: mov 0x40(%rsp),%r8d
+0x00007f161121349b: mov %r8d,0x1c(%rsp)
+0x00007f16112134a0: mov %r10d,0x38(%rsp)
+0x00007f16112134a5: mov 0x50(%rsp),%r10d
+0x00007f16112134aa: mov %r10d,0x40(%rsp)
+0x00007f16112134af: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [32]=Oop [64]=NarrowOop [80]=NarrowOop off=3316}
+                                              ;*if_icmplt
+                                              ; - StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                                              ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112134b4: callq 0x00007f16282d80b0  ;*invokespecial <init>
+                                              ; - java.lang.String::<init>@1 (line 190)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0033: mov $0xffffff65,%esi
+0x00007f16112134be: mov 0x30(%rsp),%r10
+0x00007f16112134c3: mov %r10,(%rsp)
+0x00007f16112134c7: mov 0x38(%rsp),%r10
+0x00007f16112134cc: mov %r10,0x8(%rsp)
+0x00007f16112134d1: mov 0x44(%rsp),%r11d
+0x00007f16112134d6: mov %r11d,0x20(%rsp)
+0x00007f16112134db: mov 0x4c(%rsp),%r10d
+0x00007f16112134e0: mov %r10d,0x24(%rsp)
+0x00007f16112134e5: mov 0x68(%rsp),%r10
+0x00007f16112134ea: mov %r10,0x38(%rsp)
+0x00007f16112134ef: mov 0x48(%rsp),%r11d
+0x00007f16112134f4: mov %r11d,0x44(%rsp)
+0x00007f16112134f9: xchg %ax,%ax
+0x00007f16112134fb: callq 0x00007f16110051a0  ; OopMap{rbp=NarrowOop [0]=Oop [8]=Oop [56]=Oop [80]=NarrowOop [96]=Oop [104]=Oop off=3392}
+                                              ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213500: callq 0x00007f16282d80b0  ;*ifgt
+                                              ; - java.lang.String::<init>@18 (line 194)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0034: mov $0xffffff65,%esi
+0x00007f161121350a: mov 0x30(%rsp),%r10
+0x00007f161121350f: mov %r10,(%rsp)
+0x00007f1611213513: mov 0x38(%rsp),%r10
+0x00007f1611213518: mov %r10,0x8(%rsp)
+0x00007f161121351d: mov 0x44(%rsp),%r10d
+0x00007f1611213522: mov %r10d,0x14(%rsp)
+0x00007f1611213527: mov 0x4c(%rsp),%r11d
+0x00007f161121352c: mov %r11d,0x24(%rsp)
+0x00007f1611213531: mov 0x68(%rsp),%r10
+0x00007f1611213536: mov %r10,0x38(%rsp)
+0x00007f161121353b: mov 0x48(%rsp),%r11d
+0x00007f1611213540: mov %r11d,0x44(%rsp)
+0x00007f1611213545: mov %ecx,0x4c(%rsp)
+0x00007f1611213549: xchg %ax,%ax
+0x00007f161121354b: callq 0x00007f16110051a0  ; OopMap{rbp=NarrowOop [0]=Oop [8]=Oop [56]=Oop [80]=NarrowOop [96]=Oop [104]=Oop off=3472}
+                                              ;*if_icmple
+                                              ; - java.lang.String::<init>@55 (line 204)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213550: callq 0x00007f16282d80b0  ;*synchronization entry
+                                              ; - java.util.Arrays::copyOfRange@-1 (line 3661)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0035: mov $0xffffff65,%esi
+0x00007f161121355a: mov 0x30(%rsp),%r10
+0x00007f161121355f: mov %r10,(%rsp)
+0x00007f1611213563: mov 0x38(%rsp),%r10
+0x00007f1611213568: mov %r10,0x8(%rsp)
+0x00007f161121356d: mov 0x44(%rsp),%r10d
+0x00007f1611213572: mov %r10d,0x14(%rsp)
+0x00007f1611213577: mov 0x4c(%rsp),%r11d
+0x00007f161121357c: mov %r11d,0x24(%rsp)
+0x00007f1611213581: mov 0x68(%rsp),%r10
+0x00007f1611213586: mov %r10,0x38(%rsp)
+0x00007f161121358b: callq 0x00007f16110051a0  ; OopMap{rbp=NarrowOop [0]=Oop [8]=Oop [56]=Oop [80]=NarrowOop [96]=Oop [104]=Oop off=3536}
+                                              ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213590: callq 0x00007f16282d80b0  ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0036: mov $0xffffff65,%esi
+0x00007f161121359a: mov 0x30(%rsp),%rbp
+0x00007f161121359f: mov 0x38(%rsp),%r10
+0x00007f16112135a4: mov %r10,(%rsp)
+0x00007f16112135a8: mov 0x10(%rsp),%r11d
+0x00007f16112135ad: mov %r11d,0x8(%rsp)
+0x00007f16112135b2: mov 0x44(%rsp),%r10d
+0x00007f16112135b7: mov %r10d,0xc(%rsp)
+0x00007f16112135bc: mov %ebx,0x34(%rsp)
+0x00007f16112135c0: mov 0x50(%rsp),%r10d
+0x00007f16112135c5: mov %r10d,0x3c(%rsp)
+0x00007f16112135ca: nop
+0x00007f16112135cb: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [60]=NarrowOop [80]=NarrowOop off=3600}
+                                              ;*if_icmpne
+                                              ; - alt.CsvCharConsumer2::pushCell@19 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112135d0: callq 0x00007f16282d80b0  ;*if_icmpne
+                                              ; - alt.CsvCharConsumer2::pushCell@19 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0037: mov $0xffffffe4,%esi
+0x00007f16112135da: mov 0x30(%rsp),%rbp
+0x00007f16112135df: mov 0x38(%rsp),%r10
+0x00007f16112135e4: mov %r10,(%rsp)
+0x00007f16112135e8: mov 0x10(%rsp),%r10d
+0x00007f16112135ed: mov %r10d,0x8(%rsp)
+0x00007f16112135f2: mov 0x44(%rsp),%r11d
+0x00007f16112135f7: mov %r11d,0x20(%rsp)
+0x00007f16112135fc: mov %rcx,0x38(%rsp)
+0x00007f1611213601: xchg %ax,%ax
+0x00007f1611213603: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [56]=Oop [80]=NarrowOop [84]=NarrowOop [96]=Oop off=3656}
+                                              ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213608: callq 0x00007f16282d80b0  ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0038: mov %r8,%r10
+0x00007f1611213610: add $0xfffffffffffffffe,%r10
+0x00007f1611213614: mov %r10,%rcx
+0x00007f1611213617: mov %rsi,%rdi
+0x00007f161121361a: xor %rax,%rax
+0x00007f161121361d: shl $0x3,%rcx
+0x00007f1611213621: rep rex  ; - java.util.Arrays::copyOf@6 (line 3181)
+                             ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                             ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                             ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213624: jmpq L0017
+             L0039: mov $0xfffffff6,%esi
+0x00007f161121362e: mov 0x30(%rsp),%rbp
+0x00007f1611213633: mov 0x10(%rsp),%r10d
+0x00007f1611213638: mov %r10d,0x8(%rsp)
+0x00007f161121363d: mov %rbx,0x18(%rsp)
+0x00007f1611213642: nop
+0x00007f1611213643: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [24]=Oop [56]=Oop [80]=NarrowOop off=3720}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@11
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213648: callq 0x00007f16282d80b0  ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@11
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L003a: mov %rdx,0x28(%rsp)
+0x00007f1611213652: jmpq L0010
+             L003b: mov $0xffffffde,%esi
+0x00007f161121365c: mov %r10,(%rsp)
+0x00007f1611213660: mov 0x10(%rsp),%r10d
+0x00007f1611213665: mov %r10d,0x8(%rsp)
+0x00007f161121366a: mov 0x44(%rsp),%r11d
+0x00007f161121366f: mov %rbx,0x18(%rsp)
+0x00007f1611213674: mov %r11d,0x20(%rsp)
+0x00007f1611213679: mov 0x50(%rsp),%r11d
+0x00007f161121367e: mov %r11d,0x38(%rsp)
+0x00007f1611213683: callq 0x00007f16110051a0  ; OopMap{[0]=Oop [24]=Oop [56]=NarrowOop [80]=NarrowOop off=3784}
+                                              ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213688: callq 0x00007f16282d80b0  ;*invokestatic copyOf
+                                              ; - java.util.Arrays::copyOf@6 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L003c: mov $0xffffffce,%esi
+0x00007f1611213692: mov 0x30(%rsp),%rbp
+0x00007f1611213697: mov 0x10(%rsp),%r10d
+0x00007f161121369c: mov %r10d,0x8(%rsp)
+0x00007f16112136a1: xchg %ax,%ax
+0x00007f16112136a3: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [20]=NarrowOop [40]=NarrowOop [56]=Oop [80]=NarrowOop [96]=Oop off=3816}
+                                              ;*invokestatic copyOf
+                                              ; - java.util.Arrays::copyOf@6 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112136a8: callq 0x00007f16282d80b0  ;*invokestatic copyOf
+                                              ; - java.util.Arrays::copyOf@6 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L003d: mov $0xffffffde,%esi
+0x00007f16112136b2: mov 0x30(%rsp),%rbp
+0x00007f16112136b7: mov 0x10(%rsp),%r8d
+0x00007f16112136bc: mov %r8d,0x8(%rsp)
+0x00007f16112136c1: mov %rbx,0x20(%rsp)
+0x00007f16112136c6: nop
+0x00007f16112136c7: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [32]=Oop [40]=NarrowOop [56]=Oop [80]=NarrowOop [96]=Oop off=3852}
+                                              ;*invokeinterface accept
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112136cc: callq 0x00007f16282d80b0  ;   {runtime_call}
+             L003e: mov %rsi,%rdi
+0x00007f16112136d4: xor %rax,%rax
+0x00007f16112136d7: shl $0x3,%rcx
+0x00007f16112136db: rep rex
+0x00007f16112136de: mov 0x8(%rsp),%rsi
+0x00007f16112136e3: mov 0x40(%rsp),%edx
+0x00007f16112136e7: mov 0x28(%rsp),%rcx
+0x00007f16112136ec: xor %r8d,%r8d
+0x00007f16112136ef: mov 0x14(%rsp),%r9d
+0x00007f16112136f4: mov 0x30(%rsp),%rbp
+0x00007f16112136f9: mov 0x44(%rsp),%r10d
+0x00007f16112136fe: mov %r10d,0x40(%rsp)
+0x00007f1611213703: callq 0x00007f161110b620  ; OopMap{rbp=Oop [8]=Oop [40]=Oop [48]=Oop [56]=Oop [80]=NarrowOop [84]=NarrowOop [96]=Oop [104]=Oop off=3912}
+                                              ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213708: jmpq L0013
+             L003f: test %r11d,%r11d
+0x00007f1611213710: jl L003e
+0x00007f1611213712: mov %rsi,%rdi
+0x00007f1611213715: xor %rax,%rax
+0x00007f1611213718: shl $0x3,%rcx
+0x00007f161121371c: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - alt.CharConsumer2::newCell@8 (line 160)
+                             ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                             ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f161121371f: jmpq L0013
+             L0040: mov $0xffffff86,%esi
+0x00007f1611213729: mov %r8d,0x1c(%rsp)
+0x00007f161121372e: nop
+0x00007f161121372f: callq 0x00007f16110051a0  ; OopMap{[28]=NarrowOop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=3956}
+                                              ;*aload_0
+                                              ; - java.util.Arrays::fill@16 (line 3155)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213734: callq 0x00007f16282d80b0  ;*aload_0
+                                              ; - java.util.Arrays::fill@16 (line 3155)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0041: mov $0x1,%r9d
+0x00007f161121373f: jmpq L0019
+             L0042: mov $0xffffffe4,%esi
+0x00007f1611213749: mov 0x38(%rsp),%r10
+0x00007f161121374e: mov %r10,(%rsp)
+0x00007f1611213752: mov 0x10(%rsp),%r10d
+0x00007f1611213757: mov %r10d,0x8(%rsp)
+0x00007f161121375c: mov 0x44(%rsp),%r11d
+0x00007f1611213761: mov %r11d,0xc(%rsp)
+0x00007f1611213766: mov %rbx,0x18(%rsp)
+0x00007f161121376b: mov %rbx,0x28(%rsp)
+0x00007f1611213770: mov 0x40(%rsp),%r11d
+0x00007f1611213775: mov %r11d,0x3c(%rsp)
+0x00007f161121377a: mov 0x50(%rsp),%r10d
+0x00007f161121377f: mov %r10d,0x44(%rsp)
+0x00007f1611213784: mov %r10d,0x48(%rsp)
+0x00007f1611213789: xchg %ax,%ax
+0x00007f161121378b: callq 0x00007f16110051a0  ; OopMap{[0]=Oop [24]=Oop [40]=Oop [68]=NarrowOop [72]=NarrowOop off=4048}
+                                              ;*caload
+                                              ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213790: callq 0x00007f16282d80b0  ;*caload
+                                              ; - alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0043: mov $0xffffff65,%esi
+0x00007f161121379a: mov %rbx,%rbp
+0x00007f161121379d: mov 0x10(%rsp),%r11d
+0x00007f16112137a2: mov %r11d,0x8(%rsp)
+0x00007f16112137a7: mov %r10d,0x10(%rsp)
+0x00007f16112137ac: data16 xchg %ax,%ax
+0x00007f16112137af: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [56]=Oop [80]=NarrowOop off=4084}
+                                              ;*ifne
+                                              ; - alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+                                              ;   {runtime_call}
+0x00007f16112137b4: callq 0x00007f16282d80b0  ;*ifne
+                                              ; - alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+                                              ;   {runtime_call}
+             L0044: mov $0xffffff65,%esi
+0x00007f16112137be: mov 0x38(%rsp),%r10
+0x00007f16112137c3: mov %r10,0x8(%rsp)
+0x00007f16112137c8: mov 0x44(%rsp),%r10d
+0x00007f16112137cd: mov %r10d,0x14(%rsp)
+0x00007f16112137d2: mov %rbx,0x20(%rsp)
+0x00007f16112137d7: mov 0x40(%rsp),%r11d
+0x00007f16112137dc: mov %r11d,0x2c(%rsp)
+0x00007f16112137e1: mov 0x50(%rsp),%r11d
+0x00007f16112137e6: mov 0x60(%rsp),%r10
+0x00007f16112137eb: mov %r10,0x38(%rsp)
+0x00007f16112137f0: mov %r11d,0x40(%rsp)
+0x00007f16112137f5: xchg %ax,%ax
+0x00007f16112137f7: callq 0x00007f16110051a0  ; OopMap{[8]=Oop [32]=Oop [56]=Oop [64]=NarrowOop off=4156}
+                                              ;*if_icmplt
+                                              ; - StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                                              ; - StringArrayCellConsumer::newCell@1 (line 22)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112137fc: callq 0x00007f16282d80b0  ;*invokespecial <init>
+                                              ; - java.lang.String::<init>@1 (line 190)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0045: mov $0xffffff65,%esi
+0x00007f1611213806: mov 0x30(%rsp),%rbp
+0x00007f161121380b: mov 0x38(%rsp),%r10
+0x00007f1611213810: mov %r10,(%rsp)
+0x00007f1611213814: mov 0x10(%rsp),%r10d
+0x00007f1611213819: mov %r10d,0x8(%rsp)
+0x00007f161121381e: mov 0x44(%rsp),%r11d
+0x00007f1611213823: mov %r11d,0x20(%rsp)
+0x00007f1611213828: mov 0x40(%rsp),%r10d
+0x00007f161121382d: mov 0x48(%rsp),%r11d
+0x00007f1611213832: mov %r11d,0x28(%rsp)
+0x00007f1611213837: mov %r10d,0x2c(%rsp)
+0x00007f161121383c: mov 0x50(%rsp),%r11d
+0x00007f1611213841: mov %r11d,0x30(%rsp)
+0x00007f1611213846: mov 0x4c(%rsp),%r11d
+0x00007f161121384b: mov %r11d,0x40(%rsp)
+0x00007f1611213850: mov 0x68(%rsp),%r10
+0x00007f1611213855: mov %r10,0x58(%rsp)
+0x00007f161121385a: nop
+0x00007f161121385b: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [48]=NarrowOop [84]=NarrowOop [88]=Oop [96]=Oop [104]=Oop off=4256}
+                                              ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213860: callq 0x00007f16282d80b0  ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0046: mov $0xffffff65,%esi
+0x00007f161121386a: mov %r8d,0x1c(%rsp)
+0x00007f161121386f: mov %ebx,0x28(%rsp)
+0x00007f1611213873: callq 0x00007f16110051a0  ; OopMap{[28]=NarrowOop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=4280}
+                                              ;*if_icmple
+                                              ; - java.util.Arrays::rangeCheck@2 (line 112)
+                                              ; - java.util.Arrays::fill@4 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213878: callq 0x00007f16282d80b0  ;*if_icmple
+                                              ; - java.util.Arrays::rangeCheck@2 (line 112)
+                                              ; - java.util.Arrays::fill@4 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0047: mov $0xffffff65,%esi
+0x00007f1611213882: mov %r8d,0x1c(%rsp)
+0x00007f1611213887: mov %ebx,0x28(%rsp)
+0x00007f161121388b: callq 0x00007f16110051a0  ; OopMap{[28]=NarrowOop [48]=Oop [56]=Oop [80]=NarrowOop [96]=Oop off=4304}
+                                              ;*if_icmple
+                                              ; - java.util.Arrays::rangeCheck@61 (line 119)
+                                              ; - java.util.Arrays::fill@4 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213890: callq 0x00007f16282d80b0  ;*ifgt
+                                              ; - java.lang.String::<init>@18 (line 194)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0048: mov $0xffffff65,%esi
+0x00007f161121389a: mov 0x30(%rsp),%rbp
+0x00007f161121389f: mov 0x38(%rsp),%r10
+0x00007f16112138a4: mov %r10,(%rsp)
+0x00007f16112138a8: mov 0x10(%rsp),%r10d
+0x00007f16112138ad: mov %r10d,0x8(%rsp)
+0x00007f16112138b2: mov 0x44(%rsp),%r11d
+0x00007f16112138b7: mov %r11d,0x20(%rsp)
+0x00007f16112138bc: mov 0x40(%rsp),%r10d
+0x00007f16112138c1: mov 0x48(%rsp),%r11d
+0x00007f16112138c6: mov %r11d,0x28(%rsp)
+0x00007f16112138cb: mov %r10d,0x2c(%rsp)
+0x00007f16112138d0: mov %ecx,0x30(%rsp)
+0x00007f16112138d4: mov 0x4c(%rsp),%r10d
+0x00007f16112138d9: mov %r10d,0x44(%rsp)
+0x00007f16112138de: mov 0x68(%rsp),%r10
+0x00007f16112138e3: mov %r10,0x58(%rsp)
+0x00007f16112138e8: data16 xchg %ax,%ax
+0x00007f16112138eb: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [80]=NarrowOop [84]=NarrowOop [88]=Oop [96]=Oop [104]=Oop off=4400}
+                                              ;*if_icmple
+                                              ; - java.lang.String::<init>@55 (line 204)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f16112138f0: callq 0x00007f16282d80b0  ;*synchronization entry
+                                              ; - java.util.Arrays::copyOfRange@-1 (line 3661)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L0049: mov $0xffffff65,%esi
+0x00007f16112138fa: mov 0x30(%rsp),%rbp
+0x00007f16112138ff: mov 0x38(%rsp),%r10
+0x00007f1611213904: mov %r10,(%rsp)
+0x00007f1611213908: mov 0x10(%rsp),%r10d
+0x00007f161121390d: mov %r10d,0x8(%rsp)
+0x00007f1611213912: mov 0x44(%rsp),%r11d
+0x00007f1611213917: mov %r11d,0xc(%rsp)
+0x00007f161121391c: mov 0x40(%rsp),%r11d
+0x00007f1611213921: mov %r11d,0x24(%rsp)
+0x00007f1611213926: mov 0x48(%rsp),%r11d
+0x00007f161121392b: mov %r11d,0x30(%rsp)
+0x00007f1611213930: mov 0x4c(%rsp),%r11d
+0x00007f1611213935: mov %r11d,0x44(%rsp)
+0x00007f161121393a: mov 0x68(%rsp),%r10
+0x00007f161121393f: mov %r10,0x58(%rsp)
+0x00007f1611213944: data16 xchg %ax,%ax
+0x00007f1611213947: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [80]=NarrowOop [84]=NarrowOop [88]=Oop [96]=Oop [104]=Oop off=4492}
+                                              ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f161121394c: callq 0x00007f16282d80b0  ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L004a: mov $0xffffff65,%esi
+0x00007f1611213956: mov 0x38(%rsp),%r10
+0x00007f161121395b: mov 0x44(%rsp),%r11d
+0x00007f1611213960: mov %r11d,0x14(%rsp)
+0x00007f1611213965: mov %r10,0x18(%rsp)
+0x00007f161121396a: mov %rbx,0x20(%rsp)
+0x00007f161121396f: mov 0x40(%rsp),%r11d
+0x00007f1611213974: mov %r11d,0x2c(%rsp)
+0x00007f1611213979: mov 0x50(%rsp),%r11d
+0x00007f161121397e: mov %r11d,0x48(%rsp)
+0x00007f1611213983: callq 0x00007f16110051a0  ; OopMap{[24]=Oop [32]=Oop [48]=Oop [56]=Oop [72]=NarrowOop [80]=NarrowOop off=4552}
+                                              ;*if_icmpne
+                                              ; - alt.CsvCharConsumer2::pushCell@19 (line 30)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213988: callq 0x00007f16282d80b0  ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L004b: mov $0x6,%esi
+0x00007f1611213992: mov 0x30(%rsp),%r10
+0x00007f1611213997: mov %r10,(%rsp)
+0x00007f161121399b: mov 0x38(%rsp),%r10
+0x00007f16112139a0: mov %r10,0x8(%rsp)
+0x00007f16112139a5: mov 0x44(%rsp),%r11d
+0x00007f16112139aa: mov %r11d,0x20(%rsp)
+0x00007f16112139af: callq 0x00007f16110051a0  ; OopMap{rbp=NarrowOop [0]=Oop [8]=Oop [80]=NarrowOop [96]=Oop [104]=Oop off=4596}
+                                              ;*new  ; - java.lang.String::<init>@25 (line 196)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f16112139b4: callq 0x00007f16282d80b0  ;*new
+                                              ; - java.lang.String::<init>@25 (line 196)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L004c: mov $0xffffff86,%esi
+0x00007f16112139be: mov %rbx,%rbp
+0x00007f16112139c1: mov %ecx,0x8(%rsp)
+0x00007f16112139c5: mov %r9d,0xc(%rsp)
+0x00007f16112139ca: mov %edi,0x10(%rsp)
+0x00007f16112139ce: mov %eax,0x14(%rsp)
+0x00007f16112139d2: nop
+0x00007f16112139d3: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [20]=NarrowOop [56]=Oop off=4632}
+                                              ;*aload_2
+                                              ; - alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+                                              ;   {runtime_call}
+0x00007f16112139d8: callq 0x00007f16282d80b0  ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+             L004d: mov $0x6,%esi
+0x00007f16112139e2: mov 0x30(%rsp),%rbp
+0x00007f16112139e7: mov 0x38(%rsp),%r10
+0x00007f16112139ec: mov %r10,(%rsp)
+0x00007f16112139f0: mov 0x10(%rsp),%r10d
+0x00007f16112139f5: mov %r10d,0x8(%rsp)
+0x00007f16112139fa: mov 0x44(%rsp),%r11d
+0x00007f16112139ff: mov %r11d,0x20(%rsp)
+0x00007f1611213a04: data16 xchg %ax,%ax
+0x00007f1611213a07: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [0]=Oop [80]=NarrowOop [84]=NarrowOop [96]=Oop [104]=Oop off=4684}
+                                              ;*new  ; - java.lang.String::<init>@25 (line 196)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a0c: callq 0x00007f16282d80b0  ;*new
+                                              ; - java.lang.String::<init>@25 (line 196)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a11: mov $0xfffffff6,%esi
+0x00007f1611213a16: mov 0x40(%rsp),%ebp
+0x00007f1611213a1a: nop
+0x00007f1611213a1b: callq 0x00007f16110051a0  ; OopMap{[80]=NarrowOop off=4704}
+                                              ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213a20: callq 0x00007f16282d80b0  ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213a25: mov $0xfffffff6,%esi
+0x00007f1611213a2a: mov 0x4c(%rsp),%ebp
+0x00007f1611213a2e: mov %r11,(%rsp)
+0x00007f1611213a32: nop
+0x00007f1611213a33: callq 0x00007f16110051a0  ; OopMap{[0]=Oop off=4728}
+                                              ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213a38: callq 0x00007f16282d80b0  ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007f1611213a3d: mov $0xfffffff6,%esi
+0x00007f1611213a42: mov 0x40(%rsp),%ebp
+0x00007f1611213a46: nop
+0x00007f1611213a47: callq 0x00007f16110051a0  ; OopMap{[80]=NarrowOop off=4748}
+                                              ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a4c: callq 0x00007f16282d80b0  ;*invokeinterface newCell
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a51: mov $0xfffffff6,%esi
+0x00007f1611213a56: mov 0x4c(%rsp),%ebp
+0x00007f1611213a5a: mov %rcx,(%rsp)
+0x00007f1611213a5e: nop
+0x00007f1611213a5f: callq 0x00007f16110051a0  ; OopMap{[0]=Oop off=4772}
+                                              ;*aastore
+                                              ; - StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a64: callq 0x00007f16282d80b0  ;   {runtime_call}
+0x00007f1611213a69: mov $0xfffffff6,%esi
+0x00007f1611213a6e: mov 0x30(%rsp),%rbp
+0x00007f1611213a73: mov 0x10(%rsp),%r11d
+0x00007f1611213a78: mov %r11d,0x8(%rsp)
+0x00007f1611213a7d: xchg %ax,%ax
+0x00007f1611213a7f: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [56]=Oop [80]=NarrowOop off=4804}
+                                              ;*invokevirtual getClass
+                                              ; - java.util.Arrays::copyOf@3 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a84: callq 0x00007f16282d80b0  ;*invokevirtual getClass
+                                              ; - java.util.Arrays::copyOf@3 (line 3181)
+                                              ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213a89: mov $0xfffffff6,%esi
+0x00007f1611213a8e: mov 0x30(%rsp),%rbp
+0x00007f1611213a93: mov 0x10(%rsp),%r11d
+0x00007f1611213a98: mov %r11d,0x8(%rsp)
+0x00007f1611213a9d: mov %rbx,0x18(%rsp)
+0x00007f1611213aa2: nop
+0x00007f1611213aa3: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [24]=Oop [56]=Oop [80]=NarrowOop off=4840}
+                                              ;*invokeinterface accept
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213aa8: callq 0x00007f16282d80b0  ;*invokeinterface accept
+                                              ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213aad: mov $0xfffffff6,%esi
+0x00007f1611213ab2: mov 0x30(%rsp),%rbp
+0x00007f1611213ab7: mov 0x10(%rsp),%r10d
+0x00007f1611213abc: mov %r10d,0x8(%rsp)
+0x00007f1611213ac1: xchg %ax,%ax
+0x00007f1611213ac3: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [56]=Oop [80]=NarrowOop off=4872}
+                                              ;*arraylength
+                                              ; - java.util.Arrays::fill@1 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213ac8: callq 0x00007f16282d80b0  ;*arraylength
+                                              ; - java.util.Arrays::fill@1 (line 3153)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213acd: mov $0xfffffff6,%esi
+0x00007f1611213ad2: nop
+0x00007f1611213ad3: callq 0x00007f16110051a0  ; OopMap{off=4888}
+                                              ;*invokevirtual getCharBuffer
+                                              ; - alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+                                              ;   {runtime_call}
+0x00007f1611213ad8: callq 0x00007f16282d80b0  ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213add: jmp L004e  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - java.lang.String::<init>@75 (line 207)
+                               ; - StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213adf: jmp L004f  ;*new
+                               ; - StringArrayCellConsumer::newCell@12 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213ae1: mov %rax,%rsi
+0x00007f1611213ae4: jmp L0051  ;*invokestatic copyOf
+                               ; - java.util.Arrays::copyOf@6 (line 3181)
+                               ; - StringArrayCellConsumer::_endOfRow@12 (line 45)
+                               ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                               ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213ae6: mov 0x8(%rax),%r11d  ;*synchronization entry
+                                         ; - StringArrayCellConsumer::endOfRow@-1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213aea: jmp L0050  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - java.lang.String::<init>@75 (line 207)
+                               ; - StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::endOfRow@4 (line 150)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L004e: mov %rax,%rsi
+0x00007f1611213aef: jmp L0051  ;*new
+                               ; - StringArrayCellConsumer::newCell@12 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007f1611213af1: mov %rax,%rsi
+0x00007f1611213af4: jmp L0051  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - java.lang.String::<init>@75 (line 207)
+                               ; - StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - alt.CharConsumer2::newCell@8 (line 160)
+                               ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L004f: mov %rax,%rsi
+0x00007f1611213af9: jmp L0051  ;*invokestatic canEscaped
+                               ; - alt.CharConsumer2::consumeAllBuffer@179 (line 67)
+0x00007f1611213afb: mov %rax,%rsi
+0x00007f1611213afe: jmp L0051  ;*invokevirtual consume
+                               ; - org.github.arnaudroger.Csv2Benchmark$$Lambda$2/2057167010::accept@11
+                               ; - StringArrayCellConsumer::_endOfRow@15 (line 45)
+                               ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                               ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                               ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213b00: mov 0x8(%rax),%r11d  ;*synchronization entry
+                                         ; - StringArrayCellConsumer::_endOfRow@-1 (line 45)
+                                         ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                         ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                         ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+             L0050: movabs $0x0,%r10
+0x00007f1611213b0e: lea (%r10,%r11,8),%r10
+0x00007f1611213b12: mov 0x38(%r10),%r10
+0x00007f1611213b16: movabs $0x7c0003000,%r11  ;   {metadata('java/lang/Exception')}
+0x00007f1611213b20: cmp %r11,%r10
+0x00007f1611213b23: je L0052  ;*synchronization entry
+                              ; - StringArrayCellConsumer::endOfRow@-1 (line 40)
+                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213b25: mov %rax,%rsi  ;*synchronization entry
+                                   ; - StringArrayCellConsumer::newCell@-1 (line 22)
+                                   ; - alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0051: add $0xb0,%rsp
+0x00007f1611213b2f: pop %rbp
+0x00007f1611213b30: jmpq 0x00007f161110be60  ;   {runtime_call}
+             L0052: mov %rax,%rbp  ;*ireturn
+                                   ; - StringArrayCellConsumer::endOfRow@4 (line 40)
+                                   ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                   ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007f1611213b38: mov $0x67,%esi
+0x00007f1611213b3d: xchg %ax,%ax
+0x00007f1611213b3f: callq 0x00007f16110051a0  ; OopMap{rbp=Oop [48]=Oop [56]=Oop [80]=NarrowOop off=4996}
+                                              ;*invokestatic rethrow
+                                              ; - StringArrayCellConsumer::endOfRow@7 (line 41)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213b44: callq 0x00007f16282d80b0  ;*aload_0
+                                              ; - java.util.Arrays::fill@16 (line 3155)
+                                              ; - StringArrayCellConsumer::_endOfRow@30 (line 46)
+                                              ; - StringArrayCellConsumer::endOfRow@1 (line 40)
+                                              ; - alt.CharConsumer2::endOfRow@8 (line 151)
+                                              ; - alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {runtime_call}
+0x00007f1611213b49: hlt
+0x00007f1611213b4a: hlt
+0x00007f1611213b4b: hlt
+0x00007f1611213b4c: hlt
+0x00007f1611213b4d: hlt
+0x00007f1611213b4e: hlt
+0x00007f1611213b4f: hlt
+0x00007f1611213b50: hlt
+0x00007f1611213b51: hlt
+0x00007f1611213b52: hlt
+0x00007f1611213b53: hlt
+0x00007f1611213b54: hlt
+0x00007f1611213b55: hlt
+0x00007f1611213b56: hlt
+0x00007f1611213b57: hlt
+0x00007f1611213b58: hlt
+0x00007f1611213b59: hlt
+0x00007f1611213b5a: hlt
+0x00007f1611213b5b: hlt
+0x00007f1611213b5c: hlt
+0x00007f1611213b5d: hlt
+0x00007f1611213b5e: hlt
+0x00007f1611213b5f: hlt
+[Stub Code]
+0x00007f1611213b60: movabs $0x0,%rbx  ;   {no_reloc}
+             L0053: jmpq L0053  ;   {runtime_call}
+0x00007f1611213b6f: movabs $0x0,%rbx  ;   {static_stub}
+             L0054: jmpq L0054  ;   {runtime_call}
+[Exception Handler]
+0x00007f1611213b7e: jmpq 0x00007f16110f94a0  ;   {runtime_call}
+[Deopt Handler Code]
+0x00007f1611213b83: callq 0x00007f1611213b88
+0x00007f1611213b88: subq $0x5,(%rsp)
+0x00007f1611213b8d: jmpq 0x00007f16110473c0  ;   {runtime_call}
+0x00007f1611213b92: hlt
+0x00007f1611213b93: hlt
+0x00007f1611213b94: hlt
+0x00007f1611213b95: hlt
+0x00007f1611213b96: hlt
+0x00007f1611213b97: hlt

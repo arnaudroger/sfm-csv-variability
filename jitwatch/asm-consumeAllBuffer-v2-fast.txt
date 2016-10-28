@@ -1,0 +1,978 @@
+# {method} {0x00007fddd1995868} 'consumeAllBuffer' '(Lorg/github/arnaudroger/csv/CellConsumer;)V' in 'org/github/arnaudroger/csv/alt/CharConsumer2'
+# this:     rsi:rsi   = 'org/github/arnaudroger/csv/alt/CharConsumer2'
+# parm0:    rdx:rdx   = 'org/github/arnaudroger/csv/CellConsumer'
+#           [sp+0xb0]  (sp of caller)
+[Entry Point]
+0x00007fddd419f600: mov 0x8(%rsi),%r10d
+0x00007fddd419f604: shl $0x3,%r10
+0x00007fddd419f608: cmp %r10,%rax
+0x00007fddd419f60b: jne 0x00007fddd3fa7e20  ;   {runtime_call}
+0x00007fddd419f611: data16 xchg %ax,%ax
+0x00007fddd419f614: nopl 0x0(%rax,%rax,1)
+0x00007fddd419f61c: data16 data16 xchg %ax,%ax
+[Verified Entry Point]
+0x00007fddd419f620: mov %eax,-0x14000(%rsp)
+0x00007fddd419f627: push %rbp
+0x00007fddd419f628: sub $0xa0,%rsp  ;*synchronization entry
+                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+0x00007fddd419f62f: mov %rdx,0x28(%rsp)
+0x00007fddd419f634: mov %rsi,0x20(%rsp)
+0x00007fddd419f639: mov 0x1c(%rsi),%r10d  ;*getfield _csvBuffer
+                                          ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@1 (line 36)
+0x00007fddd419f63d: mov 0xc(%r12,%r10,8),%r8d  ;*getfield bufferSize
+                                               ; - org.github.arnaudroger.csv.alt.CharBuffer2::getBufferSize@1 (line 24)
+                                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@12 (line 37)
+                                               ; implicit exception: dispatches to 0x00007fddd419ff05
+0x00007fddd419f642: mov %r8d,0x10(%rsp)
+0x00007fddd419f647: mov 0x10(%rsi),%ebp  ;*getfield _currentState
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@17 (line 39)
+0x00007fddd419f64a: mov 0xc(%rsi),%edi  ;*getfield _currentIndex
+                                        ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@23 (line 42)
+0x00007fddd419f64d: cmp %r8d,%edi
+0x00007fddd419f650: jge L000f  ;*if_icmpge
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+0x00007fddd419f656: mov 0x10(%r12,%r10,8),%r10d  ;*getfield buffer
+                                                 ; - org.github.arnaudroger.csv.alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+0x00007fddd419f65b: mov %r10d,0x50(%rsp)
+0x00007fddd419f660: mov 0xc(%r12,%r10,8),%r11d  ;*caload
+                                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+                                                ; implicit exception: dispatches to 0x00007fddd419fec5
+0x00007fddd419f665: mov %r11d,(%rsp)
+0x00007fddd419f669: cmp %r11d,%edi
+0x00007fddd419f66c: jae L0023
+0x00007fddd419f672: mov %r8d,%r11d
+0x00007fddd419f675: dec %r11d
+0x00007fddd419f678: cmp (%rsp),%r11d
+0x00007fddd419f67c: jae L0023  ;*aload_2
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+0x00007fddd419f682: lea (%r12,%r10,8),%rbx  ;*getfield buffer
+                                            ; - org.github.arnaudroger.csv.alt.CharBuffer2::getCharBuffer@1 (line 21)
+                                            ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+0x00007fddd419f686: mov $0xf80002da,%r11d  ;   {metadata('java/lang/String')}
+0x00007fddd419f68c: movabs $0x0,%r10
+0x00007fddd419f696: lea (%r10,%r11,8),%r10
+0x00007fddd419f69a: mov %r10,0x18(%rsp)
+0x00007fddd419f69f: mov %edi,%r10d
+0x00007fddd419f6a2: jmp L0002
+             L0000: or $0x10,%ebp  ;*ior  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@171 (line 66)
+0x00007fddd419f6a7: mov 0x28(%rsp),%rcx  ;*goto
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@106 (line 54)
+             L0001: cmp 0x10(%rsp),%edi
+0x00007fddd419f6b0: jge L000f
+0x00007fddd419f6b6: mov %edi,%r10d
+0x00007fddd419f6b9: mov %rcx,0x28(%rsp)  ;*aload_2
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+             L0002: movzwl 0x10(%rbx,%r10,2),%r11d  ;*caload
+                                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@37 (line 43)
+0x00007fddd419f6c4: mov %r10d,%edi
+0x00007fddd419f6c7: inc %edi  ;*iadd
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::startNextCell@3 (line 165)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@13 (line 161)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f6c9: cmp $0x22,%r11d
+0x00007fddd419f6cd: je L000e  ;*if_icmpeq
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::isNotEscapeCharacter@3 (line 21)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@43 (line 44)
+0x00007fddd419f6d3: mov %ebp,%r8d
+0x00007fddd419f6d6: and $0x1,%r8d  ;*iand
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@2 (line 186)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+0x00007fddd419f6da: test %r8d,%r8d
+0x00007fddd419f6dd: jne L0014  ;*ifne
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@3 (line 186)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+0x00007fddd419f6e3: cmp $0x2c,%r11d
+0x00007fddd419f6e7: je L0003  ;*if_icmpne
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::isSeparator@3 (line 16)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@60 (line 46)
+0x00007fddd419f6e9: cmp $0xa,%r11d
+0x00007fddd419f6ed: je L000c  ;*if_icmpne
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@84 (line 50)
+0x00007fddd419f6f3: cmp $0xd,%r11d
+0x00007fddd419f6f7: je L0015  ;*if_icmpne
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+0x00007fddd419f6fd: mov 0x20(%rsp),%r8
+0x00007fddd419f702: movzbl 0x18(%r8),%r9d  ;*getfield notIgnoreLeadingSpace
+                                           ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@152 (line 66)
+0x00007fddd419f707: and $0xfffffff9,%ebp  ;*iand
+                                          ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@146 (line 65)
+0x00007fddd419f70a: test %r9d,%r9d
+0x00007fddd419f70d: jne L0000  ;*ifne
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+0x00007fddd419f70f: mov $0xffffff65,%esi
+0x00007fddd419f714: rex
+0x00007fddd419f719: rex
+0x00007fddd419f71d: mov %r10d,0x14(%rsp)
+0x00007fddd419f722: mov %r11d,0x18(%rsp)
+0x00007fddd419f727: mov %r9d,0x1c(%rsp)
+0x00007fddd419f72c: data16 xchg %ax,%ax
+0x00007fddd419f72f: callq 0x00007fddd3f671a0  ; OopMap{[0]=Oop [40]=Oop [80]=NarrowOop off=308}
+                                              ;*ifne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                              ;   {runtime_call}
+0x00007fddd419f734: callq 0x00007fdde8cf20b0  ;*ifne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@155 (line 66)
+                                              ;   {runtime_call}
+             L0003: mov 0x20(%rsp),%r11
+0x00007fddd419f73e: mov 0x14(%r11),%r9d  ;*getfield cellStart
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@3 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f742: lea 0x10(%rbx,%r9,2),%rsi  ;*invokestatic arraycopy
+                                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                               ; - java.lang.String::<init>@75 (line 207)
+                                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f747: cmp %r10d,%r9d
+0x00007fddd419f74a: jge L0004  ;*if_icmpge
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@10 (line 30)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f74c: cmp (%rsp),%r9d
+0x00007fddd419f750: jae L001b
+0x00007fddd419f756: movzwl (%rsi),%r11d  ;*caload
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f75a: cmp $0x22,%r11d
+0x00007fddd419f75e: je L0020  ;*aload
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@36 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0004: mov %r10d,%r8d
+0x00007fddd419f767: sub %r9d,%r8d  ;*isub
+                                   ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@45 (line 35)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f76a: mov 0x28(%rsp),%rcx
+0x00007fddd419f76f: mov 0x8(%rcx),%edx  ; implicit exception: dispatches to 0x00007fddd419fed9
+0x00007fddd419f772: cmp $0xf8015024,%edx  ;   {metadata('org/github/arnaudroger/csv/StringArrayCellConsumer')}
+0x00007fddd419f778: jne L0018
+0x00007fddd419f77e: mov %rbx,0x28(%rsp)
+0x00007fddd419f783: mov %rcx,%r11  ;*invokeinterface newCell
+                                   ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f786: mov 0x10(%r11),%ebp  ;*getfield currentIndex
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@1 (line 28)
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f78a: mov 0x14(%r11),%ebx  ;*getfield currentLength
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@5 (line 28)
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f78e: cmp %ebx,%ebp
+0x00007fddd419f790: jge L001c  ;*if_icmplt
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f796: mov 0x60(%r15),%rbx
+0x00007fddd419f79a: mov 0x1c(%r11),%edx  ;*getfield currentRow
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@5 (line 23)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f79e: mov %edx,0x80(%rsp)
+0x00007fddd419f7a5: mov %rbx,%rdx
+0x00007fddd419f7a8: add $0x18,%rdx
+0x00007fddd419f7ac: cmp 0x70(%r15),%rdx
+0x00007fddd419f7b0: jae L0012
+0x00007fddd419f7b6: mov %rdx,0x60(%r15)
+0x00007fddd419f7ba: prefetchnta 0xc0(%rdx)
+0x00007fddd419f7c1: mov 0x18(%rsp),%rdx
+0x00007fddd419f7c6: mov 0xa8(%rdx),%rdx
+0x00007fddd419f7cd: mov %rdx,(%rbx)
+0x00007fddd419f7d0: movl $0xf80002da,0x8(%rbx)  ;   {metadata('java/lang/String')}
+0x00007fddd419f7d7: mov %r12d,0xc(%rbx)
+0x00007fddd419f7db: mov %r12,0x10(%rbx)  ;*new  ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@12 (line 23)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0005: test %r9d,%r9d
+0x00007fddd419f7e2: jl L001d  ;*ifge
+                              ; - java.lang.String::<init>@5 (line 191)
+                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f7e8: test %r8d,%r8d
+0x00007fddd419f7eb: jle L000d  ;*iload_2
+                               ; - java.lang.String::<init>@50 (line 204)
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0006: mov (%rsp),%edx
+0x00007fddd419f7f4: sub %r8d,%edx  ;*isub
+                                   ; - java.lang.String::<init>@54 (line 204)
+                                   ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                   ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f7f7: cmp %edx,%r9d
+0x00007fddd419f7fa: jg L001e  ;*if_icmple
+                              ; - java.lang.String::<init>@55 (line 204)
+                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f800: test %r8d,%r8d
+0x00007fddd419f803: jl L001f  ;*ifge
+                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                              ; - java.lang.String::<init>@75 (line 207)
+                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f809: cmp $0x80000,%r8d
+0x00007fddd419f810: ja L0017
+0x00007fddd419f816: movslq %r8d,%r13
+             L0007: shl %r13
+0x00007fddd419f81c: add $0x17,%r13
+0x00007fddd419f820: cmp $0x80000,%r8d
+0x00007fddd419f827: ja L0013
+0x00007fddd419f82d: mov 0x60(%r15),%r14
+0x00007fddd419f831: mov %r13,%rdx
+0x00007fddd419f834: and $0xfffffffffffffff8,%rdx
+0x00007fddd419f838: mov %r14,%rax
+0x00007fddd419f83b: add %rdx,%rax
+0x00007fddd419f83e: cmp 0x70(%r15),%rax
+0x00007fddd419f842: jae L0013
+0x00007fddd419f848: mov %rax,0x60(%r15)
+0x00007fddd419f84c: prefetchnta 0xc0(%rax)
+0x00007fddd419f853: movq $0x1,(%r14)
+0x00007fddd419f85a: prefetchnta 0x100(%rax)
+0x00007fddd419f861: movl $0xf8000041,0x8(%r14)  ;   {metadata({type array char})}
+0x00007fddd419f869: mov %r8d,0xc(%r14)
+0x00007fddd419f86d: prefetchnta 0x140(%rax)
+0x00007fddd419f874: prefetchnta 0x180(%rax)
+0x00007fddd419f87b: mov %rcx,0x8(%rsp)
+0x00007fddd419f880: mov %edi,0x4(%rsp)
+0x00007fddd419f884: mov %r10d,0x14(%rsp)
+0x00007fddd419f889: mov %r9d,0x30(%rsp)
+0x00007fddd419f88e: mov %rsi,0x38(%rsp)
+0x00007fddd419f893: mov %r8d,0x34(%rsp)
+0x00007fddd419f898: mov %r11,0x40(%rsp)
+0x00007fddd419f89d: mov %ebp,0x48(%rsp)
+0x00007fddd419f8a1: mov %rbx,0x58(%rsp)
+0x00007fddd419f8a6: mov %r13,0x60(%rsp)  ;*newarray
+                                         ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                         ; - java.lang.String::<init>@75 (line 207)
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0008: mov (%rsp),%r10d
+0x00007fddd419f8af: sub 0x30(%rsp),%r10d  ;*isub
+                                          ; - java.util.Arrays::copyOfRange@52 (line 3665)
+                                          ; - java.lang.String::<init>@75 (line 207)
+                                          ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                          ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                          ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                          ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f8b4: mov %r14,%r11
+0x00007fddd419f8b7: add $0x10,%r11  ;*invokestatic arraycopy
+                                    ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                    ; - java.lang.String::<init>@75 (line 207)
+                                    ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                    ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                    ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f8bb: mov %r11,%rsi
+0x00007fddd419f8be: mov %r14,0x68(%rsp)
+0x00007fddd419f8c3: cmp 0x34(%rsp),%r10d
+0x00007fddd419f8c8: mov 0x34(%rsp),%r9d
+0x00007fddd419f8cd: cmovl %r10d,%r9d  ;*invokestatic min
+                                      ; - java.util.Arrays::copyOfRange@54 (line 3666)
+                                      ; - java.lang.String::<init>@75 (line 207)
+                                      ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                      ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                      ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                      ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f8d1: mov %r9d,%r10d
+0x00007fddd419f8d4: add 0x30(%rsp),%r10d
+0x00007fddd419f8d9: mov 0x60(%rsp),%r11
+0x00007fddd419f8de: shr $0x3,%r11
+0x00007fddd419f8e2: mov %r11,%rcx
+0x00007fddd419f8e5: add $0xfffffffffffffffe,%rcx
+0x00007fddd419f8e9: mov (%rsp),%ebx
+0x00007fddd419f8ec: cmp %r10d,%ebx
+0x00007fddd419f8ef: jb L0019
+0x00007fddd419f8f5: mov 0x34(%rsp),%ebp
+0x00007fddd419f8f9: cmp %r9d,%ebp
+0x00007fddd419f8fc: jb L0019
+0x00007fddd419f902: test %r9d,%r9d
+0x00007fddd419f905: jle L001a
+0x00007fddd419f90b: movslq %r9d,%rdx
+0x00007fddd419f90e: cmp 0x34(%rsp),%r9d
+0x00007fddd419f913: jl L0010
+             L0009: mov 0x38(%rsp),%rdi
+0x00007fddd419f91e: movabs $0x7fddd3fb4580,%r10
+0x00007fddd419f928: callq *%r10  ;*invokestatic arraycopy
+                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                 ; - java.lang.String::<init>@75 (line 207)
+                                 ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                 ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                 ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L000a: mov 0x68(%rsp),%r10
+0x00007fddd419f930: shr $0x3,%r10
+0x00007fddd419f934: mov 0x58(%rsp),%rbx
+0x00007fddd419f939: mov %r10d,0xc(%rbx)
+0x00007fddd419f93d: mov %rbx,%r10
+0x00007fddd419f940: shr $0x9,%r10
+0x00007fddd419f944: movabs $0x7fddcfda1000,%r11
+0x00007fddd419f94e: mov %r12b,(%r11,%r10,1)  ;*putfield value
+                                             ; - java.lang.String::<init>@78 (line 207)
+                                             ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                             ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f952: mov 0x8(%rsp),%rcx
+0x00007fddd419f957: mov 0x4(%rsp),%edi
+0x00007fddd419f95b: mov 0x14(%rsp),%r10d
+0x00007fddd419f960: mov 0x40(%rsp),%r11
+0x00007fddd419f965: mov 0x48(%rsp),%ebp  ;*synchronization entry
+                                         ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@-1 (line 22)
+                                         ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L000b: mov 0x80(%rsp),%r8d
+0x00007fddd419f971: mov 0xc(%r12,%r8,8),%r8d  ; implicit exception: dispatches to 0x00007fddd419fef1
+0x00007fddd419f976: cmp %r8d,%ebp
+0x00007fddd419f979: jae L0016  ;*aastore
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f97f: mov 0x20(%rsp),%r10
+0x00007fddd419f984: mov %edi,0x14(%r10)  ;*putfield cellStart
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::startNextCell@4 (line 165)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@13 (line 161)
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f988: incl 0x10(%r11)  ;*putfield currentIndex
+                                     ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@30 (line 24)
+                                     ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                     ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                     ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f98c: mov 0x80(%rsp),%r11d
+0x00007fddd419f994: lea (%r12,%r11,8),%r10  ;*getfield currentRow
+                                            ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@5 (line 23)
+                                            ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                            ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                            ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f998: lea 0x10(%r10,%rbp,4),%r11
+0x00007fddd419f99d: mov %rbx,%r10
+0x00007fddd419f9a0: shr $0x3,%r10
+0x00007fddd419f9a4: mov %r10d,(%r11)
+0x00007fddd419f9a7: mov %r11,%r10
+0x00007fddd419f9aa: shr $0x9,%r10
+0x00007fddd419f9ae: movabs $0x7fddcfda1000,%r11
+0x00007fddd419f9b8: mov %r12b,(%r11,%r10,1)  ;*aastore
+                                             ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                                             ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419f9bc: mov $0x4,%ebp
+0x00007fddd419f9c1: mov 0x28(%rsp),%rbx
+0x00007fddd419f9c6: jmpq L0001
+             L000c: and $0x2,%ebp  ;*iand
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::lastCharWasNotCr@2 (line 190)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+0x00007fddd419f9ce: test %ebp,%ebp
+0x00007fddd419f9d0: jne L0021  ;*ifne
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+0x00007fddd419f9d6: mov %r10d,%ebp
+0x00007fddd419f9d9: mov %rbx,0x8(%rsp)
+0x00007fddd419f9de: mov %edi,0x4(%rsp)
+0x00007fddd419f9e2: mov 0x20(%rsp),%rsi
+0x00007fddd419f9e7: mov %rbx,%rdx
+0x00007fddd419f9ea: mov %r10d,%ecx
+0x00007fddd419f9ed: mov 0x28(%rsp),%r8
+0x00007fddd419f9f2: nop
+0x00007fddd419f9f3: callq 0x00007fddd3fa8020  ; OopMap{[8]=Oop [32]=Oop [40]=Oop [80]=NarrowOop off=1016}
+                                              ;*invokespecial endOfRow
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+                                              ;   {optimized virtual_call}
+0x00007fddd419f9f8: xor %ebp,%ebp
+0x00007fddd419f9fa: mov 0x28(%rsp),%rcx
+0x00007fddd419f9ff: mov 0x4(%rsp),%edi
+0x00007fddd419fa03: mov 0x8(%rsp),%rbx
+0x00007fddd419fa08: jmpq L0001
+             L000d: test %r8d,%r8d
+0x00007fddd419fa10: jl L0022  ;*ifge
+                              ; - java.lang.String::<init>@22 (line 195)
+                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fa16: cmp (%rsp),%r9d
+0x00007fddd419fa1a: jg L0006  ;*if_icmpgt
+                              ; - java.lang.String::<init>@37 (line 198)
+                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fa20: movl $0xed9e14c7,0xc(%rbx)  ;   {oop([C)}
+0x00007fddd419fa27: mov %rbx,%r8
+0x00007fddd419fa2a: shr $0x9,%r8
+0x00007fddd419fa2e: movabs $0x7fddcfda1000,%r9
+0x00007fddd419fa38: mov %r12b,(%r9,%r8,1)  ;*putfield value
+                                           ; - java.lang.String::<init>@46 (line 199)
+                                           ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                           ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                           ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                           ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fa3c: jmpq L000b
+             L000e: mov %rbx,0x30(%rsp)
+0x00007fddd419fa46: mov %edi,0x8(%rsp)
+0x00007fddd419fa4a: mov %ebp,0x4(%rsp)
+0x00007fddd419fa4e: mov %r10d,%ebp
+0x00007fddd419fa51: mov 0x4(%rsp),%esi
+0x00007fddd419fa55: xchg %ax,%ax
+0x00007fddd419fa57: callq 0x00007fddd3fa8420  ; OopMap{[32]=Oop [40]=Oop [48]=Oop [80]=NarrowOop off=1116}
+                                              ;*invokestatic canEscaped
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@179 (line 67)
+                                              ;   {static_call}
+0x00007fddd419fa5c: test %eax,%eax
+0x00007fddd419fa5e: je L0011  ;*ifeq
+                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@182 (line 67)
+0x00007fddd419fa60: mov 0x4(%rsp),%ebp
+0x00007fddd419fa64: xor $0x1,%ebp
+0x00007fddd419fa67: or $0x8,%ebp  ;*ior  ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@191 (line 68)
+0x00007fddd419fa6a: mov 0x28(%rsp),%rcx
+0x00007fddd419fa6f: mov 0x8(%rsp),%edi
+0x00007fddd419fa73: mov 0x30(%rsp),%rbx
+0x00007fddd419fa78: jmpq L0001  ;*if_icmpge
+                                ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@31 (line 42)
+             L000f: mov 0x20(%rsp),%r10
+0x00007fddd419fa82: mov %ebp,0x10(%r10)  ;*putfield _currentState
+                                         ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@203 (line 71)
+0x00007fddd419fa86: mov %edi,0xc(%r10)  ;*synchronization entry
+                                        ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@-1 (line 36)
+0x00007fddd419fa8a: add $0xa0,%rsp
+0x00007fddd419fa91: pop %rbp
+0x00007fddd419fa92: test %eax,0x15e45568(%rip)  # 0x00007fdde9fe5000
+                                                ;   {poll_return} *** SAFEPOINT POLL ***
+0x00007fddd419fa98: retq
+             L0010: mov %rdx,%r10
+0x00007fddd419fa9c: shl %r10
+0x00007fddd419fa9f: add $0x10,%r10
+0x00007fddd419faa3: mov %r10,%r8
+0x00007fddd419faa6: and $0xfffffffffffffff9,%r8
+0x00007fddd419faaa: mov %r14,%rdi
+0x00007fddd419faad: add %r8,%rdi
+0x00007fddd419fab0: shr $0x3,%r10
+0x00007fddd419fab4: sub %r10,%r11
+0x00007fddd419fab7: mov %r11,%rcx
+0x00007fddd419faba: xor %rax,%rax
+0x00007fddd419fabd: shl $0x3,%rcx
+0x00007fddd419fac1: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fac4: jmpq L0009
+             L0011: mov 0x28(%rsp),%rcx
+0x00007fddd419face: mov 0x4(%rsp),%ebp
+0x00007fddd419fad2: mov 0x8(%rsp),%edi
+0x00007fddd419fad6: mov 0x30(%rsp),%rbx
+0x00007fddd419fadb: jmpq L0001
+             L0012: mov %ebp,0x4c(%rsp)
+0x00007fddd419fae4: mov %r11,0x58(%rsp)
+0x00007fddd419fae9: mov %r8d,0x48(%rsp)
+0x00007fddd419faee: mov %rsi,0x40(%rsp)
+0x00007fddd419faf3: mov %r9d,0x3c(%rsp)
+0x00007fddd419faf8: mov %r10d,0x38(%rsp)
+0x00007fddd419fafd: rex
+0x00007fddd419fb02: rex
+0x00007fddd419fb07: mov %rax,-0x8(%rsp)
+0x00007fddd419fb0c: mov (%rsp),%eax
+0x00007fddd419fb0f: mov %eax,0x18(%rsp)
+0x00007fddd419fb13: mov -0x8(%rsp),%rax
+0x00007fddd419fb18: mov %rax,-0x8(%rsp)
+0x00007fddd419fb1d: mov 0x50(%rsp),%eax
+0x00007fddd419fb21: mov %eax,0x14(%rsp)
+0x00007fddd419fb25: mov -0x8(%rsp),%rax
+0x00007fddd419fb2a: mov %edi,0xc(%rsp)
+0x00007fddd419fb2e: mov %rax,-0x8(%rsp)
+0x00007fddd419fb33: mov 0x10(%rsp),%eax
+0x00007fddd419fb37: mov %eax,0x8(%rsp)
+0x00007fddd419fb3b: mov -0x8(%rsp),%rax
+0x00007fddd419fb40: mov %rcx,(%rsp)
+0x00007fddd419fb44: mov 0x20(%rsp),%rbp
+0x00007fddd419fb49: movabs $0x7c00016d0,%rsi  ;   {metadata('java/lang/String')}
+0x00007fddd419fb53: rex
+0x00007fddd419fb58: rex
+0x00007fddd419fb5d: mov %r10d,0x1c(%rsp)
+0x00007fddd419fb62: nop
+0x00007fddd419fb63: callq 0x00007fddd4062220  ; OopMap{rbp=Oop [0]=Oop [20]=NarrowOop [32]=Oop [40]=Oop [64]=Derived_oop_[32] [88]=Oop [128]=NarrowOop off=1384}
+                                              ;*new  ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@12 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fb68: mov %rbp,0x20(%rsp)
+0x00007fddd419fb6d: mov (%rsp),%rcx
+0x00007fddd419fb71: mov %rax,-0x8(%rsp)
+0x00007fddd419fb76: mov 0x8(%rsp),%eax
+0x00007fddd419fb7a: mov %eax,0x10(%rsp)
+0x00007fddd419fb7e: mov -0x8(%rsp),%rax
+0x00007fddd419fb83: mov 0xc(%rsp),%edi
+0x00007fddd419fb87: mov %rax,-0x8(%rsp)
+0x00007fddd419fb8c: mov 0x14(%rsp),%eax
+0x00007fddd419fb90: mov %eax,0x50(%rsp)
+0x00007fddd419fb94: mov -0x8(%rsp),%rax
+0x00007fddd419fb99: mov %rax,-0x8(%rsp)
+0x00007fddd419fb9e: mov 0x18(%rsp),%eax
+0x00007fddd419fba2: mov %eax,(%rsp)
+0x00007fddd419fba5: mov -0x8(%rsp),%rax
+0x00007fddd419fbaa: rex
+0x00007fddd419fbaf: rex
+0x00007fddd419fbb4: mov 0x38(%rsp),%r10d
+0x00007fddd419fbb9: mov 0x3c(%rsp),%r9d
+0x00007fddd419fbbe: mov 0x40(%rsp),%rsi
+0x00007fddd419fbc3: mov 0x48(%rsp),%r8d
+0x00007fddd419fbc8: mov 0x58(%rsp),%r11
+0x00007fddd419fbcd: mov 0x4c(%rsp),%ebp
+0x00007fddd419fbd1: mov %rax,%rbx
+0x00007fddd419fbd4: jmpq L0005
+             L0013: mov %r13,0x60(%rsp)
+0x00007fddd419fbde: mov %rbx,0x58(%rsp)
+0x00007fddd419fbe3: mov %ebp,0x48(%rsp)
+0x00007fddd419fbe7: mov %r11,0x40(%rsp)
+0x00007fddd419fbec: mov %r8d,0x34(%rsp)
+0x00007fddd419fbf1: mov %rsi,0x38(%rsp)
+0x00007fddd419fbf6: mov %r9d,0x30(%rsp)
+0x00007fddd419fbfb: mov %r10d,0x14(%rsp)
+0x00007fddd419fc00: mov %edi,0x4(%rsp)
+0x00007fddd419fc04: mov %rcx,0x8(%rsp)  ;*ifge
+                                        ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                        ; - java.lang.String::<init>@75 (line 207)
+                                        ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                        ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                        ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                        ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fc09: movabs $0x7c0000208,%rsi  ;   {metadata({type array char})}
+0x00007fddd419fc13: mov %r8d,%edx
+0x00007fddd419fc16: nop
+0x00007fddd419fc17: callq 0x00007fddd4061520  ; OopMap{[8]=Oop [32]=Oop [40]=Oop [56]=Derived_oop_[40] [64]=Oop [80]=NarrowOop [88]=Oop [128]=NarrowOop off=1564}
+                                              ;*newarray
+                                              ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fc1c: mov %rax,%r14
+0x00007fddd419fc1f: jmpq L0008
+             L0014: mov $0xffffff65,%esi
+0x00007fddd419fc29: rex
+0x00007fddd419fc2e: rex
+0x00007fddd419fc32: mov %r10d,0x14(%rsp)
+0x00007fddd419fc37: mov %r11d,0x18(%rsp)
+0x00007fddd419fc3c: mov %r8d,0x1c(%rsp)
+0x00007fddd419fc41: xchg %ax,%ax
+0x00007fddd419fc43: callq 0x00007fddd3f671a0  ; OopMap{[0]=Oop [40]=Oop [80]=NarrowOop off=1608}
+                                              ;*ifne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@3 (line 186)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+                                              ;   {runtime_call}
+0x00007fddd419fc48: callq 0x00007fdde8cf20b0  ;*ifne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::isCharEscaped@3 (line 186)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@51 (line 45)
+                                              ;   {runtime_call}
+             L0015: mov $0xffffff65,%esi
+0x00007fddd419fc52: rex
+0x00007fddd419fc57: rex
+0x00007fddd419fc5b: mov %r10d,0x14(%rsp)
+0x00007fddd419fc60: mov %r11d,0x1c(%rsp)
+0x00007fddd419fc65: xchg %ax,%ax
+0x00007fddd419fc67: callq 0x00007fddd3f671a0  ; OopMap{[0]=Oop [40]=Oop [80]=NarrowOop off=1644}
+                                              ;*if_icmpne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+                                              ;   {runtime_call}
+0x00007fddd419fc6c: callq 0x00007fdde8cf20b0  ;*if_icmpne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@125 (line 59)
+                                              ;   {runtime_call}
+             L0016: mov $0xffffffe4,%esi
+0x00007fddd419fc76: mov %rcx,0x8(%rsp)
+0x00007fddd419fc7b: rex
+0x00007fddd419fc80: rex
+0x00007fddd419fc85: mov %r10d,0x20(%rsp)
+0x00007fddd419fc8a: mov %r11,0x28(%rsp)
+0x00007fddd419fc8f: mov %rbx,0x30(%rsp)
+0x00007fddd419fc94: data16 xchg %ax,%ax
+0x00007fddd419fc97: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [40]=Oop [48]=Oop [80]=NarrowOop [128]=NarrowOop off=1692}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fc9c: callq 0x00007fdde8cf20b0  ;*aastore
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0017: movslq %r8d,%r13  ;*newarray
+                                      ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                      ; - java.lang.String::<init>@75 (line 207)
+                                      ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                      ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                      ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                      ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fca4: jmpq L0007
+             L0018: mov $0xffffffde,%esi
+0x00007fddd419fcae: mov %rax,-0x8(%rsp)
+0x00007fddd419fcb3: mov 0x10(%rsp),%eax
+0x00007fddd419fcb7: mov %eax,0x8(%rsp)
+0x00007fddd419fcbb: mov -0x8(%rsp),%rax
+0x00007fddd419fcc0: rex
+0x00007fddd419fcc5: rex
+0x00007fddd419fcca: mov %r10d,0x18(%rsp)
+0x00007fddd419fccf: rex
+0x00007fddd419fcd4: rex
+0x00007fddd419fcd9: mov %r9d,0x1c(%rsp)
+0x00007fddd419fcde: mov %r8d,0x28(%rsp)
+0x00007fddd419fce3: callq 0x00007fddd3f671a0  ; OopMap{[16]=Oop [32]=Oop [80]=NarrowOop off=1768}
+                                              ;*invokeinterface newCell
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fce8: callq 0x00007fdde8cf20b0  ;   {runtime_call}
+             L0019: mov %rsi,%rdi
+0x00007fddd419fcf0: xor %rax,%rax
+0x00007fddd419fcf3: shl $0x3,%rcx
+0x00007fddd419fcf7: rep rex
+0x00007fddd419fcfa: mov 0x28(%rsp),%rsi
+0x00007fddd419fcff: mov 0x30(%rsp),%edx
+0x00007fddd419fd03: mov %r14,%rcx
+0x00007fddd419fd06: xor %r8d,%r8d
+0x00007fddd419fd09: xchg %ax,%ax
+0x00007fddd419fd0b: callq 0x00007fddd4062960  ; OopMap{[8]=Oop [32]=Oop [40]=Oop [64]=Oop [80]=NarrowOop [88]=Oop [104]=Oop [128]=NarrowOop off=1808}
+                                              ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fd10: jmpq L000a
+             L001a: test %r9d,%r9d
+0x00007fddd419fd18: jl L0019
+0x00007fddd419fd1a: mov %rsi,%rdi
+0x00007fddd419fd1d: xor %rax,%rax
+0x00007fddd419fd20: shl $0x3,%rcx
+0x00007fddd419fd24: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - java.lang.String::<init>@75 (line 207)
+                             ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                             ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                             ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419fd27: jmpq L000a
+             L001b: mov $0xffffffe4,%esi
+0x00007fddd419fd31: mov %rax,-0x8(%rsp)
+0x00007fddd419fd36: mov 0x10(%rsp),%eax
+0x00007fddd419fd3a: mov %eax,0x8(%rsp)
+0x00007fddd419fd3e: mov -0x8(%rsp),%rax
+0x00007fddd419fd43: mov %r10d,0x18(%rsp)
+0x00007fddd419fd48: mov %r10d,0x30(%rsp)
+0x00007fddd419fd4d: mov %r9d,0x34(%rsp)
+0x00007fddd419fd52: nop
+0x00007fddd419fd53: callq 0x00007fddd3f671a0  ; OopMap{[32]=Oop [40]=Oop [80]=NarrowOop off=1880}
+                                              ;*caload
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fd58: callq 0x00007fdde8cf20b0  ;*caload
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@16 (line 30)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L001c: mov $0xffffff65,%esi
+0x00007fddd419fd62: mov %rcx,0x8(%rsp)
+0x00007fddd419fd67: rex
+0x00007fddd419fd6c: rex
+0x00007fddd419fd71: mov %r10d,0x20(%rsp)
+0x00007fddd419fd76: mov %r9d,0x24(%rsp)
+0x00007fddd419fd7b: mov %r8d,0x30(%rsp)
+0x00007fddd419fd80: mov %r11,0x38(%rsp)
+0x00007fddd419fd85: mov %ebx,0x34(%rsp)
+0x00007fddd419fd89: xchg %ax,%ax
+0x00007fddd419fd8b: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [56]=Oop [80]=NarrowOop off=1936}
+                                              ;*if_icmplt
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::ensureCapacity@8 (line 28)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@1 (line 22)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fd90: callq 0x00007fdde8cf20b0  ;*invokespecial <init>
+                                              ; - java.lang.String::<init>@1 (line 190)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L001d: mov $0xffffff65,%esi
+0x00007fddd419fd9a: mov %rcx,0x8(%rsp)
+0x00007fddd419fd9f: rex
+0x00007fddd419fda4: rex
+0x00007fddd419fda9: mov %r10d,0x20(%rsp)
+0x00007fddd419fdae: mov %r11,0x28(%rsp)
+0x00007fddd419fdb3: mov %rbx,0x38(%rsp)
+0x00007fddd419fdb8: mov %r8d,0x44(%rsp)
+0x00007fddd419fdbd: mov %r9d,0x48(%rsp)
+0x00007fddd419fdc2: nop
+0x00007fddd419fdc3: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [40]=Oop [56]=Oop [80]=NarrowOop [128]=NarrowOop off=1992}
+                                              ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fdc8: callq 0x00007fdde8cf20b0  ;*ifgt
+                                              ; - java.lang.String::<init>@18 (line 194)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L001e: mov $0xffffff65,%esi
+0x00007fddd419fdd2: mov %rcx,0x8(%rsp)
+0x00007fddd419fdd7: rex
+0x00007fddd419fddc: rex
+0x00007fddd419fde1: mov %r10d,0x20(%rsp)
+0x00007fddd419fde6: mov %r11,0x28(%rsp)
+0x00007fddd419fdeb: mov %rbx,0x38(%rsp)
+0x00007fddd419fdf0: mov %r8d,0x44(%rsp)
+0x00007fddd419fdf5: mov %r9d,0x48(%rsp)
+0x00007fddd419fdfa: mov %edx,0x4c(%rsp)
+0x00007fddd419fdfe: nop
+0x00007fddd419fdff: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [40]=Oop [56]=Oop [80]=NarrowOop [128]=NarrowOop off=2052}
+                                              ;*if_icmple
+                                              ; - java.lang.String::<init>@55 (line 204)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fe04: callq 0x00007fdde8cf20b0  ;*synchronization entry
+                                              ; - java.util.Arrays::copyOfRange@-1 (line 3661)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L001f: mov $0xffffff65,%esi
+0x00007fddd419fe0e: mov %rcx,0x8(%rsp)
+0x00007fddd419fe13: rex
+0x00007fddd419fe18: rex
+0x00007fddd419fe1d: mov %r10d,0x20(%rsp)
+0x00007fddd419fe22: mov %r11,0x28(%rsp)
+0x00007fddd419fe27: mov %rbx,0x38(%rsp)
+0x00007fddd419fe2c: mov %r9d,0x40(%rsp)
+0x00007fddd419fe31: mov %r10d,0x44(%rsp)
+0x00007fddd419fe36: mov %r8d,0x4c(%rsp)
+0x00007fddd419fe3b: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [40]=Oop [56]=Oop [80]=NarrowOop [128]=NarrowOop off=2112}
+                                              ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fe40: callq 0x00007fdde8cf20b0  ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0020: mov $0xffffff65,%esi
+0x00007fddd419fe4a: mov %rax,-0x8(%rsp)
+0x00007fddd419fe4f: mov 0x10(%rsp),%eax
+0x00007fddd419fe53: mov %eax,0x8(%rsp)
+0x00007fddd419fe57: mov -0x8(%rsp),%rax
+0x00007fddd419fe5c: mov %r10d,0x18(%rsp)
+0x00007fddd419fe61: mov %r9d,0x1c(%rsp)
+0x00007fddd419fe66: mov %r10d,0x30(%rsp)
+0x00007fddd419fe6b: mov %r11d,0x34(%rsp)
+0x00007fddd419fe70: data16 xchg %ax,%ax
+0x00007fddd419fe73: callq 0x00007fddd3f671a0  ; OopMap{[32]=Oop [40]=Oop [80]=NarrowOop off=2168}
+                                              ;*if_icmpne
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@19 (line 30)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fe78: callq 0x00007fdde8cf20b0  ;*if_icmpne
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@19 (line 30)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0021: mov $0xffffff65,%esi
+0x00007fddd419fe82: mov %r10d,0x14(%rsp)
+0x00007fddd419fe87: callq 0x00007fddd3f671a0  ; OopMap{[32]=Oop [40]=Oop [80]=NarrowOop off=2188}
+                                              ;*ifne
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::lastCharWasNotCr@3 (line 190)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@89 (line 51)
+                                              ;   {runtime_call}
+0x00007fddd419fe8c: callq 0x00007fdde8cf20b0  ;*ifge
+                                              ; - java.lang.String::<init>@5 (line 191)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0022: mov $0x6,%esi
+0x00007fddd419fe96: mov %rcx,0x8(%rsp)
+0x00007fddd419fe9b: rex
+0x00007fddd419fea0: rex
+0x00007fddd419fea5: mov %r10d,0x20(%rsp)
+0x00007fddd419feaa: mov %r11,0x28(%rsp)
+0x00007fddd419feaf: mov %rbx,0x30(%rsp)
+0x00007fddd419feb4: mov %r8d,0x38(%rsp)
+0x00007fddd419feb9: xchg %ax,%ax
+0x00007fddd419febb: callq 0x00007fddd3f671a0  ; OopMap{[8]=Oop [24]=Oop [40]=Oop [48]=Oop [80]=NarrowOop [128]=NarrowOop off=2240}
+                                              ;*new  ; - java.lang.String::<init>@25 (line 196)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fec0: callq 0x00007fdde8cf20b0  ;*new
+                                              ; - java.lang.String::<init>@25 (line 196)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+             L0023: mov $0xffffff86,%esi
+0x00007fddd419feca: mov %edi,0x14(%rsp)
+0x00007fddd419fece: nop
+0x00007fddd419fecf: callq 0x00007fddd3f671a0  ; OopMap{[32]=Oop [40]=Oop [80]=NarrowOop off=2260}
+                                              ;*aload_2
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+                                              ;   {runtime_call}
+0x00007fddd419fed4: callq 0x00007fdde8cf20b0  ;*aload_2
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@34 (line 43)
+                                              ;   {runtime_call}
+0x00007fddd419fed9: mov $0xfffffff6,%esi
+0x00007fddd419fede: mov %r9d,%ebp
+0x00007fddd419fee1: mov %r8d,(%rsp)
+0x00007fddd419fee5: xchg %ax,%ax
+0x00007fddd419fee7: callq 0x00007fddd3f671a0  ; OopMap{[80]=NarrowOop off=2284}
+                                              ;*invokeinterface newCell
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419feec: callq 0x00007fdde8cf20b0  ;*invokeinterface newCell
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419fef1: mov $0xfffffff6,%esi
+0x00007fddd419fef6: mov %rbx,(%rsp)
+0x00007fddd419fefa: nop
+0x00007fddd419fefb: callq 0x00007fddd3f671a0  ; OopMap{[0]=Oop off=2304}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419ff00: callq 0x00007fdde8cf20b0  ;*aastore
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@22 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419ff05: mov $0xfffffff6,%esi
+0x00007fddd419ff0a: nop
+0x00007fddd419ff0b: callq 0x00007fddd3f671a0  ; OopMap{off=2320}
+                                              ;*invokevirtual getCharBuffer
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@4 (line 36)
+                                              ;   {runtime_call}
+0x00007fddd419ff10: callq 0x00007fdde8cf20b0  ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - java.lang.String::<init>@75 (line 207)
+                                              ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                                              ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                              ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+                                              ;   {runtime_call}
+0x00007fddd419ff15: jmp L0024  ;*new
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@12 (line 23)
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+0x00007fddd419ff17: mov %rax,%rsi
+0x00007fddd419ff1a: jmp L0025  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - java.lang.String::<init>@75 (line 207)
+                               ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@19 (line 23)
+                               ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0024: mov %rax,%rsi
+0x00007fddd419ff1f: jmp L0025  ;*invokestatic canEscaped
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@179 (line 67)
+0x00007fddd419ff21: mov %rax,%rsi
+0x00007fddd419ff24: jmp L0025  ;*invokespecial endOfRow
+                               ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@100 (line 52)
+0x00007fddd419ff26: mov %rax,%rsi  ;*synchronization entry
+                                   ; - org.github.arnaudroger.csv.StringArrayCellConsumer::newCell@-1 (line 22)
+                                   ; - org.github.arnaudroger.csv.alt.CsvCharConsumer2::pushCell@46 (line 35)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::newCell@8 (line 160)
+                                   ; - org.github.arnaudroger.csv.alt.CharConsumer2::consumeAllBuffer@71 (line 47)
+             L0025: add $0xa0,%rsp
+0x00007fddd419ff30: pop %rbp
+0x00007fddd419ff31: jmpq 0x00007fddd4062a20  ;   {runtime_call}
+0x00007fddd419ff36: hlt
+0x00007fddd419ff37: hlt
+0x00007fddd419ff38: hlt
+0x00007fddd419ff39: hlt
+0x00007fddd419ff3a: hlt
+0x00007fddd419ff3b: hlt
+0x00007fddd419ff3c: hlt
+0x00007fddd419ff3d: hlt
+0x00007fddd419ff3e: hlt
+0x00007fddd419ff3f: hlt
+[Stub Code]
+0x00007fddd419ff40: movabs $0x0,%rbx  ;   {no_reloc}
+             L0026: jmpq L0026  ;   {runtime_call}
+0x00007fddd419ff4f: movabs $0x0,%rbx  ;   {static_stub}
+             L0027: jmpq L0027  ;   {runtime_call}
+[Exception Handler]
+0x00007fddd419ff5e: jmpq 0x00007fddd3fce760  ;   {runtime_call}
+[Deopt Handler Code]
+0x00007fddd419ff63: callq 0x00007fddd419ff68
+0x00007fddd419ff68: subq $0x5,(%rsp)
+0x00007fddd419ff6d: jmpq 0x00007fddd3fa93c0  ;   {runtime_call}
+0x00007fddd419ff72: hlt
+0x00007fddd419ff73: hlt
+0x00007fddd419ff74: hlt
+0x00007fddd419ff75: hlt
+0x00007fddd419ff76: hlt
+0x00007fddd419ff77: hlt
