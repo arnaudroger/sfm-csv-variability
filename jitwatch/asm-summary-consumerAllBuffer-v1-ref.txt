@@ -1,0 +1,59 @@
+0x00007f385d2371a4: mov %edx,%r10d  ;*aload_2
+                                    ; - orig.CharConsumer::consumeAllBuffer@34 (line 42)
+             L0002: movzwl 0x10(%r14,%r10,2),%ecx  ;*caload
+                                                   ; - orig.CharConsumer::consumeAllBuffer@37 (line 42)
+0x00007f385d2371ad: mov %r10d,%edx
+0x00007f385d2371b0: inc %edx  ;*iadd
+                              ; - orig.CharConsumer::startNextCell@6 (line 162)
+                              ; - orig.CharConsumer::newCell@16 (line 158)
+                              ; - orig.CharConsumer::consumeAllBuffer@71 (line 46)
+0x00007f385d2371b2: cmp $0x22,%ecx
+0x00007f385d2371b5: je L001d  ;*if_icmpeq
+                              ; - orig.CsvCharConsumer::isNotEscapeCharacter@3 (line 21)
+                              ; - orig.CharConsumer::consumeAllBuffer@43 (line 43)
+0x00007f385d2371bb: mov %edi,%r11d
+0x00007f385d2371be: and $0x1,%r11d  ;*iand
+                                    ; - orig.CharConsumer::isCharEscaped@2 (line 183)
+                                    ; - orig.CharConsumer::consumeAllBuffer@51 (line 44)
+0x00007f385d2371c2: test %r11d,%r11d
+0x00007f385d2371c5: jne L002c  ;*ifne
+                               ; - orig.CharConsumer::isCharEscaped@3 (line 183)
+                               ; - orig.CharConsumer::consumeAllBuffer@51 (line 44)
+0x00007f385d2371cb: cmp $0x2c,%ecx
+0x00007f385d2371ce: je L0003  ;*if_icmpne
+                              ; - orig.CsvCharConsumer::isSeparator@3 (line 16)
+                              ; - orig.CharConsumer::consumeAllBuffer@60 (line 45)
+0x00007f385d2371d0: cmp $0xa,%ecx
+0x00007f385d2371d3: je L000c  ;*if_icmpne
+                              ; - orig.CharConsumer::consumeAllBuffer@84 (line 49)
+0x00007f385d2371d9: cmp $0xd,%ecx
+0x00007f385d2371dc: je L002d  ;*if_icmpne
+                              ; - orig.CharConsumer::consumeAllBuffer@125 (line 58)
+
+
+
+....
+
+           L0003: mov 0x10(%r12,%r8,8),%r8d  ;*getfield mark
+                                             ; - orig.CharConsumer::newCell@6 (line 157)
+                                             ; - orig.CharConsumer::consumeAllBuffer@71 (line 46)
+                                             ; implicit exception: dispatches to 0x00007f385d2383cd
+0x00007f385d237222: lea 0x10(%r14,%r8,2),%rax  ;*invokestatic arraycopy
+                                             ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                             ; - java.lang.String::<init>@75 (line 207)
+                                             ; - StringArrayCellConsumer::newCell@19 (line 23)
+                                             ; - orig.CsvCharConsumer::pushCell@46 (line 35)
+                                             ; - orig.CharConsumer::newCell@11 (line 157)
+                                             ; - orig.CharConsumer::consumeAllBuffer@71 (line 46)
+0x00007f385d237227: cmp %r10d,%r8d
+0x00007f385d23722a: jge L0004  ;*if_icmpge
+                             ; - orig.CsvCharConsumer::pushCell@10 (line 30)
+                             ; - orig.CharConsumer::newCell@11 (line 157)
+                             ; - orig.CharConsumer::consumeAllBuffer@71 (line 46)
+0x00007f385d23722c: cmp 0x4(%rsp),%r8d
+0x00007f385d237231: jae L0033
+0x00007f385d237237: movzwl (%rax),%r11d  ;*caload
+                                       ; - orig.CsvCharConsumer::pushCell@16 (line 30)
+                                       ; - orig.CharConsumer::newCell@11 (line 157)
+
+
