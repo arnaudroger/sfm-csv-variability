@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
+java -jar target/benchmarks.jar Sim  -bm sampl -tu ms -f 5 -i 10 -wi 10
 
 Benchmark                                                    (nbCellsPerRow)  (nbRows)    Mode  Cnt    Score   Error  Units
 SimplifiedBenchmark.benchmarkDirect                                       10    500000  sample  242  233.642 ± 9.727  ms/op
@@ -30,6 +31,8 @@ SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.999                10   
 SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.9999               10    500000  sample       265.814          ms/op
 SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p1.00                 10    500000  sample       265.814          ms/op
 
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkDirect   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-direct.log"
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-holder.log"
  */
 
 @State(Scope.Thread)
