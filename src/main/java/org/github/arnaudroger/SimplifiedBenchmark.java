@@ -6,6 +6,7 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -31,8 +32,9 @@ SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.999                10   
 SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.9999               10    500000  sample       265.814          ms/op
 SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p1.00                 10    500000  sample       265.814          ms/op
 
-java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkDirect   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-direct.log"
-java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-holder.log"
+java8
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkDirect   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-direct.log"
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-holder.log"
  */
 
 @State(Scope.Thread)
@@ -44,18 +46,20 @@ public class SimplifiedBenchmark {
 
         int startCell = 0;
 
-        List<String> cells = new ArrayList<>();
+        char[][] cells = new char[csvContent.nbCellsPerRow][];
+        int cellIndex = 0;
         for(int currentIndex = 0;  currentIndex < content.length; currentIndex++) {
             char c = content[currentIndex];
 
             if (c == ',') {
-                cells.add(new String(content, startCell, currentIndex - startCell));
+                cells[cellIndex++] = Arrays.copyOfRange(content, startCell, currentIndex);
                 startCell = currentIndex + 1;
             } else if (c == '\n') {
-                cells.add(new String(content, startCell, currentIndex - startCell));
+                cells[cellIndex++] = Arrays.copyOfRange(content, startCell, currentIndex);
                 startCell = currentIndex + 1;
-                blackhole.consume(new ArrayList<>(cells));
-                cells.clear();
+                blackhole.consume(cells);
+                cellIndex = 0;
+
             }
 
         }
@@ -66,28 +70,59 @@ public class SimplifiedBenchmark {
     public void benchmarkHolder(CsvContent csvContent, Blackhole blackhole) {
         char[] content = csvContent.content;
 
-        holder = new Holder();
+        holder.startCell = 0;
 
-        List<String> cells = new ArrayList<>();
+        char[][] cells = new char[csvContent.nbCellsPerRow][];
+        int cellIndex = 0;
         for(int currentIndex = 0;  currentIndex < content.length; currentIndex++) {
             char c = content[currentIndex];
 
             if (c == ',') {
-                cells.add(new String(content, holder.startCell, currentIndex - holder.startCell));
+                int startCell = holder.startCell;
+                cells[cellIndex++] = Arrays.copyOfRange(content, startCell, currentIndex);
                 holder.startCell = currentIndex + 1;
             } else if (c == '\n') {
-                cells.add(new String(content,  holder.startCell, currentIndex - holder.startCell));
+                int startCell = holder.startCell;
+                cells[cellIndex++] = Arrays.copyOfRange(content, startCell, currentIndex);
                 holder.startCell = currentIndex + 1;
-                blackhole.consume(new ArrayList<>(cells));
-                cells.clear();
+                    blackhole.consume(cells);
+                    cellIndex = 0;
+                }
+
+        }
+    }
+
+    private Holder holder = new Holder(); // wrong but ok here
+
+    static class Holder  {
+        int startCell = 0;
+    }
+
+
+    @Benchmark
+    public void benchmarkDirect2(CsvContent csvContent, Blackhole blackhole) {
+        char[] content = csvContent.content;
+
+
+        char[][] cells = new char[csvContent.nbCellsPerRow][];
+        int cellIndex = 0;
+
+        int startCell = 0;
+        for(int currentIndex = 0;  currentIndex < content.length; currentIndex++) {
+            char c = content[currentIndex];
+
+            if (c == ','  || c == '\n') {
+                cells[cellIndex] = Arrays.copyOfRange(content,  startCell, currentIndex);
+                cellIndex ++;
+                startCell = currentIndex + 1;
+                if (c == '\n') {
+                    blackhole.consume(cells);
+                    cellIndex = 0;
+                }
+
             }
 
         }
     }
 
-    private Holder holder;
-
-    static class Holder  {
-        int startCell = 0;
-    }
 }
