@@ -1,13 +1,12 @@
 package org.github.arnaudroger;
 
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.Scope;
-import org.openjdk.jmh.annotations.State;
+import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /*
 java -jar target/benchmarks.jar Sim  -bm sampl -tu ms -f 5 -i 10 -wi 10
@@ -38,15 +37,18 @@ java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -
  */
 
 @State(Scope.Thread)
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class SimplifiedBenchmark {
 
     @Benchmark
     public void benchmarkDirect(CsvContent csvContent, Blackhole blackhole) {
         char[] content = csvContent.content;
 
-        int startCell = 0;
 
         char[][] cells = new char[csvContent.nbCellsPerRow][];
+
+        int startCell = 0;
         int cellIndex = 0;
         for(int currentIndex = 0;  currentIndex < content.length; currentIndex++) {
             char c = content[currentIndex];
@@ -100,7 +102,7 @@ public class SimplifiedBenchmark {
 
 
     @Benchmark
-    public void benchmarkDirect2(CsvContent csvContent, Blackhole blackhole) {
+    public void benchmarkBranch(CsvContent csvContent, Blackhole blackhole) {
         char[] content = csvContent.content;
 
 
