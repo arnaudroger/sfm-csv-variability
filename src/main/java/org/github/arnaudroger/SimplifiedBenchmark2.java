@@ -38,31 +38,40 @@ public class SimplifiedBenchmark2 {
     private int nextCharDirect(Blackhole blackhole, char[] content, int startCell, int currentIndex) {
         char c = content[currentIndex];
         if (c == ',') {
-            blackhole.consume(processContent(content, startCell, currentIndex));
-            return currentIndex + 1;
+            char[] chars = new char[currentIndex - startCell];
+            for(int i = 0; i < chars.length; i++) {
+                chars[i] = content[i + startCell];
+            }
+            blackhole.consume(chars);
+            startCell = currentIndex + 1;
         } else if (c == '\n') {
-            blackhole.consume(processContent(content, startCell, currentIndex));
-            return currentIndex + 1;
+            char[] chars = new char[currentIndex - startCell];
+            for(int i = 0; i < chars.length; i++) {
+                chars[i] = content[i + startCell];
+            }
+            blackhole.consume(chars);            startCell = currentIndex + 1;
         }
         return startCell;
-    }
-
-   // @CompilerControl(CompilerControl.Mode.DONT_INLINE)
-    private char[] processContent(char[] content, int startCell, int currentIndex) {
-        int newLength = currentIndex - startCell;
-        char[] copy = new char[newLength];
-        System.arraycopy(content, startCell, copy, 0, newLength);
-        return copy;
     }
 
     @CompilerControl(CompilerControl.Mode.DONT_INLINE)
     private void nextCharHolder(Blackhole blackhole, char[] content, int currentIndex) {
         char c = content[currentIndex];
         if (c == ',') {
-            blackhole.consume(processContent(content, holder.startCell, currentIndex));
+            int startCell = holder.startCell;
+            char[] chars = new char[currentIndex - startCell];
+            for(int i = 0; i < chars.length; i++) {
+                chars[i] = content[i + startCell];
+            }
+            blackhole.consume(chars);
             holder.startCell = currentIndex + 1;
         } else if (c == '\n') {
-            blackhole.consume(processContent(content, holder.startCell, currentIndex));
+            int startCell = holder.startCell;
+            char[] chars = new char[currentIndex - startCell];
+            for(int i = 0; i < chars.length; i++) {
+                chars[i] = content[i + startCell];
+            }
+            blackhole.consume(chars);
             holder.startCell = currentIndex + 1;
         }
     }
