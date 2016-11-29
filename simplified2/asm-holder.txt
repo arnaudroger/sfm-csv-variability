@@ -1,0 +1,534 @@
+# {method} {0x00007f158a6c48a8} 'nextCharHolder' '(Lorg/openjdk/jmh/infra/Blackhole;[CI)V' in 'org/github/arnaudroger/SimplifiedBenchmark2'
+# this:     rsi:rsi   = 'org/github/arnaudroger/SimplifiedBenchmark2'
+# parm0:    rdx:rdx   = 'org/openjdk/jmh/infra/Blackhole'
+# parm1:    rcx:rcx   = '[C'
+# parm2:    r8        = int
+#           [sp+0x50]  (sp of caller)
+[Entry Point]
+0x00007f158ce62ee0: mov 0x8(%rsi),%r10d
+0x00007f158ce62ee4: shl $0x3,%r10
+0x00007f158ce62ee8: cmp %r10,%rax
+0x00007f158ce62eeb: jne 0x00007f158ccd5be0  ;   {runtime_call}
+0x00007f158ce62ef1: nop
+0x00007f158ce62ef2: nop
+0x00007f158ce62ef3: nop
+0x00007f158ce62ef4: nop
+0x00007f158ce62ef5: nop
+0x00007f158ce62ef6: nop
+0x00007f158ce62ef7: nop
+0x00007f158ce62ef8: nop
+0x00007f158ce62ef9: nop
+0x00007f158ce62efa: nop
+0x00007f158ce62efb: nop
+0x00007f158ce62efc: nop
+0x00007f158ce62efd: nop
+0x00007f158ce62efe: nop
+0x00007f158ce62eff: nop  ;; B1: #	B53 B2 <- BLOCK HEAD IS JUNK   Freq: 1
+[Verified Entry Point]
+0x00007f158ce62f00: mov %eax,-0x16000(%rsp)
+0x00007f158ce62f07: push %rbp
+0x00007f158ce62f08: sub $0x40,%rsp  ;*synchronization entry
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@-1 (line 61)
+0x00007f158ce62f0c: mov %rdx,0x8(%rsp)
+0x00007f158ce62f11: mov %rsi,(%rsp)
+0x00007f158ce62f15: mov %rcx,%r10
+0x00007f158ce62f18: mov 0xc(%rcx),%r9d  ; implicit exception: dispatches to 0x00007f158ce63385
+                                        ;; B2: #	B48 B3 <- B1  Freq: 0.999999
+0x00007f158ce62f1c: cmp %r9d,%r8d
+0x00007f158ce62f1f: jae L0011  ;; B3: #	B23 B4 <- B2  Freq: 0.999998
+0x00007f158ce62f25: movzwl 0x10(%rcx,%r8,2),%r11d  ;*caload
+                                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@2 (line 61)
+0x00007f158ce62f2b: mov 0xc(%rsi),%edi  ;*getfield holder
+                                        ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@13 (line 63)
+0x00007f158ce62f2e: mov %r8d,%ebx
+0x00007f158ce62f31: dec %ebx
+0x00007f158ce62f33: mov %r8d,%edx
+0x00007f158ce62f36: inc %edx  ;*iadd
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@70 (line 69)
+0x00007f158ce62f38: mov %edx,0x10(%rsp)
+0x00007f158ce62f3c: cmp $0x2c,%r11d
+0x00007f158ce62f40: jne L0006  ;*if_icmpne
+                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@9 (line 62)
+                               ;; B4: #	B54 B5 <- B3  Freq: 0.231979
+0x00007f158ce62f46: mov 0xc(%r12,%rdi,8),%ebp  ;*getfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@16 (line 63)
+                                               ; implicit exception: dispatches to 0x00007f158ce63399
+                                               ;; B5: #	B44 B6 <- B4  Freq: 0.231979
+0x00007f158ce62f4b: mov %r8d,%esi
+0x00007f158ce62f4e: sub %ebp,%esi  ;*isub
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@24 (line 64)
+0x00007f158ce62f50: cmp $0x80000,%esi
+0x00007f158ce62f56: ja L000f  ;; B6: #	B44 B7 <- B5  Freq: 0.231979
+0x00007f158ce62f5c: mov 0x78(%r15),%rdx
+0x00007f158ce62f60: movslq %esi,%rcx
+0x00007f158ce62f63: shl %rcx
+0x00007f158ce62f66: add $0x17,%rcx
+0x00007f158ce62f6a: mov %rcx,%r11
+0x00007f158ce62f6d: and $0xfffffffffffffff8,%r11
+0x00007f158ce62f71: mov %rdx,%rax
+0x00007f158ce62f74: add %r11,%rax
+0x00007f158ce62f77: cmp 0x88(%r15),%rax
+0x00007f158ce62f7e: jae L000f  ;; B7: #	B8 <- B6  Freq: 0.231955
+0x00007f158ce62f84: mov %rax,0x78(%r15)
+0x00007f158ce62f88: prefetchnta 0xc0(%rax)
+0x00007f158ce62f8f: movq $0x1,(%rdx)
+0x00007f158ce62f96: prefetchnta 0x100(%rax)
+0x00007f158ce62f9d: movl $0xf8000042,0x8(%rdx)  ;   {metadata({type array char})}
+0x00007f158ce62fa4: mov %esi,0xc(%rdx)
+0x00007f158ce62fa7: prefetchnta 0x140(%rax)
+0x00007f158ce62fae: mov %rdx,%rdi
+0x00007f158ce62fb1: add $0x10,%rdi
+0x00007f158ce62fb5: prefetchnta 0x180(%rax)
+0x00007f158ce62fbc: shr $0x3,%rcx
+0x00007f158ce62fc0: add $0xfffffffffffffffe,%rcx
+0x00007f158ce62fc4: xor %rax,%rax
+0x00007f158ce62fc7: shl $0x3,%rcx
+0x00007f158ce62fcb: rep rex  ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@25 (line 64)
+                             ;; B8: #	B19 B9 <- B45 B7  Freq: 0.231979
+             L0000: test %esi,%esi
+0x00007f158ce62fd0: jle L0005  ;*if_icmpge
+                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@37 (line 65)
+                               ;; B9: #	B50 B10 <- B8  Freq: 0.172184
+0x00007f158ce62fd6: cmp %r9d,%ebp
+0x00007f158ce62fd9: jae L0013  ;; B10: #	B50 B11 <- B9  Freq: 0.172184
+0x00007f158ce62fdf: cmp %r9d,%ebx
+0x00007f158ce62fe2: jae L0013  ;; B11: #	B50 B12 <- B10  Freq: 0.172184
+0x00007f158ce62fe8: test %esi,%esi
+0x00007f158ce62fea: jbe L0013  ;; B12: #	B50 B13 <- B11  Freq: 0.172184
+0x00007f158ce62ff0: mov %esi,%ebx
+0x00007f158ce62ff2: dec %ebx
+0x00007f158ce62ff4: cmp %esi,%ebx
+0x00007f158ce62ff6: jae L0013  ;; B13: #	B14 <- B12  Freq: 0.172183
+0x00007f158ce62ffc: xor %ecx,%ecx  ;*aload
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@40 (line 66)
+                                   ;; B14: #	B14 B15 <- B13 B14 	Loop: B14-B14 inner pre of N512 Freq: 0.344367
+             L0001: mov %ecx,%r9d
+0x00007f158ce63001: add %ebp,%r9d
+0x00007f158ce63004: movzwl 0x10(%r10,%r9,2),%r9d
+0x00007f158ce6300a: mov %r9w,0x10(%rdx,%rcx,2)  ;*castore
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@51 (line 66)
+0x00007f158ce63010: inc %ecx  ;*iinc
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@52 (line 65)
+0x00007f158ce63012: cmp $0x1,%ecx
+0x00007f158ce63015: jl L0001  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@37 (line 65)
+                              ;; B15: #	B17 B16 <- B14  Freq: 0.172183
+0x00007f158ce63017: cmp %ebx,%ecx
+0x00007f158ce63019: jge L0003
+0x00007f158ce6301b: nop
+0x00007f158ce6301c: nop
+0x00007f158ce6301d: nop
+0x00007f158ce6301e: nop
+0x00007f158ce6301f: nop  ;*aload
+                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@40 (line 66)
+                         ;; B16: #	B16 B17 <- B15 B16 	Loop: B16-B16 inner main of N349 Freq: 0.667999
+             L0002: mov %ecx,%r11d
+0x00007f158ce63023: add %ebp,%r11d  ;*iadd
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@49 (line 66)
+0x00007f158ce63026: movzwl 0x10(%r10,%r11,2),%r9d
+0x00007f158ce6302c: mov %r9w,0x10(%rdx,%rcx,2)
+0x00007f158ce63032: movslq %ecx,%r9
+0x00007f158ce63035: movslq %r11d,%r11
+0x00007f158ce63038: movzwl 0x12(%r10,%r11,2),%edi
+0x00007f158ce6303e: mov %di,0x12(%rdx,%r9,2)  ;*castore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@51 (line 66)
+0x00007f158ce63044: add $0x2,%ecx  ;*iinc
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@52 (line 65)
+0x00007f158ce63047: cmp %ebx,%ecx
+0x00007f158ce63049: jl L0002  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@37 (line 65)
+                              ;; B17: #	B19 B18 <- B15 B16  Freq: 0.172183
+             L0003: cmp %esi,%ecx
+0x00007f158ce6304d: jge L0005
+0x00007f158ce6304f: nop  ;*aload
+                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@40 (line 66)
+                         ;; B18: #	B18 B19 <- B17 B18 	Loop: B18-B18 inner post of N512 Freq: 0.172183
+             L0004: mov %ecx,%r9d
+0x00007f158ce63053: add %ebp,%r9d
+0x00007f158ce63056: movzwl 0x10(%r10,%r9,2),%r9d
+0x00007f158ce6305c: mov %r9w,0x10(%rdx,%rcx,2)  ;*castore
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@51 (line 66)
+0x00007f158ce63062: inc %ecx  ;*iinc
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@52 (line 65)
+0x00007f158ce63064: cmp %esi,%ecx
+0x00007f158ce63066: jl L0004  ;; B19: #	B49 B20 <- B18 B17 B8  Freq: 0.231978
+             L0005: mov 0x8(%rsp),%rsi
+0x00007f158ce6306d: test %rsi,%rsi
+0x00007f158ce63070: je L0012  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@37 (line 65)
+                              ;; B20: #	B61 B21 <- B19  Freq: 0.231978
+0x00007f158ce63076: mov %r8d,%ebp
+0x00007f158ce63079: nop
+0x00007f158ce6307a: nop
+0x00007f158ce6307b: callq 0x00007f158ccd5de0  ; OopMap{[0]=Oop off=416}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@61 (line 68)
+                                              ;   {optimized virtual_call}
+                                              ;; B21: #	B55 B22 <- B20  Freq: 0.231973
+0x00007f158ce63080: mov (%rsp),%r10
+0x00007f158ce63084: mov 0xc(%r10),%r11d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@65 (line 69)
+0x00007f158ce63088: mov 0x10(%rsp),%r8d
+0x00007f158ce6308d: mov %r8d,0xc(%r12,%r11,8)  ;*putfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@71 (line 69)
+                                               ; implicit exception: dispatches to 0x00007f158ce633a9
+                                               ;; B22: #	B24 <- B21  Freq: 0.231973
+0x00007f158ce63092: jmp L0007  ;; B23: #	B25 B24 <- B3  Freq: 0.768019
+             L0006: cmp $0xa,%r11d
+0x00007f158ce63098: je L0008  ;*caload
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@2 (line 61)
+                              ;; B24: #	N804 <- B43 B23 B22  Freq: 0.999991
+             L0007: add $0x40,%rsp
+0x00007f158ce6309e: pop %rbp
+0x00007f158ce6309f: test %eax,0x166abf5b(%rip)  # 0x00007f15a350f000
+                                                ;   {poll_return} *** SAFEPOINT POLL ***
+0x00007f158ce630a5: retq  ;; B25: #	B56 B26 <- B23  Freq: 0.0257814
+             L0008: mov 0xc(%r12,%rdi,8),%ebp  ;*getfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@88 (line 71)
+                                               ; implicit exception: dispatches to 0x00007f158ce633b9
+                                               ;; B26: #	B46 B27 <- B25  Freq: 0.0257814
+0x00007f158ce630ab: mov %r8d,%esi
+0x00007f158ce630ae: sub %ebp,%esi  ;*isub
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@96 (line 72)
+0x00007f158ce630b0: cmp $0x80000,%esi
+0x00007f158ce630b6: ja L0010  ;; B27: #	B46 B28 <- B26  Freq: 0.0257813
+0x00007f158ce630bc: mov 0x78(%r15),%rdx
+0x00007f158ce630c0: movslq %esi,%rcx
+0x00007f158ce630c3: shl %rcx
+0x00007f158ce630c6: add $0x17,%rcx
+0x00007f158ce630ca: mov %rcx,%r11
+0x00007f158ce630cd: and $0xfffffffffffffff8,%r11
+0x00007f158ce630d1: mov %rdx,%rax
+0x00007f158ce630d4: add %r11,%rax
+0x00007f158ce630d7: cmp 0x88(%r15),%rax
+0x00007f158ce630de: jae L0010  ;; B28: #	B29 <- B27  Freq: 0.0257787
+0x00007f158ce630e4: mov %rax,0x78(%r15)
+0x00007f158ce630e8: prefetchnta 0xc0(%rax)
+0x00007f158ce630ef: movq $0x1,(%rdx)
+0x00007f158ce630f6: prefetchnta 0x100(%rax)
+0x00007f158ce630fd: movl $0xf8000042,0x8(%rdx)  ;   {metadata({type array char})}
+0x00007f158ce63104: mov %esi,0xc(%rdx)
+0x00007f158ce63107: prefetchnta 0x140(%rax)
+0x00007f158ce6310e: mov %rdx,%rdi
+0x00007f158ce63111: add $0x10,%rdi
+0x00007f158ce63115: prefetchnta 0x180(%rax)
+0x00007f158ce6311c: shr $0x3,%rcx
+0x00007f158ce63120: add $0xfffffffffffffffe,%rcx
+0x00007f158ce63124: xor %rax,%rax
+0x00007f158ce63127: shl $0x3,%rcx
+0x00007f158ce6312b: rep rex  ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@97 (line 72)
+                             ;; B29: #	B40 B30 <- B47 B28  Freq: 0.0257814
+             L0009: test %esi,%esi
+0x00007f158ce63130: jle L000e  ;*if_icmpge
+                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@109 (line 73)
+                               ;; B30: #	B52 B31 <- B29  Freq: 0.0191356
+0x00007f158ce63136: cmp %r9d,%ebp
+0x00007f158ce63139: jae L0015  ;; B31: #	B52 B32 <- B30  Freq: 0.0191356
+0x00007f158ce6313f: cmp %r9d,%ebx
+0x00007f158ce63142: jae L0015  ;; B32: #	B52 B33 <- B31  Freq: 0.0191356
+0x00007f158ce63148: test %esi,%esi
+0x00007f158ce6314a: jbe L0015  ;; B33: #	B52 B34 <- B32  Freq: 0.0191356
+0x00007f158ce63150: mov %esi,%ecx
+0x00007f158ce63152: dec %ecx
+0x00007f158ce63154: cmp %esi,%ecx
+0x00007f158ce63156: jae L0015  ;; B34: #	B35 <- B33  Freq: 0.0191355
+0x00007f158ce6315c: xor %edi,%edi  ;*aload
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@112 (line 74)
+                                   ;; B35: #	B35 B36 <- B34 B35 	Loop: B35-B35 inner pre of N518 Freq: 0.0382711
+             L000a: mov %edi,%r11d
+0x00007f158ce63161: add %ebp,%r11d
+0x00007f158ce63164: movzwl 0x10(%r10,%r11,2),%r11d
+0x00007f158ce6316a: mov %r11w,0x10(%rdx,%rdi,2)  ;*castore
+                                                 ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@123 (line 74)
+0x00007f158ce63170: inc %edi  ;*iinc
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@124 (line 73)
+0x00007f158ce63172: cmp $0x1,%edi
+0x00007f158ce63175: jl L000a  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@109 (line 73)
+                              ;; B36: #	B38 B37 <- B35  Freq: 0.0191355
+0x00007f158ce63177: cmp %ecx,%edi
+0x00007f158ce63179: jge L000c
+0x00007f158ce6317b: nop
+0x00007f158ce6317c: nop
+0x00007f158ce6317d: nop
+0x00007f158ce6317e: nop
+0x00007f158ce6317f: nop  ;*aload
+                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@112 (line 74)
+                         ;; B37: #	B37 B38 <- B36 B37 	Loop: B37-B37 inner main of N251 Freq: 0.074234
+             L000b: mov %edi,%r11d
+0x00007f158ce63183: add %ebp,%r11d  ;*iadd
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@121 (line 74)
+0x00007f158ce63186: movzwl 0x10(%r10,%r11,2),%r9d
+0x00007f158ce6318c: mov %r9w,0x10(%rdx,%rdi,2)
+0x00007f158ce63192: movslq %edi,%r9
+0x00007f158ce63195: movslq %r11d,%r11
+0x00007f158ce63198: movzwl 0x12(%r10,%r11,2),%ebx
+0x00007f158ce6319e: mov %bx,0x12(%rdx,%r9,2)  ;*castore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@123 (line 74)
+0x00007f158ce631a4: add $0x2,%edi  ;*iinc
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@124 (line 73)
+0x00007f158ce631a7: cmp %ecx,%edi
+0x00007f158ce631a9: jl L000b  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@109 (line 73)
+                              ;; B38: #	B40 B39 <- B36 B37  Freq: 0.0191355
+             L000c: cmp %esi,%edi
+0x00007f158ce631ad: jge L000e
+0x00007f158ce631af: nop  ;*aload
+                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@112 (line 74)
+                         ;; B39: #	B39 B40 <- B38 B39 	Loop: B39-B39 inner post of N518 Freq: 0.0191355
+             L000d: mov %edi,%r9d
+0x00007f158ce631b3: add %ebp,%r9d
+0x00007f158ce631b6: movzwl 0x10(%r10,%r9,2),%r9d
+0x00007f158ce631bc: mov %r9w,0x10(%rdx,%rdi,2)  ;*castore
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@123 (line 74)
+0x00007f158ce631c2: inc %edi  ;*iinc
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@124 (line 73)
+0x00007f158ce631c4: cmp %esi,%edi
+0x00007f158ce631c6: jl L000d  ;; B40: #	B51 B41 <- B39 B38 B29  Freq: 0.0257813
+             L000e: mov 0x8(%rsp),%r10
+0x00007f158ce631cd: test %r10,%r10
+0x00007f158ce631d0: je L0014  ;*if_icmpge
+                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@109 (line 73)
+                              ;; B41: #	B60 B42 <- B40  Freq: 0.0257813
+0x00007f158ce631d6: mov %r8d,%ebp
+0x00007f158ce631d9: mov %r10,%rsi
+0x00007f158ce631dc: nop
+0x00007f158ce631dd: nop
+0x00007f158ce631de: nop
+0x00007f158ce631df: callq 0x00007f158ccd5de0  ; OopMap{[0]=Oop off=772}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@133 (line 76)
+                                              ;   {optimized virtual_call}
+                                              ;; B42: #	B57 B43 <- B41  Freq: 0.0257807
+0x00007f158ce631e4: mov (%rsp),%r10
+0x00007f158ce631e8: mov 0xc(%r10),%r11d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@137 (line 77)
+0x00007f158ce631ec: mov 0x10(%rsp),%r10d
+0x00007f158ce631f1: mov %r10d,0xc(%r12,%r11,8)  ;*putfield startCell
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@143 (line 77)
+                                                ; implicit exception: dispatches to 0x00007f158ce633c9
+                                                ;; B43: #	B24 <- B42  Freq: 0.0257807
+0x00007f158ce631f6: jmpq L0007  ;; B44: #	B59 B45 <- B5 B6  Freq: 2.34368e-05
+             L000f: mov %esi,0x28(%rsp)
+0x00007f158ce631ff: mov %rax,-0x8(%rsp)
+0x00007f158ce63204: mov 0x10(%rsp),%eax
+0x00007f158ce63208: mov %eax,0x24(%rsp)
+0x00007f158ce6320c: mov -0x8(%rsp),%rax
+0x00007f158ce63211: mov %ebx,0x20(%rsp)
+0x00007f158ce63215: mov %r9d,0x14(%rsp)
+0x00007f158ce6321a: rex
+0x00007f158ce6321e: rex
+0x00007f158ce63223: mov %r8d,0x10(%rsp)
+0x00007f158ce63228: mov %r10,(%rsp)
+0x00007f158ce6322c: movabs $0x7c0000210,%rsi  ;   {metadata({type array char})}
+0x00007f158ce63236: mov 0x28(%rsp),%edx
+0x00007f158ce6323a: nop
+0x00007f158ce6323b: callq 0x00007f158cd9e060  ; OopMap{[0]=Oop [8]=Oop [24]=Oop off=864}
+                                              ;*newarray
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@25 (line 64)
+                                              ;   {runtime_call}
+                                              ;; B45: #	B8 <- B44  Freq: 2.34363e-05
+0x00007f158ce63240: mov %rax,%rdx
+0x00007f158ce63243: mov (%rsp),%r10
+0x00007f158ce63247: mov 0x10(%rsp),%r8d
+0x00007f158ce6324c: rex
+0x00007f158ce63251: rex
+0x00007f158ce63255: mov 0x14(%rsp),%r9d
+0x00007f158ce6325a: mov 0x20(%rsp),%ebx
+0x00007f158ce6325e: mov %rax,-0x8(%rsp)
+0x00007f158ce63263: mov 0x24(%rsp),%eax
+0x00007f158ce63267: mov %eax,0x10(%rsp)
+0x00007f158ce6326b: mov -0x8(%rsp),%rax
+0x00007f158ce63270: mov 0x28(%rsp),%esi
+0x00007f158ce63274: jmpq L0000  ;; B46: #	B58 B47 <- B26 B27  Freq: 2.60468e-06
+             L0010: mov %esi,0x28(%rsp)
+0x00007f158ce6327d: mov %rax,-0x8(%rsp)
+0x00007f158ce63282: mov 0x10(%rsp),%eax
+0x00007f158ce63286: mov %eax,0x24(%rsp)
+0x00007f158ce6328a: mov -0x8(%rsp),%rax
+0x00007f158ce6328f: mov %ebx,0x20(%rsp)
+0x00007f158ce63293: mov %r9d,0x14(%rsp)
+0x00007f158ce63298: rex
+0x00007f158ce6329c: rex
+0x00007f158ce632a1: mov %r8d,0x10(%rsp)
+0x00007f158ce632a6: mov %r10,(%rsp)
+0x00007f158ce632aa: movabs $0x7c0000210,%rsi  ;   {metadata({type array char})}
+0x00007f158ce632b4: mov 0x28(%rsp),%edx
+0x00007f158ce632b8: nop
+0x00007f158ce632b9: nop
+0x00007f158ce632ba: nop
+0x00007f158ce632bb: callq 0x00007f158cd9e060  ; OopMap{[0]=Oop [8]=Oop [24]=Oop off=992}
+                                              ;*newarray
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@97 (line 72)
+                                              ;   {runtime_call}
+                                              ;; B47: #	B29 <- B46  Freq: 2.60463e-06
+0x00007f158ce632c0: mov %rax,%rdx
+0x00007f158ce632c3: mov (%rsp),%r10
+0x00007f158ce632c7: mov 0x10(%rsp),%r8d
+0x00007f158ce632cc: rex
+0x00007f158ce632d1: rex
+0x00007f158ce632d5: mov 0x14(%rsp),%r9d
+0x00007f158ce632da: mov 0x20(%rsp),%ebx
+0x00007f158ce632de: mov %rax,-0x8(%rsp)
+0x00007f158ce632e3: mov 0x24(%rsp),%eax
+0x00007f158ce632e7: mov %eax,0x10(%rsp)
+0x00007f158ce632eb: mov -0x8(%rsp),%rax
+0x00007f158ce632f0: mov 0x28(%rsp),%esi
+0x00007f158ce632f4: jmpq L0009  ;; B48: #	N804 <- B2  Freq: 1.01328e-06
+             L0011: mov $0xffffffe4,%esi
+0x00007f158ce632fe: mov (%rsp),%rbp
+0x00007f158ce63302: mov %rdx,(%rsp)
+0x00007f158ce63306: mov %rcx,0x18(%rsp)
+0x00007f158ce6330b: mov %r8d,0x14(%rsp)
+0x00007f158ce63310: nop
+0x00007f158ce63311: nop
+0x00007f158ce63312: nop
+0x00007f158ce63313: callq 0x00007f158ccd76e0  ; OopMap{rbp=Oop [0]=Oop [24]=Oop off=1080}
+                                              ;*caload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@2 (line 61)
+                                              ;   {runtime_call}
+0x00007f158ce63318: callq 0x00007f15a1f3df90  ;   {runtime_call}
+                                              ;; B49: #	N804 <- B19  Freq: 2.35059e-07
+             L0012: mov $0xfffffff6,%esi
+0x00007f158ce63322: mov %rdx,%rbp
+0x00007f158ce63325: nop
+0x00007f158ce63326: nop
+0x00007f158ce63327: callq 0x00007f158ccd76e0  ; OopMap{rbp=Oop off=1100}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@61 (line 68)
+                                              ;   {runtime_call}
+0x00007f158ce6332c: callq 0x00007f15a1f3df90  ;   {runtime_call}
+                                              ;; B50: #	N804 <- B12 B9 B10 B11  Freq: 6.95595e-07
+             L0013: mov $0xffffff86,%esi
+0x00007f158ce63336: mov %r10,0x10(%rsp)
+0x00007f158ce6333b: mov %r8d,0x18(%rsp)
+0x00007f158ce63340: mov %rdx,0x20(%rsp)
+0x00007f158ce63345: nop
+0x00007f158ce63346: nop
+0x00007f158ce63347: callq 0x00007f158ccd76e0  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [32]=Oop off=1132}
+                                              ;*aload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@40 (line 66)
+                                              ;   {runtime_call}
+0x00007f158ce6334c: callq 0x00007f15a1f3df90  ;   {runtime_call}
+                                              ;; B51: #	N804 <- B40  Freq: 2.61236e-08
+             L0014: mov $0xfffffff6,%esi
+0x00007f158ce63356: mov %rdx,%rbp
+0x00007f158ce63359: nop
+0x00007f158ce6335a: nop
+0x00007f158ce6335b: callq 0x00007f158ccd76e0  ; OopMap{rbp=Oop off=1152}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@133 (line 76)
+                                              ;   {runtime_call}
+0x00007f158ce63360: callq 0x00007f15a1f3df90  ;   {runtime_call}
+                                              ;; B52: #	N804 <- B33 B30 B31 B32  Freq: 7.73046e-08
+             L0015: mov $0xffffff86,%esi
+0x00007f158ce6336a: mov %r10,0x10(%rsp)
+0x00007f158ce6336f: mov %r8d,0x18(%rsp)
+0x00007f158ce63374: mov %rdx,0x20(%rsp)
+0x00007f158ce63379: nop
+0x00007f158ce6337a: nop
+0x00007f158ce6337b: callq 0x00007f158ccd76e0  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [32]=Oop off=1184}
+                                              ;*aload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@112 (line 74)
+                                              ;   {runtime_call}
+0x00007f158ce63380: callq 0x00007f15a1f3df90  ;*aload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@112 (line 74)
+                                              ;   {runtime_call}
+                                              ;; B53: #	N804 <- B1  Freq: 1.01328e-06
+0x00007f158ce63385: mov $0xfffffff6,%esi
+0x00007f158ce6338a: mov %r8d,%ebp
+0x00007f158ce6338d: nop
+0x00007f158ce6338e: nop
+0x00007f158ce6338f: callq 0x00007f158ccd76e0  ; OopMap{off=1204}
+                                              ;*caload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@2 (line 61)
+                                              ;   {runtime_call}
+0x00007f158ce63394: callq 0x00007f15a1f3df90  ;*caload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@2 (line 61)
+                                              ;   {runtime_call}
+                                              ;; B54: #	N804 <- B4  Freq: 2.3506e-07
+0x00007f158ce63399: mov $0xfffffff6,%esi
+0x00007f158ce6339e: nop
+0x00007f158ce6339f: callq 0x00007f158ccd76e0  ; OopMap{off=1220}
+                                              ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@16 (line 63)
+                                              ;   {runtime_call}
+0x00007f158ce633a4: callq 0x00007f15a1f3df90  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@16 (line 63)
+                                              ;   {runtime_call}
+                                              ;; B55: #	N804 <- B21  Freq: 2.35054e-07
+0x00007f158ce633a9: mov $0xfffffff6,%esi
+0x00007f158ce633ae: nop
+0x00007f158ce633af: callq 0x00007f158ccd76e0  ; OopMap{off=1236}
+                                              ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@71 (line 69)
+                                              ;   {runtime_call}
+0x00007f158ce633b4: callq 0x00007f15a1f3df90  ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@71 (line 69)
+                                              ;   {runtime_call}
+                                              ;; B56: #	N804 <- B25  Freq: 2.61237e-08
+0x00007f158ce633b9: mov $0xfffffff6,%esi
+0x00007f158ce633be: nop
+0x00007f158ce633bf: callq 0x00007f158ccd76e0  ; OopMap{off=1252}
+                                              ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@88 (line 71)
+                                              ;   {runtime_call}
+0x00007f158ce633c4: callq 0x00007f15a1f3df90  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@88 (line 71)
+                                              ;   {runtime_call}
+                                              ;; B57: #	N804 <- B42  Freq: 2.61231e-08
+0x00007f158ce633c9: mov $0xfffffff6,%esi
+0x00007f158ce633ce: nop
+0x00007f158ce633cf: callq 0x00007f158ccd76e0  ; OopMap{off=1268}
+                                              ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@143 (line 77)
+                                              ;   {runtime_call}
+0x00007f158ce633d4: callq 0x00007f15a1f3df90  ;*newarray
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@97 (line 72)
+                                              ;   {runtime_call}
+                                              ;; B58: #	B62 <- B46  Freq: 2.60468e-11
+0x00007f158ce633d9: mov %rax,%rsi
+0x00007f158ce633dc: jmp L0016  ;*newarray
+                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@25 (line 64)
+                               ;; B59: #	B62 <- B44  Freq: 2.34368e-10
+0x00007f158ce633de: mov %rax,%rsi
+0x00007f158ce633e1: jmp L0016  ;*invokevirtual consume
+                               ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@133 (line 76)
+                               ;; B60: #	B62 <- B41  Freq: 2.57813e-07
+0x00007f158ce633e3: mov %rax,%rsi
+0x00007f158ce633e6: jmp L0016  ;; B61: #	B62 <- B20  Freq: 2.31978e-06
+0x00007f158ce633e8: mov %rax,%rsi  ;*newarray
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark2::nextCharHolder@25 (line 64)
+                                   ;; B62: #	N804 <- B59 B61 B58 B60  Freq: 2.57785e-06
+             L0016: add $0x40,%rsp
+0x00007f158ce633ef: pop %rbp
+0x00007f158ce633f0: jmpq 0x00007f158cd9c5e0  ;   {runtime_call}
+0x00007f158ce633f5: hlt
+0x00007f158ce633f6: hlt
+0x00007f158ce633f7: hlt
+0x00007f158ce633f8: hlt
+0x00007f158ce633f9: hlt
+0x00007f158ce633fa: hlt
+0x00007f158ce633fb: hlt
+0x00007f158ce633fc: hlt
+0x00007f158ce633fd: hlt
+0x00007f158ce633fe: hlt
+0x00007f158ce633ff: hlt
+[Stub Code]
+0x00007f158ce63400: movabs $0x0,%rbx  ;   {no_reloc}
+             L0017: jmpq L0017  ;   {runtime_call}
+0x00007f158ce6340f: movabs $0x0,%rbx  ;   {static_stub}
+             L0018: jmpq L0018  ;   {runtime_call}
+[Exception Handler]
+0x00007f158ce6341e: jmpq 0x00007f158cd91820  ;   {runtime_call}
+[Deopt Handler Code]
+0x00007f158ce63423: callq 0x00007f158ce63428
+0x00007f158ce63428: subq $0x5,(%rsp)
+0x00007f158ce6342d: jmpq 0x00007f158ccd71a0  ;   {runtime_call}
+0x00007f158ce63432: hlt
+0x00007f158ce63433: hlt
+0x00007f158ce63434: hlt
+0x00007f158ce63435: hlt
+0x00007f158ce63436: hlt
+0x00007f158ce63437: hlt
+
