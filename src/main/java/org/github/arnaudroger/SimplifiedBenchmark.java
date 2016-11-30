@@ -12,28 +12,14 @@ import java.util.concurrent.TimeUnit;
 java -jar target/benchmarks.jar Sim  -bm sampl -tu ms -f 5 -i 10 -wi 10
 
 Benchmark                                                    (nbCellsPerRow)  (nbRows)    Mode  Cnt    Score   Error  Units
-SimplifiedBenchmark.benchmarkDirect                                       10    500000  sample  242  233.642 ± 9.727  ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.00                 10    500000  sample       191.103          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.50                 10    500000  sample       206.176          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.90                 10    500000  sample       308.806          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.95                 10    500000  sample       313.367          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.99                 10    500000  sample       323.260          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.999                10    500000  sample       325.059          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p0.9999               10    500000  sample       325.059          ms/op
-SimplifiedBenchmark.benchmarkDirect:benchmarkDirect·p1.00                 10    500000  sample       325.059          ms/op
-SimplifiedBenchmark.benchmarkHolder                                       10    500000  sample  327  169.661 ± 5.611  ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.00                 10    500000  sample       143.393          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.50                 10    500000  sample       157.024          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.90                 10    500000  sample       235.143          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.95                 10    500000  sample       240.281          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.99                 10    500000  sample       255.423          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.999                10    500000  sample       265.814          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p0.9999               10    500000  sample       265.814          ms/op
-SimplifiedBenchmark.benchmarkHolder:benchmarkHolder·p1.00                 10    500000  sample       265.814          ms/op
+Benchmark                            (nbCellsPerRow)  (nbRows)  Mode  Cnt    Score   Error  Units
+SimplifiedBenchmark.benchmarkBranch               10    500000  avgt   20   86.054 ± 1.338  ms/op
+SimplifiedBenchmark.benchmarkDirect               10    500000  avgt   20  179.858 ± 2.843  ms/op
+SimplifiedBenchmark.benchmarkHolder               10    500000  avgt   20   94.505 ± 1.389  ms/op
 
 java8
-java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkDirect   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-direct.log"
-java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=jitwatch-holder.log"
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkDirect   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=simplified/compile-direct.xml"
+java -jar target/benchmarks.jar SimplifiedBenchmark.benchmarkHolder   -bm avgt -tu ms -f 1 -i 10 -wi 10 -jvmArgs "-XX:-TieredCompilation -server -XX:+UnlockDiagnosticVMOptions -XX:+TraceClassLoading -XX:+LogCompilation -XX:+PrintAssembly -XX:LogFile=simplified/compile-holder.xml"
  */
 
 @State(Scope.Thread)
