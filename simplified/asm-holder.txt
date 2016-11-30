@@ -1,0 +1,731 @@
+# {method} {0x00000001113f2c08} 'benchmarkHolder' '(Lorg/github/arnaudroger/CsvContent;Lorg/openjdk/jmh/infra/Blackhole;)V' in 'org/github/arnaudroger/SimplifiedBenchmark'
+[Entry Point]
+0x000000010ca4d440: callq 0x000000010be85e14  ;   {runtime_call}
+0x000000010ca4d445: data32 data32 nopw 0x0(%rax,%rax,1)
+0x000000010ca4d450: mov %eax,-0x14000(%rsp)
+0x000000010ca4d457: push %rbp
+0x000000010ca4d458: sub $0x80,%rsp
+0x000000010ca4d45f: mov 0x10(%rsi),%ebx
+0x000000010ca4d462: mov 0x18(%rsi),%r10d
+0x000000010ca4d466: mov %r10d,0x18(%rsp)
+0x000000010ca4d46b: mov 0x40(%rsi),%rbp
+0x000000010ca4d46f: mov 0x30(%rsi),%r14
+0x000000010ca4d473: mov 0x20(%rsi),%r10
+0x000000010ca4d477: mov %r10,(%rsp)
+0x000000010ca4d47b: mov 0x28(%rsi),%r10
+0x000000010ca4d47f: mov %r10,0x8(%rsp)
+0x000000010ca4d484: mov %rsi,%rdi
+0x000000010ca4d487: movabs $0x10bee473e,%r10
+0x000000010ca4d491: callq *%r10
+0x000000010ca4d494: test %rbp,%rbp
+0x000000010ca4d497: je L0021
+0x000000010ca4d49d: mov %rbp,%r13
+0x000000010ca4d4a0: mov 0x8(%rbp),%r10d
+0x000000010ca4d4a4: shl $0x3,%r10
+0x000000010ca4d4a8: mov 0x30(%r10),%r10
+0x000000010ca4d4ac: movabs $0x7c00aae10,%r11  ;   {metadata('org/github/arnaudroger/SimplifiedBenchmark')}
+0x000000010ca4d4b6: cmp %r11,%r10
+0x000000010ca4d4b9: jne L0025
+0x000000010ca4d4bf: mov %rbp,%r11
+             L0000: test %r14,%r14
+0x000000010ca4d4c5: je L0022
+0x000000010ca4d4cb: mov 0x8(%r14),%r10d
+0x000000010ca4d4cf: cmp $0xf801540f,%r10d  ;   {metadata('org/openjdk/jmh/infra/Blackhole')}
+0x000000010ca4d4d6: jne L0026
+0x000000010ca4d4dc: mov %r14,%r10
+0x000000010ca4d4df: mov %r10,0x10(%rsp)
+             L0001: mov 0x8(%rsp),%r10
+0x000000010ca4d4e9: test %r10,%r10
+0x000000010ca4d4ec: je L0023
+0x000000010ca4d4f2: mov 0x8(%r10),%r9d
+0x000000010ca4d4f6: cmp $0xf8000041,%r9d  ;   {metadata({type array char})}
+0x000000010ca4d4fd: jne L0027
+0x000000010ca4d503: mov %r10,%r8
+0x000000010ca4d506: mov %r8,%r9
+0x000000010ca4d509: mov %r8,%rdi
+             L0002: mov (%rsp),%rdx
+0x000000010ca4d510: test %rdx,%rdx
+0x000000010ca4d513: je L0024
+0x000000010ca4d519: mov 0x8(%rdx),%ecx
+0x000000010ca4d51c: cmp $0xf801826f,%ecx  ;   {metadata({type array char}[])}
+0x000000010ca4d522: jne L0028  ;*iload
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@28 (line 65)
+             L0003: mov 0xc(%r8),%eax  ;*arraylength
+                                       ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@31 (line 65)
+                                       ; implicit exception: dispatches to 0x000000010ca4dd15
+0x000000010ca4d52c: jmpq L000b  ;*ifge
+                                ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+             L0004: movabs $0x7c0000208,%rsi  ;   {metadata({type array char})}
+0x000000010ca4d53b: mov 0x4c(%rsp),%edx
+0x000000010ca4d53f: callq 0x000000010ca101a0  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [24]=Oop [40]=Oop [48]=Oop [64]=Derived_oop_[48] off=260}
+                                              ;*newarray
+                                              ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+                                              ;   {runtime_call}
+0x000000010ca4d544: jmpq L0007
+             L0005: mov 0xc(%r11),%r10d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@49 (line 69)
+                                         ; implicit exception: dispatches to 0x000000010ca4dc91
+0x000000010ca4d54d: mov 0xc(%r12,%r10,8),%esi  ;*getfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@52 (line 69)
+                                               ; implicit exception: dispatches to 0x000000010ca4dca1
+0x000000010ca4d552: mov %ebx,%r10d
+0x000000010ca4d555: sub %esi,%r10d  ;*isub
+                                    ; - java.util.Arrays::copyOfRange@2 (line 3661)
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d558: mov 0x18(%rsp),%ebp
+0x000000010ca4d55c: inc %ebp  ;*iinc
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@61 (line 70)
+0x000000010ca4d55e: test %r10d,%r10d
+0x000000010ca4d561: jl L001a  ;*ifge
+                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d567: cmp $0x80000,%r10d
+0x000000010ca4d56e: ja L0016
+0x000000010ca4d574: mov %r10d,0x4c(%rsp)
+0x000000010ca4d579: mov %esi,0x48(%rsp)
+0x000000010ca4d57d: mov %ecx,0x3c(%rsp)
+0x000000010ca4d581: mov %r14,0x40(%rsp)
+0x000000010ca4d586: mov %eax,0x38(%rsp)
+0x000000010ca4d58a: mov %rdx,0x30(%rsp)
+0x000000010ca4d58f: mov %rdi,0x28(%rsp)
+0x000000010ca4d594: mov %r9,0x8(%rsp)
+0x000000010ca4d599: mov %r8,0x18(%rsp)
+0x000000010ca4d59e: mov %r11,(%rsp)
+0x000000010ca4d5a2: mov %r13d,0x24(%rsp)
+0x000000010ca4d5a7: mov %ebx,0x20(%rsp)
+0x000000010ca4d5ab: movslq %r10d,%r10
+             L0006: shl %r10
+0x000000010ca4d5b1: add $0x17,%r10
+0x000000010ca4d5b5: mov %r10,0x50(%rsp)
+0x000000010ca4d5ba: mov 0x4c(%rsp),%r10d
+0x000000010ca4d5bf: cmp $0x80000,%r10d
+0x000000010ca4d5c6: ja L0004
+0x000000010ca4d5cc: mov 0x60(%r15),%rax
+0x000000010ca4d5d0: mov 0x50(%rsp),%r11
+0x000000010ca4d5d5: and $0xfffffffffffffff8,%r11
+0x000000010ca4d5d9: mov %rax,%r10
+0x000000010ca4d5dc: add %r11,%r10
+0x000000010ca4d5df: cmp 0x70(%r15),%r10
+0x000000010ca4d5e3: jae L0004
+0x000000010ca4d5e9: mov %r10,0x60(%r15)
+0x000000010ca4d5ed: prefetchnta 0xc0(%r10)
+0x000000010ca4d5f5: movq $0x1,(%rax)
+0x000000010ca4d5fc: prefetchnta 0x100(%r10)
+0x000000010ca4d604: movl $0xf8000041,0x8(%rax)  ;   {metadata({type array char})}
+0x000000010ca4d60b: mov 0x4c(%rsp),%r11d
+0x000000010ca4d610: mov %r11d,0xc(%rax)
+0x000000010ca4d614: prefetchnta 0x140(%r10)
+0x000000010ca4d61c: prefetchnta 0x180(%r10)  ;*newarray
+                                             ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+             L0007: mov %rax,0x58(%rsp)
+0x000000010ca4d629: mov 0x38(%rsp),%r11d
+0x000000010ca4d62e: sub 0x48(%rsp),%r11d  ;*isub
+                                          ; - java.util.Arrays::copyOfRange@52 (line 3665)
+                                          ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d633: mov %rax,%r10
+0x000000010ca4d636: add $0x10,%r10  ;*invokestatic arraycopy
+                                    ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d63a: mov %r10,%rbx
+0x000000010ca4d63d: cmp 0x4c(%rsp),%r11d
+0x000000010ca4d642: mov 0x4c(%rsp),%r9d
+0x000000010ca4d647: cmovl %r11d,%r9d  ;*invokestatic min
+                                      ; - java.util.Arrays::copyOfRange@54 (line 3666)
+                                      ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d64b: mov 0x50(%rsp),%r8
+0x000000010ca4d650: shr $0x3,%r8
+0x000000010ca4d654: mov %r8,%rcx
+0x000000010ca4d657: add $0xfffffffffffffffe,%rcx
+0x000000010ca4d65b: mov 0x48(%rsp),%r11d
+0x000000010ca4d660: test %r11d,%r11d
+0x000000010ca4d663: jl L0018
+0x000000010ca4d669: mov %r9d,%r10d
+0x000000010ca4d66c: add 0x48(%rsp),%r10d
+0x000000010ca4d671: mov 0x38(%rsp),%r11d
+0x000000010ca4d676: cmp %r10d,%r11d
+0x000000010ca4d679: jb L0018
+0x000000010ca4d67f: mov 0x4c(%rsp),%r10d
+0x000000010ca4d684: cmp %r9d,%r10d
+0x000000010ca4d687: jb L0018
+0x000000010ca4d68d: test %r9d,%r9d
+0x000000010ca4d690: jle L0019
+0x000000010ca4d696: movslq %r9d,%rdx
+0x000000010ca4d699: cmp 0x4c(%rsp),%r9d
+0x000000010ca4d69e: jl L0010
+             L0008: mov 0x18(%rsp),%r10
+0x000000010ca4d6a9: mov 0x48(%rsp),%r11d
+0x000000010ca4d6ae: lea 0x10(%r10,%r11,2),%rdi
+0x000000010ca4d6b3: mov %rbx,%rsi
+0x000000010ca4d6b6: movabs $0x10c9f4580,%r10
+0x000000010ca4d6c0: callq *%r10  ;*invokestatic arraycopy
+                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                 ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+             L0009: mov 0x30(%rsp),%r10
+0x000000010ca4d6c8: mov 0xc(%r10),%r11d  ; implicit exception: dispatches to 0x000000010ca4dcb1
+0x000000010ca4d6cc: mov 0x24(%rsp),%r10d
+0x000000010ca4d6d1: cmp %r11d,%r10d
+0x000000010ca4d6d4: jae L0017  ;*aastore
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@72 (line 70)
+0x000000010ca4d6da: mov (%rsp),%r10
+0x000000010ca4d6de: mov 0xc(%r10),%r10d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@74 (line 71)
+0x000000010ca4d6e2: mov 0x40(%rsp),%r11
+0x000000010ca4d6e7: mov %r11,%r8
+0x000000010ca4d6ea: mov 0x58(%rsp),%r11
+0x000000010ca4d6ef: shr $0x3,%r11
+0x000000010ca4d6f3: mov 0x40(%rsp),%r9
+0x000000010ca4d6f8: mov %r11d,(%r9)
+0x000000010ca4d6fb: shr $0x9,%r8
+0x000000010ca4d6ff: movabs $0x10c3a2000,%r11
+0x000000010ca4d709: mov %r12b,(%r11,%r8,1)  ;*aastore
+                                            ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@72 (line 70)
+0x000000010ca4d70d: mov 0x3c(%rsp),%r8d
+0x000000010ca4d712: mov %r8d,0xc(%r12,%r10,8)  ;*putfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@81 (line 71)
+                                               ; implicit exception: dispatches to 0x000000010ca4dcc1
+0x000000010ca4d717: mov %ebp,%r13d
+0x000000010ca4d71a: mov (%rsp),%r11
+0x000000010ca4d71e: mov 0x18(%rsp),%r8
+0x000000010ca4d723: mov 0x8(%rsp),%r9
+0x000000010ca4d728: mov 0x28(%rsp),%rdi
+0x000000010ca4d72d: mov 0x30(%rsp),%rdx
+0x000000010ca4d732: mov 0x38(%rsp),%eax
+0x000000010ca4d736: mov 0x3c(%rsp),%ecx
+0x000000010ca4d73a: nopw 0x0(%rax,%rax,1)  ; OopMap{r11=Oop r8=Oop r9=Oop rdi=Oop rdx=Oop [16]=Oop off=768}
+                                           ;*goto
+                                           ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@142 (line 65)
+             L000a: test %eax,-0x2152746(%rip)  # 0x000000010a8fb000
+                                                ;*goto
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@142 (line 65)
+                                                ;   {poll} *** SAFEPOINT POLL ***
+0x000000010ca4d746: mov %ecx,%ebx
+0x000000010ca4d748: mov %r13d,0x18(%rsp)  ;*iload
+                                          ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@28 (line 65)
+             L000b: cmp %eax,%ebx
+0x000000010ca4d74f: jge L0014  ;*if_icmpge
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@32 (line 65)
+0x000000010ca4d755: cmp %eax,%ebx
+0x000000010ca4d757: jae L0015
+0x000000010ca4d75d: movzwl 0x10(%r8,%rbx,2),%r10d  ;*caload
+                                                   ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@38 (line 66)
+0x000000010ca4d763: mov 0x18(%rsp),%r13d
+0x000000010ca4d768: lea 0x10(%rdx,%r13,4),%r14  ;*aastore
+                                                ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+0x000000010ca4d76d: mov %ebx,%ecx
+0x000000010ca4d76f: inc %ecx  ;*iadd
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@80 (line 71)
+0x000000010ca4d771: cmp $0x2c,%r10d
+0x000000010ca4d775: je L0005  ;*if_icmpne
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@45 (line 68)
+0x000000010ca4d77b: cmp $0xa,%r10d
+0x000000010ca4d77f: jne L000a  ;*if_icmpne
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@91 (line 72)
+0x000000010ca4d781: mov 0xc(%r11),%r10d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@95 (line 73)
+                                         ; implicit exception: dispatches to 0x000000010ca4dcd1
+0x000000010ca4d785: mov 0xc(%r12,%r10,8),%esi  ;*getfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@98 (line 73)
+                                               ; implicit exception: dispatches to 0x000000010ca4dce1
+0x000000010ca4d78a: mov %ebx,%r10d
+0x000000010ca4d78d: sub %esi,%r10d  ;*isub
+                                    ; - java.util.Arrays::copyOfRange@2 (line 3661)
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d790: test %r10d,%r10d
+0x000000010ca4d793: jl L0020  ;*ifge
+                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d799: cmp $0x80000,%r10d
+0x000000010ca4d7a0: ja L001b
+0x000000010ca4d7a6: movslq %r10d,%rbp
+             L000c: shl %rbp
+0x000000010ca4d7ac: add $0x17,%rbp
+0x000000010ca4d7b0: cmp $0x80000,%r10d
+0x000000010ca4d7b7: ja L0012
+0x000000010ca4d7bd: mov %rbp,0x50(%rsp)
+0x000000010ca4d7c2: mov %r10d,0x4c(%rsp)
+0x000000010ca4d7c7: mov %esi,0x48(%rsp)
+0x000000010ca4d7cb: mov %ecx,0x24(%rsp)
+0x000000010ca4d7cf: mov %r14,0x40(%rsp)
+0x000000010ca4d7d4: mov %eax,0x4(%rsp)
+0x000000010ca4d7d8: mov %rdx,0x38(%rsp)
+0x000000010ca4d7dd: mov %rdi,0x30(%rsp)
+0x000000010ca4d7e2: mov %r9,0x28(%rsp)
+0x000000010ca4d7e7: mov %r8,0x18(%rsp)
+0x000000010ca4d7ec: mov %r11,0x8(%rsp)
+0x000000010ca4d7f1: mov %r13d,(%rsp)
+0x000000010ca4d7f5: mov %ebx,0x20(%rsp)
+0x000000010ca4d7f9: mov 0x60(%r15),%r11
+0x000000010ca4d7fd: mov %rbp,%r8
+0x000000010ca4d800: and $0xfffffffffffffff8,%r8
+0x000000010ca4d804: mov %r11,%r10
+0x000000010ca4d807: add %r8,%r10
+0x000000010ca4d80a: cmp 0x70(%r15),%r10
+0x000000010ca4d80e: jae L0013
+0x000000010ca4d814: mov %r10,0x60(%r15)
+0x000000010ca4d818: prefetchnta 0xc0(%r10)
+0x000000010ca4d820: movq $0x1,(%r11)
+0x000000010ca4d827: prefetchnta 0x100(%r10)
+0x000000010ca4d82f: movl $0xf8000041,0x8(%r11)  ;   {metadata({type array char})}
+0x000000010ca4d837: mov 0x4c(%rsp),%ebp
+0x000000010ca4d83b: mov %ebp,0xc(%r11)
+0x000000010ca4d83f: prefetchnta 0x140(%r10)
+0x000000010ca4d847: prefetchnta 0x180(%r10)  ;*newarray
+                                             ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+             L000d: mov %r11,0x58(%rsp)
+0x000000010ca4d854: mov 0x4(%rsp),%r10d
+0x000000010ca4d859: sub 0x48(%rsp),%r10d  ;*isub
+                                          ; - java.util.Arrays::copyOfRange@52 (line 3665)
+                                          ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d85e: add $0x10,%r11  ;*invokestatic arraycopy
+                                    ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                    ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d862: mov %r11,%rbx
+0x000000010ca4d865: cmp 0x4c(%rsp),%r10d
+0x000000010ca4d86a: mov 0x4c(%rsp),%r9d
+0x000000010ca4d86f: cmovl %r10d,%r9d  ;*invokestatic min
+                                      ; - java.util.Arrays::copyOfRange@54 (line 3666)
+                                      ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d873: mov 0x50(%rsp),%r10
+0x000000010ca4d878: shr $0x3,%r10
+0x000000010ca4d87c: mov %r10,%rcx
+0x000000010ca4d87f: add $0xfffffffffffffffe,%rcx
+0x000000010ca4d883: mov 0x48(%rsp),%ebp
+0x000000010ca4d887: test %ebp,%ebp
+0x000000010ca4d889: jl L001e
+0x000000010ca4d88f: mov %r9d,%r11d
+0x000000010ca4d892: add 0x48(%rsp),%r11d
+0x000000010ca4d897: mov 0x4(%rsp),%r8d
+0x000000010ca4d89c: cmp %r11d,%r8d
+0x000000010ca4d89f: jb L001e
+0x000000010ca4d8a5: mov 0x4c(%rsp),%ebp
+0x000000010ca4d8a9: cmp %r9d,%ebp
+0x000000010ca4d8ac: jb L001e
+0x000000010ca4d8b2: test %r9d,%r9d
+0x000000010ca4d8b5: jle L001f
+0x000000010ca4d8bb: movslq %r9d,%rdx
+0x000000010ca4d8be: cmp 0x4c(%rsp),%r9d
+0x000000010ca4d8c3: jl L0011
+             L000e: mov 0x18(%rsp),%r10
+0x000000010ca4d8ce: mov 0x48(%rsp),%ebp
+0x000000010ca4d8d2: lea 0x10(%r10,%rbp,2),%rdi
+0x000000010ca4d8d7: mov %rbx,%rsi
+0x000000010ca4d8da: movabs $0x10c9f4580,%r10
+0x000000010ca4d8e4: callq *%r10  ;*invokestatic arraycopy
+                                 ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                 ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+             L000f: mov 0x38(%rsp),%r11
+0x000000010ca4d8ec: mov 0xc(%r11),%r10d  ; implicit exception: dispatches to 0x000000010ca4dcf1
+0x000000010ca4d8f0: mov (%rsp),%ebp
+0x000000010ca4d8f3: cmp %r10d,%ebp
+0x000000010ca4d8f6: jae L001c  ;*aastore
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+0x000000010ca4d8fc: mov 0x8(%rsp),%r10
+0x000000010ca4d901: mov 0xc(%r10),%r10d  ;*getfield holder
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@120 (line 75)
+0x000000010ca4d905: mov 0x40(%rsp),%r11
+0x000000010ca4d90a: mov %r11,%r8
+0x000000010ca4d90d: mov 0x58(%rsp),%r11
+0x000000010ca4d912: shr $0x3,%r11
+0x000000010ca4d916: mov 0x40(%rsp),%r9
+0x000000010ca4d91b: mov %r11d,(%r9)
+0x000000010ca4d91e: shr $0x9,%r8
+0x000000010ca4d922: movabs $0x10c3a2000,%r11
+0x000000010ca4d92c: mov %r12b,(%r11,%r8,1)  ;*aastore
+                                            ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+0x000000010ca4d930: mov 0x24(%rsp),%r8d
+0x000000010ca4d935: mov %r8d,0xc(%r12,%r10,8)  ;*putfield startCell
+                                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@127 (line 75)
+                                               ; implicit exception: dispatches to 0x000000010ca4dd05
+0x000000010ca4d93a: mov 0x10(%rsp),%rbp
+0x000000010ca4d93f: test %rbp,%rbp
+0x000000010ca4d942: je L001d  ;*aastore
+                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+0x000000010ca4d948: mov 0x10(%rsp),%rsi
+0x000000010ca4d94d: mov 0x38(%rsp),%rdx
+0x000000010ca4d952: nop
+0x000000010ca4d953: callq 0x000000010c9e8020  ; OopMap{[8]=Oop [16]=Oop [24]=Oop [40]=Oop [48]=Oop [56]=Oop off=1304}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@133 (line 76)
+                                              ;   {optimized virtual_call}
+0x000000010ca4d958: xor %r13d,%r13d
+0x000000010ca4d95b: mov 0x8(%rsp),%r11
+0x000000010ca4d960: mov 0x18(%rsp),%r8
+0x000000010ca4d965: mov 0x28(%rsp),%r9
+0x000000010ca4d96a: mov 0x30(%rsp),%rdi
+0x000000010ca4d96f: mov 0x38(%rsp),%rdx
+0x000000010ca4d974: mov 0x4(%rsp),%eax
+0x000000010ca4d978: mov 0x24(%rsp),%ecx
+0x000000010ca4d97c: jmpq L000a
+             L0010: mov %rdx,%r10
+0x000000010ca4d984: shl %r10
+0x000000010ca4d987: add $0x10,%r10
+0x000000010ca4d98b: mov %r10,%r11
+0x000000010ca4d98e: and $0xfffffffffffffff9,%r11
+0x000000010ca4d992: mov %rax,%rdi
+0x000000010ca4d995: add %r11,%rdi
+0x000000010ca4d998: shr $0x3,%r10
+0x000000010ca4d99c: sub %r10,%r8
+0x000000010ca4d99f: mov %r8,%rcx
+0x000000010ca4d9a2: xor %rax,%rax
+0x000000010ca4d9a5: shl $0x3,%rcx
+0x000000010ca4d9a9: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4d9ac: jmpq L0008
+             L0011: mov %rdx,%r11
+0x000000010ca4d9b4: shl %r11
+0x000000010ca4d9b7: add $0x10,%r11
+0x000000010ca4d9bb: mov %r11,%r8
+0x000000010ca4d9be: and $0xfffffffffffffff9,%r8
+0x000000010ca4d9c2: mov 0x58(%rsp),%rdi
+0x000000010ca4d9c7: add %r8,%rdi
+0x000000010ca4d9ca: shr $0x3,%r11
+0x000000010ca4d9ce: sub %r11,%r10
+0x000000010ca4d9d1: mov %r10,%rcx
+0x000000010ca4d9d4: xor %rax,%rax
+0x000000010ca4d9d7: shl $0x3,%rcx
+0x000000010ca4d9db: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4d9de: jmpq L000e
+             L0012: mov %ebx,0x20(%rsp)
+0x000000010ca4d9e7: mov %rax,-0x8(%rsp)
+0x000000010ca4d9ec: mov 0x18(%rsp),%eax
+0x000000010ca4d9f0: mov %eax,(%rsp)
+0x000000010ca4d9f3: mov -0x8(%rsp),%rax
+0x000000010ca4d9f8: mov %r11,0x8(%rsp)
+0x000000010ca4d9fd: mov %r8,0x18(%rsp)
+0x000000010ca4da02: mov %r9,0x28(%rsp)
+0x000000010ca4da07: mov %rdi,0x30(%rsp)
+0x000000010ca4da0c: mov %rdx,0x38(%rsp)
+0x000000010ca4da11: mov %eax,0x4(%rsp)
+0x000000010ca4da15: mov %r14,0x40(%rsp)
+0x000000010ca4da1a: mov %ecx,0x24(%rsp)
+0x000000010ca4da1e: mov %esi,0x48(%rsp)
+0x000000010ca4da22: mov %r10d,0x4c(%rsp)
+0x000000010ca4da27: mov %rbp,0x50(%rsp)  ;*ifge
+                                         ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                         ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+             L0013: movabs $0x7c0000208,%rsi  ;   {metadata({type array char})}
+0x000000010ca4da36: mov 0x4c(%rsp),%edx
+0x000000010ca4da3a: nop
+0x000000010ca4da3b: callq 0x000000010ca101a0  ; OopMap{[8]=Oop [16]=Oop [24]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Derived_oop_[56] off=1536}
+                                              ;*newarray
+                                              ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4da40: mov %rax,%r11
+0x000000010ca4da43: jmpq L000d
+             L0014: add $0x80,%rsp
+0x000000010ca4da4f: pop %rbp
+0x000000010ca4da50: test %eax,-0x2152a56(%rip)  # 0x000000010a8fb000
+                                                ;   {poll_return} *** SAFEPOINT POLL ***
+0x000000010ca4da56: retq
+             L0015: mov $0xffffffe4,%esi
+0x000000010ca4da5c: mov %r11,%rbp
+0x000000010ca4da5f: rex
+0x000000010ca4da64: rex
+0x000000010ca4da68: mov %rdx,0x10(%rsp)
+0x000000010ca4da6d: mov %r8,0x20(%rsp)
+0x000000010ca4da72: mov %ebx,0x28(%rsp)
+0x000000010ca4da76: nop
+0x000000010ca4da77: callq 0x000000010c9a71a0  ; OopMap{rbp=Oop [0]=Oop [16]=Oop [32]=Oop off=1596}
+                                              ;*caload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@38 (line 66)
+                                              ;   {runtime_call}
+0x000000010ca4da7c: callq 0x000000010be85e14  ;*caload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@38 (line 66)
+                                              ;   {runtime_call}
+             L0016: mov %r10d,0x4c(%rsp)
+0x000000010ca4da86: mov %esi,0x48(%rsp)
+0x000000010ca4da8a: mov %ecx,0x3c(%rsp)
+0x000000010ca4da8e: mov %r14,0x40(%rsp)
+0x000000010ca4da93: mov %eax,0x38(%rsp)
+0x000000010ca4da97: mov %rdx,0x30(%rsp)
+0x000000010ca4da9c: mov %rdi,0x28(%rsp)
+0x000000010ca4daa1: mov %r9,0x8(%rsp)
+0x000000010ca4daa6: mov %r8,0x18(%rsp)
+0x000000010ca4daab: mov %r11,(%rsp)
+0x000000010ca4daaf: mov %r13d,0x24(%rsp)
+0x000000010ca4dab4: mov %ebx,0x20(%rsp)
+0x000000010ca4dab8: movslq %r10d,%r10  ;*newarray
+                                       ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                       ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4dabb: jmpq L0006
+             L0017: mov $0xffffffe4,%esi
+0x000000010ca4dac5: rex
+0x000000010ca4daca: rex
+0x000000010ca4dacf: rex
+0x000000010ca4dad4: rex
+0x000000010ca4dad9: mov 0x30(%rsp),%r10
+0x000000010ca4dade: mov %r10,0x28(%rsp)
+0x000000010ca4dae3: callq 0x000000010c9a71a0  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [40]=Oop [88]=Oop off=1704}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@72 (line 70)
+                                              ;   {runtime_call}
+0x000000010ca4dae8: callq 0x000000010be85e14  ;   {runtime_call}
+             L0018: mov %rbx,%rdi
+0x000000010ca4daf0: xor %rax,%rax
+0x000000010ca4daf3: shl $0x3,%rcx
+0x000000010ca4daf7: rep rex
+0x000000010ca4dafa: mov 0x8(%rsp),%rsi
+0x000000010ca4daff: mov 0x48(%rsp),%edx
+0x000000010ca4db03: mov 0x58(%rsp),%rcx
+0x000000010ca4db08: xor %r8d,%r8d
+0x000000010ca4db0b: callq 0x000000010ca0f560  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [24]=Oop [40]=Oop [48]=Oop [64]=Derived_oop_[48] [88]=Oop off=1744}
+                                              ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+                                              ;   {runtime_call}
+0x000000010ca4db10: jmpq L0009
+             L0019: test %r9d,%r9d
+0x000000010ca4db18: jl L0018
+0x000000010ca4db1a: mov %rbx,%rdi
+0x000000010ca4db1d: xor %rax,%rax
+0x000000010ca4db20: shl $0x3,%rcx
+0x000000010ca4db24: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4db27: jmpq L0009  ;*synchronization entry
+                                ; - java.util.Arrays::copyOfRange@-1 (line 3661)
+                                ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+             L001a: mov %r11,(%rsp)
+0x000000010ca4db30: rex
+0x000000010ca4db35: rex
+0x000000010ca4db3a: mov %rdx,0x28(%rsp)
+0x000000010ca4db3f: mov %r13d,0x24(%rsp)
+0x000000010ca4db44: mov %r8,0x30(%rsp)
+0x000000010ca4db49: mov %esi,0x38(%rsp)
+0x000000010ca4db4d: mov %ebx,0x3c(%rsp)
+0x000000010ca4db51: mov %r10d,0x44(%rsp)
+0x000000010ca4db56: mov $0xffffff65,%esi
+0x000000010ca4db5b: callq 0x000000010c9a71a0  ; OopMap{[0]=Oop [8]=Oop [40]=Oop [48]=Oop off=1824}
+                                              ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+                                              ;   {runtime_call}
+0x000000010ca4db60: callq 0x000000010be85e14  ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+                                              ;   {runtime_call}
+             L001b: movslq %r10d,%rbp  ;*newarray
+                                       ; - java.util.Arrays::copyOfRange@40 (line 3664)
+                                       ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4db68: jmpq L000c
+             L001c: mov $0xffffffe4,%esi
+0x000000010ca4db72: mov 0x8(%rsp),%r10
+0x000000010ca4db77: mov %r10,(%rsp)
+0x000000010ca4db7b: mov 0x10(%rsp),%r10
+0x000000010ca4db80: mov %r10,0x8(%rsp)
+0x000000010ca4db85: mov 0x18(%rsp),%r10
+0x000000010ca4db8a: mov %r10,0x10(%rsp)
+0x000000010ca4db8f: callq 0x000000010c9a71a0  ; OopMap{[0]=Oop [8]=Oop [16]=Oop [56]=Oop [88]=Oop off=1876}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4db94: callq 0x000000010be85e14  ;   {runtime_call}
+             L001d: mov $0xfffffff6,%esi
+0x000000010ca4db9e: nop
+0x000000010ca4db9f: callq 0x000000010c9a71a0  ; OopMap{[56]=Oop off=1892}
+                                              ;*invokevirtual consume
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@133 (line 76)
+                                              ;   {runtime_call}
+0x000000010ca4dba4: callq 0x000000010be85e14  ;   {runtime_call}
+             L001e: mov %rbx,%rdi
+0x000000010ca4dbac: xor %rax,%rax
+0x000000010ca4dbaf: shl $0x3,%rcx
+0x000000010ca4dbb3: rep rex
+0x000000010ca4dbb6: mov 0x30(%rsp),%rsi
+0x000000010ca4dbbb: mov 0x48(%rsp),%edx
+0x000000010ca4dbbf: mov 0x58(%rsp),%rcx
+0x000000010ca4dbc4: xor %r8d,%r8d
+0x000000010ca4dbc7: callq 0x000000010ca0f560  ; OopMap{[8]=Oop [16]=Oop [24]=Oop [40]=Oop [48]=Oop [56]=Oop [64]=Derived_oop_[56] [88]=Oop off=1932}
+                                              ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4dbcc: jmpq L000f
+             L001f: test %r9d,%r9d
+0x000000010ca4dbd4: jl L001e
+0x000000010ca4dbd6: mov %rbx,%rdi
+0x000000010ca4dbd9: xor %rax,%rax
+0x000000010ca4dbdc: shl $0x3,%rcx
+0x000000010ca4dbe0: rep rex  ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                             ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+0x000000010ca4dbe3: jmpq L000f  ;*synchronization entry
+                                ; - java.util.Arrays::copyOfRange@-1 (line 3661)
+                                ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+             L0020: mov %r11,%rbp
+0x000000010ca4dbeb: rex
+0x000000010ca4dbf0: rex
+0x000000010ca4dbf4: mov %rdx,0x20(%rsp)
+0x000000010ca4dbf9: mov %r13d,0x1c(%rsp)
+0x000000010ca4dbfe: mov %r8,0x28(%rsp)
+0x000000010ca4dc03: mov %esi,0x30(%rsp)
+0x000000010ca4dc07: mov %ebx,0x34(%rsp)
+0x000000010ca4dc0b: mov %r10d,0x3c(%rsp)
+0x000000010ca4dc10: mov $0xffffff65,%esi
+0x000000010ca4dc15: xchg %ax,%ax
+0x000000010ca4dc17: callq 0x000000010c9a71a0  ; OopMap{rbp=Oop [0]=Oop [32]=Oop [40]=Oop off=2012}
+                                              ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4dc1c: callq 0x000000010be85e14  ;*ifge
+                                              ; - java.util.Arrays::copyOfRange@5 (line 3662)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+                                              ;   {runtime_call}
+             L0021: xor %r11d,%r11d
+0x000000010ca4dc24: mov %rbp,%r13
+0x000000010ca4dc27: jmpq L0000
+             L0022: xor %r10d,%r10d
+0x000000010ca4dc2f: mov %r10,0x10(%rsp)
+0x000000010ca4dc34: jmpq L0001
+             L0023: xor %r8d,%r8d
+0x000000010ca4dc3c: xor %r9d,%r9d
+0x000000010ca4dc3f: xor %edi,%edi
+0x000000010ca4dc41: jmpq L0002
+             L0024: xor %edx,%edx
+0x000000010ca4dc48: jmpq L0003
+             L0025: mov (%rsp),%rdx
+0x000000010ca4dc51: mov 0x8(%rsp),%r10
+0x000000010ca4dc56: jmp L0028
+             L0026: mov (%rsp),%rdx
+0x000000010ca4dc5c: mov 0x8(%rsp),%r10
+0x000000010ca4dc61: jmp L0028
+             L0027: mov (%rsp),%rdx
+             L0028: mov $0xffffff9d,%esi
+0x000000010ca4dc6c: mov 0x18(%rsp),%ebp
+0x000000010ca4dc70: mov %ebx,(%rsp)
+0x000000010ca4dc73: mov %r13,0x8(%rsp)
+0x000000010ca4dc78: mov %r14,0x10(%rsp)
+0x000000010ca4dc7d: mov %r10,0x18(%rsp)
+0x000000010ca4dc82: mov %rdx,0x20(%rsp)
+0x000000010ca4dc87: callq 0x000000010c9a71a0  ; OopMap{[8]=Oop [16]=Oop [24]=Oop [32]=Oop off=2124}
+                                              ;*iload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@28 (line 65)
+                                              ;   {runtime_call}
+0x000000010ca4dc8c: callq 0x000000010be85e14  ;*getfield holder
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@49 (line 69)
+                                              ;   {runtime_call}
+0x000000010ca4dc91: mov $0xfffffff6,%esi
+0x000000010ca4dc96: nop
+0x000000010ca4dc97: callq 0x000000010c9a71a0  ; OopMap{off=2140}
+                                              ;*getfield holder
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@49 (line 69)
+                                              ;   {runtime_call}
+0x000000010ca4dc9c: callq 0x000000010be85e14  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@52 (line 69)
+                                              ;   {runtime_call}
+0x000000010ca4dca1: mov $0xfffffff6,%esi
+0x000000010ca4dca6: nop
+0x000000010ca4dca7: callq 0x000000010c9a71a0  ; OopMap{off=2156}
+                                              ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@52 (line 69)
+                                              ;   {runtime_call}
+0x000000010ca4dcac: callq 0x000000010be85e14  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@52 (line 69)
+                                              ;   {runtime_call}
+0x000000010ca4dcb1: mov $0xfffffff6,%esi
+0x000000010ca4dcb6: nop
+0x000000010ca4dcb7: callq 0x000000010c9a71a0  ; OopMap{[88]=Oop off=2172}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@72 (line 70)
+                                              ;   {runtime_call}
+0x000000010ca4dcbc: callq 0x000000010be85e14  ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@81 (line 71)
+                                              ;   {runtime_call}
+0x000000010ca4dcc1: mov $0xfffffff6,%esi
+0x000000010ca4dcc6: nop
+0x000000010ca4dcc7: callq 0x000000010c9a71a0  ; OopMap{off=2188}
+                                              ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@81 (line 71)
+                                              ;   {runtime_call}
+0x000000010ca4dccc: callq 0x000000010be85e14  ;*getfield holder
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@95 (line 73)
+                                              ;   {runtime_call}
+0x000000010ca4dcd1: mov $0xfffffff6,%esi
+0x000000010ca4dcd6: nop
+0x000000010ca4dcd7: callq 0x000000010c9a71a0  ; OopMap{off=2204}
+                                              ;*getfield holder
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@95 (line 73)
+                                              ;   {runtime_call}
+0x000000010ca4dcdc: callq 0x000000010be85e14  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@98 (line 73)
+                                              ;   {runtime_call}
+0x000000010ca4dce1: mov $0xfffffff6,%esi
+0x000000010ca4dce6: nop
+0x000000010ca4dce7: callq 0x000000010c9a71a0  ; OopMap{off=2220}
+                                              ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@98 (line 73)
+                                              ;   {runtime_call}
+0x000000010ca4dcec: callq 0x000000010be85e14  ;*getfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@98 (line 73)
+                                              ;   {runtime_call}
+0x000000010ca4dcf1: mov $0xfffffff6,%esi
+0x000000010ca4dcf6: mov (%rsp),%ebp
+0x000000010ca4dcf9: xchg %ax,%ax
+0x000000010ca4dcfb: callq 0x000000010c9a71a0  ; OopMap{[88]=Oop off=2240}
+                                              ;*aastore
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@118 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4dd00: callq 0x000000010be85e14  ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@127 (line 75)
+                                              ;   {runtime_call}
+0x000000010ca4dd05: mov $0xfffffff6,%esi
+0x000000010ca4dd0a: nop
+0x000000010ca4dd0b: callq 0x000000010c9a71a0  ; OopMap{off=2256}
+                                              ;*putfield startCell
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@127 (line 75)
+                                              ;   {runtime_call}
+0x000000010ca4dd10: callq 0x000000010be85e14  ;   {runtime_call}
+0x000000010ca4dd15: mov $0xffffff86,%esi
+0x000000010ca4dd1a: mov %r11,%rbp
+0x000000010ca4dd1d: rex
+0x000000010ca4dd22: rex
+0x000000010ca4dd26: mov %r8,0x8(%rsp)
+0x000000010ca4dd2b: mov %rdx,0x10(%rsp)
+0x000000010ca4dd30: mov %ebx,0x1c(%rsp)
+0x000000010ca4dd34: data32 xchg %ax,%ax
+0x000000010ca4dd37: callq 0x000000010c9a71a0  ; OopMap{rbp=Oop [0]=Oop [8]=Oop [16]=Oop off=2300}
+                                              ;*iload
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@28 (line 65)
+                                              ;   {runtime_call}
+0x000000010ca4dd3c: callq 0x000000010be85e14  ;*invokestatic arraycopy
+                                              ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                                              ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+                                              ;   {runtime_call}
+0x000000010ca4dd41: jmp L0029  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+0x000000010ca4dd43: jmp L002a  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@115 (line 74)
+             L0029: mov %rax,%rsi
+0x000000010ca4dd48: jmp L002b  ;*invokestatic arraycopy
+                               ; - java.util.Arrays::copyOfRange@57 (line 3665)
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@69 (line 70)
+             L002a: mov %rax,%rsi
+0x000000010ca4dd4d: jmp L002b  ;*invokevirtual consume
+                               ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@133 (line 76)
+0x000000010ca4dd4f: mov %rax,%rsi  ;*synchronization entry
+                                   ; - org.github.arnaudroger.SimplifiedBenchmark::benchmarkHolder@-1 (line 59)
+             L002b: add $0x80,%rsp
+0x000000010ca4dd59: pop %rbp
+0x000000010ca4dd5a: jmpq 0x000000010ca0f620  ;   {runtime_call}
+0x000000010ca4dd5f: hlt
+[Stub Code]
+0x000000010ca4dd60: movabs $0x0,%rbx  ;   {no_reloc}
+             L002c: jmpq L002c  ;   {runtime_call}
+[Exception Handler]
+0x000000010ca4dd6f: jmpq 0x000000010ca0e760  ;   {runtime_call}
+[Deopt Handler Code]
+0x000000010ca4dd74: callq 0x000000010ca4dd79
+0x000000010ca4dd79: subq $0x5,(%rsp)
+0x000000010ca4dd7e: jmpq 0x000000010c9e93c0  ;   {runtime_call}
+0x000000010ca4dd83: hlt
+0x000000010ca4dd84: hlt
+0x000000010ca4dd85: hlt
+0x000000010ca4dd86: hlt
+0x000000010ca4dd87: hlt
